@@ -77,6 +77,12 @@ body {
 .offcanvas-nav .hire-link:hover {
   background-color: #a2be0d;
 }
+#menuToggle i {
+  font-size: 32px;     /* সাইজ বড় করলো */
+  color: #b4d210;       /* তুমি যেটা চাইবে সে রঙ দাও, এখানে সাদা (#ffffff) দিলাম */
+  width: 32px;
+  height: 32px;
+}
 
 
 /* Responsive visibility switch */
@@ -986,5 +992,12 @@ body {
   .plan-button {
     width: 100%;
   }
+
+ .logo img {
+    width: 120px;
+    height: 20px;
+  
+  }
+
 }
 
