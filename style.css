@@ -7,7 +7,7 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
+  background-color: #e4f8d7;
   color: #333;
 }
 .container {
@@ -32,6 +32,7 @@ body {
   padding: 30px 20px;
   transition: right 0.3s ease;
   z-index: 999;
+
 }
 
 .offcanvas-menu.active {
@@ -82,10 +83,12 @@ body {
   color: #b4d210;       /* তুমি যেটা চাইবে সে রঙ দাও, এখানে সাদা (#ffffff) দিলাম */
   width: 32px;
   height: 32px;
+  
 }
 
 
 /* Responsive visibility switch */
+
 /* মোবাইল ভার্সন (width 768px এর নিচে) */
 @media (max-width: 768px) {
   .desktop-only {
@@ -108,13 +111,30 @@ body {
 
 
 .main-header {
-  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
   flex-wrap: wrap;
+
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+
+  /* Default: Desktop view */
+  overflow: hidden;
 }
+
+
+
+
 
 /* ==== Logo ==== */
 .logo {
@@ -375,6 +395,33 @@ body {
   padding: 50px 20px;
   text-align: center;
   background-color: #fff;
+  position: relative;
+  z-index: 1;
+overflow: hidden;
+}
+
+.services-section::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(150px);
+  z-index: -1;
+}
+
+.services-section::after {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(180px); /* Blur আরও বাড়ানো হলো */
+  z-index: -1;
 }
 
 .section-title {
@@ -392,12 +439,13 @@ body {
 }
 
 .service-box {
-  background-color: #5c5c5b;
+  background-color: #ffffff;
   color: #b4d210;
   padding: 30px 20px;
   border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  box-shadow: 0 0 15px rgba(180, 210, 16, 0.4);
 }
 
 .service-box i {
@@ -433,8 +481,35 @@ body {
   padding: 60px 20px;
   background-color: #fff;
   text-align: center;
+  position: relative;
+  z-index: 1;
+overflow: hidden;
 }
 
+
+.portfolio-section::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(150px);
+  z-index: -1;
+}
+
+.portfolio-section::after {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(180px); /* Blur আরও বাড়ানো হলো */
+  z-index: -1;
+}
 .portfolio-title {
   font-size: 36px;
   color: #b4d210;
@@ -480,12 +555,42 @@ body {
 
 
 
+
+
 /* Why Choose Me? */
 
 .choose-section {
   padding: 60px 20px;
   background-color: #fff;
   text-align: center;
+
+position: relative;
+  z-index: 1;
+overflow: hidden;
+}
+
+.choose-section::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(150px);
+  z-index: -1;
+}
+
+.choose-section::after {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(180px); /* Blur আরও বাড়ানো হলো */
+  z-index: -1;
 }
 
 .choose-title {
@@ -503,12 +608,17 @@ body {
 }
 
 .choose-box {
-  background-color: #5c5c5b;
+  background-color: #fffffa;
   color: #b4d210;
+  
   padding: 30px 25px;
   border-radius: 15px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+
+  box-shadow: 0 0 15px rgba(180, 210, 16, 0.4);
 }
+
 
 .choose-box i {
   font-size: 40px;
@@ -549,6 +659,33 @@ body {
   padding: 60px 20px;
   background-color: #fff;
   text-align: center;
+position: relative;
+  z-index: 1;
+overflow: hidden;
+}
+
+.testimonial-section::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(150px);
+  z-index: -1;
+}
+
+.testimonial-section::after {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(180px); /* Blur আরও বাড়ানো হলো */
+  z-index: -1;
 }
 
 .testimonial-title {
@@ -566,12 +703,13 @@ body {
 }
 
 .testimonial-box {
-  background-color: #5c5c5b;
+  background-color: #ffffff;
   color: #b4d210;
   padding: 30px 25px;
   border-radius: 15px;
   transition: transform 0.3s ease, background-color 0.3s ease;
   position: relative;
+  box-shadow: 0 0 15px rgba(180, 210, 16, 0.4);
 }
 
 .quote-icon {
@@ -585,7 +723,7 @@ body {
 .testimonial-text {
   font-size: 15px;
   margin-top: 40px;
-  color: #eee;
+  color: #757474;
   margin-bottom: 20px;
 }
 
@@ -627,6 +765,33 @@ body {
   padding: 60px 20px;
   background-color: #fff;
   text-align: center;
+  position: relative;
+ z-index: 1;
+overflow: hidden;
+}
+
+.pricing-section::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(150px);
+  z-index: -1;
+}
+
+.pricing-section::after {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(180px); /* Blur আরও বাড়ানো হলো */
+  z-index: -1;
 }
 
 .pricing-title {
@@ -695,9 +860,10 @@ body {
 }
 
 .pricing-box:hover {
-  background-color: #b4d210;
+  background-color: #ffffff;
   color: #5c5c5b;
   transform: translateY(-10px);
+  box-shadow: 0 0 15px rgba(180, 210, 16, 0.4);
 }
 
 .pricing-box:hover .plan-name,
@@ -719,8 +885,34 @@ body {
 .faq-section {
   padding: 60px 20px;
   background-color: #fff;
-  max-width: 800px;
   margin: 0 auto;
+  position: relative;
+ z-index: 1;
+overflow: hidden;
+}
+
+.faq-section::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(150px);
+  z-index: -1;
+}
+
+.faq-section::after {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(180px); /* Blur আরও বাড়ানো হলো */
+  z-index: -1;
 }
 
 .faq-title {
@@ -734,17 +926,22 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-content: center;
+
 }
 
 .faq-item {
   border: 1px solid #b4d210;
   border-radius: 10px;
+  width: 700px;
   overflow: hidden;
   background-color: #5c5c5b;
+  margin: 5px auto; 
 }
 
+
 .faq-question {
-  background-color: #b4d210;
+  background-color: #ffffff;
   color: #5c5c5b;
   font-weight: bold;
   padding: 15px 20px;
@@ -757,10 +954,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 0 15px rgba(180, 210, 16, 0.4);
 }
 
 .faq-question:hover {
   background-color: #a2be0d;
+  color: #fff;
 }
 
 .arrow {
@@ -790,6 +989,33 @@ body {
   padding: 60px 20px;
   background-color: #fff;
   text-align: center;
+  position: relative;
+ z-index: 1;
+overflow: hidden;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(150px);
+  z-index: -1;
+}
+
+.contact-section::after {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(180px); /* Blur আরও বাড়ানো হলো */
+  z-index: -1;
 }
 
 .contact-title {
@@ -874,23 +1100,57 @@ body {
 
 /* Footer Design */
 .footer {
-  background-color: #1e1e1e;
+  background-color: #000; 
   color: #fff;
-  padding: 40px 20px 20px;
+  padding: 40px 20px 0px; 
   font-family: sans-serif;
+
+  /* Bigger Glow Spread */
+  
+
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(150px);
+  z-index: -1;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(180px); /* Blur আরও বাড়ানো হলো */
+  z-index: -1;
+}
+
 .footer-about {
-  background-color: #1e1e1e;
+  background: transparent;
   color: #fff;
   padding-right: 15px;
   font-family: sans-serif;
 }
+
 .footer-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1200px;
   margin: auto;
+  padding-bottom: 20;
 }
 
 .footer-container > div {
@@ -898,6 +1158,8 @@ body {
   min-width: 250px;
   margin-bottom: 20px;
 }
+
+
 
 .footer h3 {
   color: #b4d210;
@@ -929,6 +1191,7 @@ body {
   padding-top: 15px;
   font-size: 14px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .footer-contact p {
@@ -968,7 +1231,9 @@ body {
   .contact-container {
     grid-template-columns: 1fr;
   }
-
+.main-header {
+    overflow: visible;
+  }
   .section-title,
   .pricing-title,
   .contact-title,
