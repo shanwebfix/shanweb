@@ -80,6 +80,7 @@ body {
 
 
 /* Responsive visibility switch */
+/* মোবাইল ভার্সন (width 768px এর নিচে) */
 @media (max-width: 768px) {
   .desktop-only {
     display: none !important;
@@ -88,6 +89,17 @@ body {
     display: block !important;
   }
 }
+
+/* ডেস্কটপ ভার্সন (width 769px বা তার বেশি) */
+@media (min-width: 769px) {
+  .desktop-only {
+    display: block !important;
+  }
+  .mobile-only {
+    display: none !important;
+  }
+}
+
 
 .main-header {
   background-color: #ffffff;
