@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+
+ <header class="main-header">
+  <div class="logo">ShanWeb</div>
+
+  <!-- Desktop menu -->
+  <div class="nav-wrapper desktop-only">
+    <nav class="nav-center">
+      <a href="#">Home</a>
+      <a href="#">Portfolio</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+  <div class="hire-btn desktop-only">
+    <a href="#">Hire Me</a>
+  </div>
+
+  <!-- Mobile toggle -->
+  <div class="menu-toggle mobile-only" id="menuToggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Offcanvas menu -->
+  <div class="offcanvas-menu" id="offcanvasMenu">
+    <!-- Close icon -->
+    <div class="close-btn" id="closeMenu">
+      <i class="fas fa-times"></i>
+    </div>
+
+    <nav class="offcanvas-nav">
+      <a href="#">Home</a>
+      <a href="#">Portfolio</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#" class="hire-link">Hire Me</a>
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+<!-- ===== Hero Section ===== -->
+<section class="hero-section">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline src="assets/hero-bg.mp4" class="hero-video"></video>
+
+  <!-- Overlay Content -->
+  <div class="hero-content">
+    <div class="hero-left">
+      <h1>Hi, I'm <span class="gradient-text">SHAN AHMED</span></h1>
+
+      <p>I’m a passionate web developer who builds responsive and interactive websites.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary">View Portfolio</a>
+        <a href="#" class="btn-outline">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="assets/hero-img.png" alt="Hero Image">
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Service Content -->
+<section class="services-section">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-container">
+
+      <div class="service-box">
+        <i class="fas fa-briefcase"></i>
+        <h3>Portfolio</h3>
+      </div>
+
+      <div class="service-box">
+        <i class="fas fa-rocket"></i>
+        <h3>Landing Page</h3>
+      </div>
+
+      <div class="service-box">
+        <i class="fas fa-building"></i>
+        <h3>Business Website</h3>
+      </div>
+
+      <div class="service-box">
+        <i class="fas fa-shopping-cart"></i>
+        <h3>E-commerce</h3>
+      </div>
+
+      <div class="service-box">
+        <i class="fas fa-pen-nib"></i>
+        <h3>Blog Website</h3>
+      </div>
+
+      <div class="service-box">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>App Landing</h3>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+<!-- Portfolio -->
+  <section class="portfolio-section">
+  <h2 class="portfolio-title">My Portfolio</h2>
+  <div class="portfolio-grid">
+
+    <div class="portfolio-item">
+      <div class="image-container">
+        <img src="assets/fitness.jpg" alt="Project 1">
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <div class="image-container">
+        <img src="assets/fitness.jpg" alt="Project 2">
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <div class="image-container">
+        <img src="assets/fitness.jpg" alt="Project 3">
+
+      </div>
+    </div>
+
+    <!-- আর ৩টা চাইলে কপি করে নিচে বসাও -->
+  </div>
+</section>
+
+
+
+<!-- Why Choose Me? -->
+  <section class="choose-section">
+    <h2 class="choose-title">Why Choose Me?</h2>
+    <div class="choose-container">
+
+      <div class="choose-box">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Clean & Modern Design</h3>
+        <p>I create attractive, modern, and responsive designs that reflect your brand.</p>
+      </div>
+
+      <div class="choose-box">
+        <i class="fas fa-clock"></i>
+        <h3>Fast Delivery</h3>
+        <p>I value your time and ensure on-time project delivery without compromising quality.</p>
+      </div>
+
+      <div class="choose-box">
+        <i class="fas fa-handshake"></i>
+        <h3>Reliable Support</h3>
+        <p>Even after project completion, I provide support to keep your business running smoothly.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+<!-- Client Testimonial -->
+  <section class="testimonial-section">
+  <h2 class="testimonial-title">Client Testimonials</h2>
+  <div class="testimonial-container">
+
+    <div class="testimonial-box">
+      <i class="fas fa-quote-left quote-icon"></i>
+      <p class="testimonial-text">
+        I’m extremely satisfied with the website design. It was beyond my expectations — fast, modern, and responsive!
+      </p>
+      <h3 class="client-name">Shakil Hossain</h3>
+      <p class="client-role">CEO, SoftTech</p>
+    </div>
+
+    <div class="testimonial-box">
+      <i class="fas fa-quote-left quote-icon"></i>
+      <p class="testimonial-text">
+        Very professional and communicates clearly. Delivered exactly what I wanted, and on time. Highly recommended!
+      </p>
+      <h3 class="client-name">Anika Rahman</h3>
+      <p class="client-role">Founder, StyleWeb</p>
+    </div>
+
+    <div class="testimonial-box">
+      <i class="fas fa-quote-left quote-icon"></i>
+      <p class="testimonial-text">
+        Outstanding support and post-delivery help! Will definitely work again for my upcoming projects.
+      </p>
+      <h3 class="client-name">Mizanur Rahman</h3>
+      <p class="client-role">Marketing Manager, BrandHub</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- Pricing Plan -->
+<section class="pricing-section">
+  <h2 class="pricing-title">Pricing Plans</h2>
+  <div class="pricing-container">
+
+    <div class="pricing-box">
+      <h3 class="plan-name">Basic</h3>
+      <p class="plan-price">$99</p>
+      <ul class="plan-features">
+        <li>1 Page Website</li>
+        <li>Basic Design</li>
+        <li>Responsive Layout</li>
+        <li>5 Days Delivery</li>
+      </ul>
+      <a href="#" class="plan-button">Get Started</a>
+    </div>
+
+    <div class="pricing-box">
+      <h3 class="plan-name">Standard</h3>
+      <p class="plan-price">$199</p>
+      <ul class="plan-features">
+        <li>Up to 5 Pages</li>
+        <li>Modern UI/UX</li>
+        <li>Mobile Friendly</li>
+        <li>SEO Optimized</li>
+      </ul>
+      <a href="#" class="plan-button">Choose Plan</a>
+    </div>
+
+    <div class="pricing-box">
+      <h3 class="plan-name">Premium</h3>
+      <p class="plan-price">$299</p>
+      <ul class="plan-features">
+        <li>Unlimited Pages</li>
+        <li>Custom Design</li>
+        <li>Full SEO Setup</li>
+        <li>Priority Support</li>
+      </ul>
+      <a href="#" class="plan-button">Start Now</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<!-- FAQ -->
+<section class="faq-section">
+  <h2 class="faq-title">Frequently Asked Questions</h2>
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How long will it take to build my website?
+        <span class="arrow">&#9662;</span> <!-- down arrow -->
+      </button>
+      <div class="faq-answer">
+        <p>It depends on your project scope, but usually between 3 to 7 days for most websites.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Will my website be mobile responsive?
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="faq-answer">
+        <p>Yes! All websites I build are fully mobile responsive and look great on all devices.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Do you provide post-delivery support?
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="faq-answer">
+        <p>Absolutely. I provide support even after the project is delivered, based on your needs.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Can you redesign my existing site?
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="faq-answer">
+        <p>Yes, I can modernize and improve your current website's look, speed, and usability.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- Contact Section -->
+
+<section class="contact-section">
+  <h2 class="contact-title">Contact Me</h2>
+  <div class="contact-container">
+
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Get In Touch</h3>
+      <p><i class="fas fa-phone"></i> +8801627-818285</p>
+      <p><i class="fas fa-envelope"></i> info@example.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- Footer Content -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>About Us</h3>
+      <p>We provide modern web design & development services to 
+        grow your online presence.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-nav-links">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p>Email: info@example.com</p>
+      <p>Phone: +8801627-818285</p>
+
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/8801234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/yourusername" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+      </div>
+    </div>
+
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 ShanWeb. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
