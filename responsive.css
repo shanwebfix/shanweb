@@ -4,15 +4,6 @@
 body {
   overflow-x: hidden !important;
 }
-.main-header {
-    overflow: hidden !important;
-  }
-.main-header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-
-}
   .services-container,
   .portfolio-grid,
   .pricing-container,
@@ -20,7 +11,7 @@ body {
     grid-template-columns: 1fr;
   }
 .main-header {
-    overflow: visible;
+    overflow: hidden;
   }
   .section-title,
   .pricing-title,
