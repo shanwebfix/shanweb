@@ -118,7 +118,7 @@
 
 @media (min-width: 769px) {
   .main-header {
-    overflow: hidden;
+    overflow: hidden !important;
   }
 }
 
