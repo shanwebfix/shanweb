@@ -5,6 +5,9 @@ body {
   overflow-x: hidden !important;
 }
 .main-header {
+    overflow: hidden !important;
+  }
+.main-header {
   position: sticky;
   top: 0;
   z-index: 999;

@@ -116,12 +116,6 @@
   overflow: visible;
 }
 
-@media (min-width: 769px) {
-  .main-header {
-    overflow: hidden !important;
-  }
-}
-
 
 
 
