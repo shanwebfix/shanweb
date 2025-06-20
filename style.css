@@ -739,10 +739,9 @@ overflow: hidden;
 .faq-section {
   padding: 60px 20px;
   background-color: #fff;
-  margin: 0 auto;
+  text-align: center;
   position: relative;
  z-index: 1;
-overflow: hidden;
 }
 
 .faq-section::before {
@@ -787,7 +786,7 @@ overflow: hidden;
 .faq-item {
   border: 1px solid #b4d210;
   border-radius: 10px;
-  width: 700px;
+  width: 500px;
   overflow: hidden;
   background-color: #5c5c5b;
   margin: 5px auto; 
@@ -799,7 +798,7 @@ overflow: hidden;
   color: #5c5c5b;
   font-weight: bold;
   padding: 15px 20px;
-  width: 100%;
+  width: 500px;
   text-align: left;
   border: none;
   cursor: pointer;

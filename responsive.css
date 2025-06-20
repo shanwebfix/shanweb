@@ -9,7 +9,7 @@ body {
   top: 0;
   z-index: 999;
 
-
+}
   .services-container,
   .portfolio-grid,
   .pricing-container,
@@ -64,39 +64,6 @@ body {
     border-radius: 15px 0px 15px 0px;
   }
 
-
-  .faq-item {
-  
-  border-radius: 10px;
-  width: 100%;
-  overflow: hidden;
-  background-color: #5c5c5b;
-  margin: 5px auto; 
-  padding: 5px;
-}
-.faq-question {
-  background-color: #ffffff;
-  color: #5c5c5b;
-  font-weight: bold;
-  padding: 15px 20px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 0 15px rgba(180, 210, 16, 0.4);
-}
-
-.faq-question:hover {
-    padding: 15px 20px;
-  background-color: #a2be0d;
-  color: #fff;
-}
-
   .testimonial-section {
   position: relative;
   z-index: 1;
@@ -104,5 +71,20 @@ body {
 }
 
 
+.faq-item {
+
+  width: 200px;
+  overflow: hidden;
+   
+  padding: 0px;
+}
+
+
+.faq-question {
+  
+  padding: 15px 20px;
+  width: 200px;
+  font-size: 16px;
+}
 
 }
