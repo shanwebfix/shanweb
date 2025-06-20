@@ -1,13 +1,10 @@
 
 @media (max-width: 768px) {
 
-.body {
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background-color: #e4f8d7;
-  color: #333;
+body {
   overflow-x: hidden;
 }
+
   .services-container,
   .portfolio-grid,
   .pricing-container,
@@ -66,7 +63,7 @@
   .faq-item {
   
   border-radius: 10px;
-  width: 400px;
+  width: 200px;
   overflow: hidden;
   background-color: #5c5c5b;
   margin: 5px auto; 
