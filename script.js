@@ -1,16 +1,16 @@
-const menuToggle = document.getElementById('menuToggle');
-const offcanvasMenu = document.getElementById('offcanvasMenu');
-const closeMenu = document.getElementById('closeMenu');
+ const menuToggle = document.getElementById('menuToggle');
+    const offcanvasMenu = document.getElementById('offcanvasMenu');
+    const closeMenu = document.getElementById('closeMenu');
 
-// Toggle open
-menuToggle.addEventListener('click', () => {
-  offcanvasMenu.classList.add('active');
-});
+    // Open menu
+    menuToggle.addEventListener('click', () => {
+      offcanvasMenu.classList.add('active');
+    });
 
-// Close icon click
-closeMenu.addEventListener('click', () => {
-  offcanvasMenu.classList.remove('active');
-});
+    // Close menu
+    closeMenu.addEventListener('click', () => {
+      offcanvasMenu.classList.remove('active');
+    });
 
 
 
@@ -85,3 +85,27 @@ document.querySelectorAll('.image-container').forEach(container => {
     container.scrollTop = scrollTop - walk;
   });
 });
+
+
+
+
+// Testimonial Slider
+
+const swiper = new Swiper(".testimonial-swiper", {
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    slidesPerView: 1,
+    spaceBetween: 30,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+    },
+  });

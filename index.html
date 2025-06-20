@@ -5,8 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ShanWeb | My Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="headerfooter.css">
   <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 <body>
@@ -29,8 +36,7 @@
     <a href="#">Hire Me</a>
   </div>
 
-  <!-- Mobile toggle -->
-  <div class="menu-toggle mobile-only" id="menuToggle">
+ <div class="menu-toggle mobile-only" id="menuToggle">
     <i class="fas fa-bars"></i>
   </div>
 
@@ -42,7 +48,7 @@
     </div>
 
     <nav class="offcanvas-nav">
-      <a href="#Home">Home</a>
+      <a href="#home">Home</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#service">Service</a>
       <a href="#about">About</a>
@@ -205,37 +211,49 @@
 
 
 <!-- Client Testimonial -->
-  <section class="testimonial-section">
+<section class="testimonial-section">
   <h2 class="testimonial-title">Client Testimonials</h2>
-  <div class="testimonial-container">
 
-    <div class="testimonial-box">
-      <i class="fas fa-quote-left quote-icon"></i>
-      <p class="testimonial-text">
-        I’m extremely satisfied with the website design. It was beyond my expectations — fast, modern, and responsive!
-      </p>
-      <h3 class="client-name">Shakil Hossain</h3>
-      <p class="client-role">CEO, SoftTech</p>
+  <div class="swiper testimonial-swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="testimonial-box">
+          <i class="fas fa-quote-left quote-icon"></i>
+          <p class="testimonial-text">
+            I’m extremely satisfied with the website design. It was beyond my expectations — fast, modern, and responsive!
+          </p>
+          <h3 class="client-name">Shakil Hossain</h3>
+          <p class="client-role">CEO, SoftTech</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="testimonial-box">
+          <i class="fas fa-quote-left quote-icon"></i>
+          <p class="testimonial-text">
+            Very professional and communicates clearly. Delivered exactly what I wanted, and on time. Highly recommended!
+          </p>
+          <h3 class="client-name">Anika Rahman</h3>
+          <p class="client-role">Founder, StyleWeb</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="testimonial-box">
+          <i class="fas fa-quote-left quote-icon"></i>
+          <p class="testimonial-text">
+            Outstanding support and post-delivery help! Will definitely work again for my upcoming projects.
+          </p>
+          <h3 class="client-name">Mizanur Rahman</h3>
+          <p class="client-role">Marketing Manager, BrandHub</p>
+        </div>
+      </div>
+
     </div>
 
-    <div class="testimonial-box">
-      <i class="fas fa-quote-left quote-icon"></i>
-      <p class="testimonial-text">
-        Very professional and communicates clearly. Delivered exactly what I wanted, and on time. Highly recommended!
-      </p>
-      <h3 class="client-name">Anika Rahman</h3>
-      <p class="client-role">Founder, StyleWeb</p>
-    </div>
-
-    <div class="testimonial-box">
-      <i class="fas fa-quote-left quote-icon"></i>
-      <p class="testimonial-text">
-        Outstanding support and post-delivery help! Will definitely work again for my upcoming projects.
-      </p>
-      <h3 class="client-name">Mizanur Rahman</h3>
-      <p class="client-role">Marketing Manager, BrandHub</p>
-    </div>
-
+    <!-- Dots -->
+    <div class="swiper-pagination"></div>
   </div>
 </section>
 

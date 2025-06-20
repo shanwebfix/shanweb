@@ -1,0 +1,106 @@
+
+@media (max-width: 768px) {
+
+.body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #e4f8d7;
+  color: #333;
+  overflow-x: hidden;
+}
+  .services-container,
+  .portfolio-grid,
+  .pricing-container,
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+.main-header {
+    overflow: visible;
+  }
+  .section-title,
+  .pricing-title,
+  .contact-title,
+  .faq-title {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .service-box,
+  .pricing-box,
+  .contact-form,
+  .contact-info,
+  .faq-item {
+    padding: 20px 15px;
+  }
+
+  .portfolio-item {
+    height: 300px;
+  }
+
+  .plan-button {
+    width: 100%;
+  }
+
+ .logo img {
+    width: 120px;
+    height: 20px;
+  
+  }
+
+.hero-buttons {
+  display: flex;
+  gap: 10px;
+}
+  .btn-primary {
+    padding: 10px 25px;
+    margin: auto;
+    border-radius: 15px 0px 15px 0px;
+  }
+.btn-outline {
+    padding: 10px 30px;
+    margin: auto;
+    border-radius: 15px 0px 15px 0px;
+  }
+
+
+  .faq-item {
+  
+  border-radius: 10px;
+  width: 400px;
+  overflow: hidden;
+  background-color: #5c5c5b;
+  margin: 5px auto; 
+  padding: 0%;
+}
+.faq-question {
+  background-color: #ffffff;
+  color: #5c5c5b;
+  font-weight: bold;
+  padding: 15px 20px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(180, 210, 16, 0.4);
+}
+
+.faq-question:hover {
+    padding: 15px 20px;
+  background-color: #a2be0d;
+  color: #fff;
+}
+
+  .testimonial-section {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+
+
+}
