@@ -45,23 +45,32 @@
   margin-bottom: 40px; /* ✅ Space between filters and content */
 }
 
+
+
 .filter-btn {
-  padding: 10px 20px;
-  border: 2px solid #b4d210;
-  background: transparent;
-  color: #5c5c5b;
-  border-radius: 20px;
-  cursor: pointer;
+  background: linear-gradient(to right, #d2cf10, #b4d210);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 15px 0px 15px 0px;
+  text-decoration: none;
   font-weight: bold;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 0 25px rgba(180, 210, 16, 0.6);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  cursor: pointer;
 }
 
 .filter-btn.active,
 .filter-btn:hover {
-  background-color: #b4d210;
-  color: white;
+  background: none !important;
+  color: #b4d210 !important;
+  border: 2px solid #b4d210;
+  box-shadow: 0 0 20px rgba(180, 210, 16, 0.6);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 }
-
 /*=========== Portfolio Grid Layout ===========*/
 .portfolio-slider {
   display: grid;
@@ -107,21 +116,29 @@
   margin-top: 30px;
 }
 
+
 .load-more-btn {
-  padding: 10px 20px;
-  background-color: #b4d210;
-  border: none;
-  color: white;
-  font-size: 16px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  background: linear-gradient(to right, #d2cf10, #b4d210);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 20px 0px 20px 0px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 0 25px rgba(180, 210, 16, 0.6);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 }
 
 .load-more-btn:hover {
-  background-color: #a2be0d;
+  background: none !important;
+  color: #b4d210 !important;
+  border: 2px solid #b4d210;
+  box-shadow: 0 0 25px rgba(180, 210, 16, 0.6);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 }
-
 /*=========== Mobile Layout ===========*/
 @media (max-width: 768px) {
   .portfolio-slider {

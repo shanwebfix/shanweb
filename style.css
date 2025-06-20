@@ -543,6 +543,97 @@ overflow: visible;
 
 
 
+/* Skills */
+.skills-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+ z-index: 1;
+overflow: hidden;
+}
+
+
+.skills-section::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(150px);
+  z-index: -1;
+}
+
+.skills-section::after {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(180px); /* Blur আরও বাড়ানো হলো */
+  z-index: -1;
+}
+.skills-title {
+  font-size: 36px;
+  color: #b4d210;
+  margin-bottom: 40px;
+}
+
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill-name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+  display: block;
+  color: #333;
+}
+
+.skill-bar {
+  width: 100%;
+  background: #eaeaea;
+  height: 22px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-fill {
+  height: 100%;
+  width: 0;
+  color: white;
+  font-size: 14px;
+  line-height: 22px;
+  padding-left: 10px;
+  background: linear-gradient(90deg, #b4d210, #a2be0d);
+  animation: fillAnimation 2s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.skill-fill::after {
+  content: attr(data-percent);
+}
+
+.skill-fill {
+  width: calc(var(--percentage, 0) * 1%);
+}
+
+@keyframes fillAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(var(--percentage) * 1%);
+  }
+}
+
+
 
 
 
@@ -628,23 +719,30 @@ overflow: hidden;
   border-bottom: 1px solid #777;
 }
 
+
 .plan-button {
-  display: inline-block;
-  background-color: #b4d210;
-  color: #5c5c5b;
-  padding: 10px 20px;
-  border-radius: 30px;
+  background: linear-gradient(to right, #d2cf10, #b4d210);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 15px 0px 15px 0px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 0 25px rgba(180, 210, 16, 0.6);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  cursor: pointer;
 }
 
 .plan-button:hover {
-  background-color: #fff;
-  color: #b4d210;
-  border: 1px solid #b4d210;
+  background: none !important;
+  color: #b4d210 !important;
+  border: 2px solid #b4d210;
+  box-shadow: 0 0 20px rgba(180, 210, 16, 0.6);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 }
-
 .pricing-box:hover {
   background-color: #ffffff;
   color: #5c5c5b;
@@ -657,8 +755,9 @@ overflow: hidden;
   color: #5c5c5b;
 }
 
+
 .pricing-box:hover .plan-features li {
-  color: #333;
+  background-color: #333;
 }
 
 
@@ -841,20 +940,29 @@ overflow: hidden;
   resize: vertical;
 }
 
+
 .contact-form button {
-  background-color: #b4d210;
-  color: #5c5c5b;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 30px;
+  background: linear-gradient(to right, #d2cf10, #b4d210);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 15px 0px 15px 0px;
+  text-decoration: none;
   font-weight: bold;
-  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 0 25px rgba(180, 210, 16, 0.6);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
-  background-color: #a2be0d;
+  background: none !important;
+  color: #b4d210 !important;
+  border: 2px solid #b4d210;
+  box-shadow: 0 0 20px rgba(180, 210, 16, 0.6);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 }
 
 .contact-info {
@@ -871,6 +979,7 @@ overflow: hidden;
 .contact-info p {
   font-size: 16px;
   margin: 10px 0;
+  color: #fff;
 }
 
 .contact-info i {
