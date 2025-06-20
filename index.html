@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsive.css">
   <link rel="stylesheet" href="headerfooter.css">
+  <link rel="stylesheet" href="portfolio.css">
   <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link
@@ -65,7 +66,7 @@
 <!-- ===== Hero Section ===== -->
 <section class="hero-section">
   <!-- Background Video -->
-  <video autoplay muted loop playsinline src="assets/hero-bg.mp4" class="hero-video"></video>
+  <video autoplay muted loop playsinline src="assets/hero-bg3.mp4" class="hero-video"></video>
 
   <!-- Overlay Content -->
   <div class="hero-content">
@@ -130,53 +131,130 @@
 
 
 
-<!-- Portfolio -->
+
+
+
+
   <section class="portfolio-section" id="portfolio">
-  <h2 class="portfolio-title">My Portfolio</h2>
-  <div class="portfolio-grid">
+  <h2 class="portfolio-title">My Work</h2>
 
-    <div class="portfolio-item">
+  <!-- Filter Buttons -->
+  <div class="portfolio-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+    <button class="filter-btn" data-filter="landing">Landing Page</button>
+    <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+    <button class="filter-btn" data-filter="business">Business</button>
+  </div>
+
+  <!-- Filtered Portfolio Items -->
+  <div class="portfolio-slider" id="sliderContent">
+
+    <!-- Portfolio -->
+    <div class="portfolio-item" data-category="portfolio">
       <div class="image-container">
-        <img src="assets/fitness.jpg" alt="Project 1">
+        <img src="assets/fitness.jpg" alt="Portfolio Project 1">
+      </div>
+    </div>
+    <div class="portfolio-item" data-category="portfolio">
+      <div class="image-container">
+        <img src="assets/fitness.jpg" alt="Portfolio Project 2">
+      </div>
+    </div>
+    <div class="portfolio-item" data-category="portfolio">
+      <div class="image-container">
+        <img src="assets/fitness.jpg" alt="Portfolio Project 3">
       </div>
     </div>
 
-    <div class="portfolio-item">
+    <!-- Landing -->
+    <div class="portfolio-item" data-category="landing">
       <div class="image-container">
-        <img src="assets/fitness.jpg" alt="Project 2">
+        <img src="assets/fitness.jpg" alt="Landing Page 1">
+      </div>
+    </div>
+    <div class="portfolio-item" data-category="landing">
+      <div class="image-container">
+        <img src="assets/fitness.jpg" alt="Landing Page 2">
+      </div>
+    </div>
+    <div class="portfolio-item" data-category="landing">
+      <div class="image-container">
+        <img src="assets/fitness.jpg" alt="Landing Page 3">
+      </div>
+    </div>
+    <div class="portfolio-item" data-category="landing">
+      <div class="image-container">
+        <img src="assets/fitness.jpg" alt="Landing Page 4">
       </div>
     </div>
 
-    <div class="portfolio-item">
+    <!-- E-Commerce -->
+    <div class="portfolio-item" data-category="ecommerce">
       <div class="image-container">
-        <img src="assets/fitness.jpg" alt="Project 3">
-
+        <img src="assets/fitness.jpg" alt="E-Commerce Project 1">
+      </div>
+    </div>
+    <div class="portfolio-item" data-category="ecommerce">
+      <div class="image-container">
+        <img src="assets/fitness.jpg" alt="E-Commerce Project 2">
+      </div>
+    </div>
+    <div class="portfolio-item" data-category="ecommerce">
+      <div class="image-container">
+        <img src="assets/fitness.jpg" alt="E-Commerce Project 3">
+      </div>
+    </div>
+    <div class="portfolio-item" data-category="ecommerce">
+      <div class="image-container">
+        <img src="assets/fitness.jpg" alt="E-Commerce Project 4">
+      </div>
+    </div>
+    <div class="portfolio-item" data-category="ecommerce">
+      <div class="image-container">
+        <img src="assets/fitness.jpg" alt="E-Commerce Project 5">
       </div>
     </div>
 
-
-    <div class="portfolio-item">
+    <!-- Business -->
+    <div class="portfolio-item" data-category="business">
       <div class="image-container">
-        <img src="assets/fitness.jpg" alt="Project 4">
+        <img src="assets/fitness.jpg" alt="Business Project 1">
+      </div>
+    </div>
+    <div class="portfolio-item" data-category="business">
+      <div class="image-container">
+        <img src="assets/fitness.jpg" alt="Business Project 2">
+      </div>
+    </div>
+    <div class="portfolio-item" data-category="business">
+      <div class="image-container">
+        <img src="assets/fitness.jpg" alt="Business Project 3">
+      </div>
+    </div>
+    <div class="portfolio-item" data-category="business">
+      <div class="image-container">
+        <img src="assets/fitness.jpg" alt="Business Project 4">
       </div>
     </div>
 
-    <div class="portfolio-item">
-      <div class="image-container">
-        <img src="assets/fitness.jpg" alt="Project 5">
-      </div>
-    </div>
+  </div>
 
-    <div class="portfolio-item">
-      <div class="image-container">
-        <img src="assets/fitness.jpg" alt="Project 6">
-
-      </div>
-    </div>
-
-    <!-- আর ৩টা চাইলে কপি করে নিচে বসাও -->
+  <!-- Load More/Less -->
+  <div class="load-more-container" id="loadMoreContainer" style="display: none;">
+    <button class="load-more-btn" id="loadMoreBtn">Load More</button>
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -438,6 +516,7 @@
 
 
 <script src="script.js"></script>
+<script src="portfolio.js"></script>
 
 </body>
 </html>
