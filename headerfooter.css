@@ -52,13 +52,13 @@
 }
 
 .offcanvas-nav .hire-link {
-  background-color: #b4d210;
+  background: linear-gradient(to right, #d2cf10, #b4d210);
   color: #fffffe;
   text-align: center;
 }
 
 .offcanvas-nav .hire-link:hover {
-  background-color: #a2be0d;
+  background: linear-gradient(to right, #b4d210, #d2cf10);
   color: #fff;
 }
 #menuToggle i {
@@ -188,7 +188,7 @@
 
 /* ==== Hire Me Button ==== */
 .hire-btn a {
-  background: linear-gradient(to right, #d2cf10, #b4d210);
+ background: linear-gradient(to right, #d2cf10, #b4d210);
   color: #fff;
   padding: 10px 25px;
   border-radius: 30px;
@@ -196,14 +196,19 @@
   font-weight: bold;
   transition: all 0.3s ease;
   border: 2px solid transparent;
-  box-sizing: border-box;
+  box-shadow: 0 0 25px rgba(180, 210, 16, 0.6);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 }
 
 
 .hire-btn a:hover {
-  background: #ffffff;
+  background: none !important;
+  color: #b4d210 !important;
   border: 2px solid #b4d210;
-  color: #b4d210;
+  box-shadow: 0 0 25px rgba(180, 210, 16, 0.6);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 }
 
 
@@ -241,7 +246,7 @@
   width: 300px;
   height: 300px;
   background: rgba(180, 210, 16, 0.3);
-  filter: blur(150px);
+  filter: blur(200px);
   z-index: -1;
 }
 
@@ -253,7 +258,7 @@
   width: 300px;
   height: 300px;
   background: rgba(180, 210, 16, 0.3);
-  filter: blur(180px); /* Blur আরও বাড়ানো হলো */
+  filter: blur(200px); /* Blur আরও বাড়ানো হলো */
   z-index: -1;
 }
 
@@ -295,14 +300,33 @@
   margin-bottom: 10px;
 }
 
+
+
 .footer a {
+  position: relative;
   color: #fff;
   text-decoration: none;
   transition: 0.3s;
 }
 
+.footer a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px; /* নিচে কিছু gap */
+  width: 0;
+  height: 2px;
+  background-color: #b4d210;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
 .footer a:hover {
-  color: #b4d210;
+  color: #fdfdfd;
+}
+
+.footer a:hover::after {
+  width: 100%;
 }
 
 .footer-bottom {

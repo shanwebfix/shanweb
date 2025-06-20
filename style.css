@@ -260,7 +260,7 @@ overflow: hidden;
 }
 
 .service-box:hover i {
-  color: #5c5c5b;
+  color: #ffffff;
 }
 
 .service-box h3 {
@@ -269,11 +269,11 @@ overflow: hidden;
 }
 
 .service-box:hover {
-  transform: translateY(-10px);
+  transform: rotateY(10deg) scale(1.05);
   box-shadow: 0 10px 20px rgba(164, 250, 93, 0.15);
 
   background-color: #b4d210;
-  color: #5c5c5b;
+  color: #ffffff;
 }
 
 
@@ -442,11 +442,17 @@ overflow: hidden;
   color: #7c7c7c;
 }
 
+
 .choose-box:hover {
   background-color: #b4d210;
   color: #ffffff;
-  transform: translateY(-10px);
+  transform: rotateY(10deg) scale(1.05);
 }
+
+
+
+
+
 
 .choose-box:hover i {
   color: #ffffff;
@@ -552,7 +558,7 @@ overflow: visible;
   background-color: #b4d210;
   color: #ffffff;
   border-radius: 15px;
-  transform: translateY(-10px);
+  transform: rotateY(10deg) scale(1.05);
 }
 
 .testimonial-box:hover .quote-icon {
