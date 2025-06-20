@@ -216,18 +216,22 @@
 
 /* Footer Design */
 .footer {
-  background-color: #000; 
-  color: #fff;
-  padding: 40px 20px 0px; 
-  font-family: sans-serif;
+  background-color: #000;
+  background-image: url('assets/footerbg.jpg');
+  background-size: cover;              
+  background-repeat: no-repeat;
+  background-position: center center;
 
-  /* Bigger Glow Spread */
-  
+  color: #fff;
+  padding: 40px 20px 0px;
+  font-family: sans-serif;
 
   position: relative;
   z-index: 1;
   overflow: hidden;
+  
 }
+
 
 .footer::before {
   content: "";
