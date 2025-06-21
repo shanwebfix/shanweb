@@ -287,8 +287,30 @@ overflow: hidden;
 
 .section-title {
   font-size: 36px;
-  color: #b4d210;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(90deg, #b4d210, #f1fcdf, #b4d210);
+  background-size: 300% 100%;
+  background-repeat: no-repeat;
+  background-position: 100% center; /* Start from right */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientRightToLeft 6s linear infinite;
   margin-bottom: 40px;
+  display: inline-block;
+}
+
+
+
+
+@keyframes gradientRightToLeft {
+  0% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
 }
 
 .services-container {
@@ -382,8 +404,27 @@ overflow: hidden;
 
 .choose-title {
   font-size: 36px;
-  color: #b4d210;
-  margin-bottom: 50px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(90deg, #b4d210, #f1fcdf, #b4d210);
+  background-size: 300% 100%;
+  background-repeat: no-repeat;
+  background-position: 100% center; /* Start from right */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientRightToLeft 6s linear infinite;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+@keyframes gradientRightToLeft {
+  0% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
 }
 
 .choose-container {
@@ -486,8 +527,27 @@ overflow: visible;
 
 .testimonial-title {
   font-size: 36px;
-  color: #b4d210;
-  margin-bottom: 50px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(90deg, #b4d210, #f1fcdf, #b4d210);
+  background-size: 300% 100%;
+  background-repeat: no-repeat;
+  background-position: 100% center; /* Start from right */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientRightToLeft 6s linear infinite;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+@keyframes gradientRightToLeft {
+  0% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
 }
 
 .testimonial-container {
@@ -599,16 +659,15 @@ overflow: visible;
 
 
 
-/* Skills */
+/* ==== Skills Section ==== */
 .skills-section {
   padding: 60px 20px;
   background-color: #fff;
   text-align: center;
   position: relative;
- z-index: 1;
-overflow: hidden;
+  z-index: 1;
+  overflow: hidden;
 }
-
 
 .skills-section::before {
   content: "";
@@ -630,14 +689,46 @@ overflow: hidden;
   width: 300px;
   height: 300px;
   background: rgba(180, 210, 16, 0.3);
-  filter: blur(180px); /* Blur আরও বাড়ানো হলো */
+  filter: blur(180px);
   z-index: -1;
 }
+
+
+
 .skills-title {
   font-size: 36px;
-  color: #b4d210;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(90deg, #b4d210, #f1fcdf, #b4d210);
+  background-size: 300% 100%;
+  background-repeat: no-repeat;
+  background-position: 100% center; /* Start from right */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientRightToLeft 6s linear infinite;
   margin-bottom: 40px;
+  display: inline-block;
 }
+
+
+
+
+@keyframes gradientRightToLeft {
+  0% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+
+
+
+
+
+
 
 .skill {
   margin-bottom: 25px;
@@ -651,35 +742,80 @@ overflow: hidden;
   color: #333;
 }
 
+/* ==== Skill Bar ==== */
 .skill-bar {
   width: 100%;
   background: #eaeaea;
-  height: 22px;
-  border-radius: 12px;
+  height: 26px; /* Taller height */
+  border-radius: 13px;
   overflow: hidden;
   position: relative;
 }
 
+/* ==== Skill Fill with "Deu Deu" Shine ==== */
 .skill-fill {
   height: 100%;
   width: 0;
-  color: white;
-  font-size: 14px;
-  line-height: 22px;
-  padding-left: 10px;
   background: linear-gradient(90deg, #b4d210, #a2be0d);
-  animation: fillAnimation 2s ease-out forwards;
-  animation-delay: 0.2s;
+  animation: fillAnimation 2s ease-out forwards, shimmer 2s linear infinite;
+  animation-delay: 0.2s, 2s;
+  position: relative;
+  overflow: hidden;
+  border-radius: 13px;
+  padding-right: 0;
 }
+
+.skill-percent {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  color: #b4d210;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+  z-index: 2;
+  font-weight: 700;
+}
+
 
 .skill-fill::after {
   content: attr(data-percent);
+  display: inline-block;
+  background-color: #ffffff;
+  color: #b4d210;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
 }
 
-.skill-fill {
-  width: calc(var(--percentage, 0) * 1%);
+
+.skill-fill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-30deg);
+  filter: blur(4px);
+  animation: shineAnim 2s linear infinite;
 }
 
+/* ==== Animations ==== */
 @keyframes fillAnimation {
   from {
     width: 0;
@@ -688,6 +824,20 @@ overflow: hidden;
     width: calc(var(--percentage) * 1%);
   }
 }
+
+@keyframes shineAnim {
+  0% {
+    left: -50%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
 
 
 
@@ -729,8 +879,27 @@ overflow: hidden;
 
 .pricing-title {
   font-size: 36px;
-  color: #b4d210;
-  margin-bottom: 50px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(90deg, #b4d210, #f1fcdf, #b4d210);
+  background-size: 300% 100%;
+  background-repeat: no-repeat;
+  background-position: 100% center; /* Start from right */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientRightToLeft 6s linear infinite;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+@keyframes gradientRightToLeft {
+  0% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
 }
 
 .pricing-container {
@@ -857,9 +1026,27 @@ overflow: hidden;
 
 .faq-title {
   font-size: 36px;
-  text-align: center;
-  color: #b4d210;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(90deg, #b4d210, #f1fcdf, #b4d210);
+  background-size: 300% 100%;
+  background-repeat: no-repeat;
+  background-position: 100% center; /* Start from right */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientRightToLeft 6s linear infinite;
   margin-bottom: 40px;
+  display: inline-block;
+}
+
+@keyframes gradientRightToLeft {
+  0% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
 }
 
 .faq-container {
@@ -960,8 +1147,27 @@ overflow: hidden;
 
 .contact-title {
   font-size: 36px;
-  color: #b4d210;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(90deg, #b4d210, #f1fcdf, #b4d210);
+  background-size: 300% 100%;
+  background-repeat: no-repeat;
+  background-position: 100% center; /* Start from right */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientRightToLeft 6s linear infinite;
   margin-bottom: 40px;
+  display: inline-block;
+}
+
+@keyframes gradientRightToLeft {
+  0% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
 }
 
 .contact-container {

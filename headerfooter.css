@@ -141,7 +141,7 @@ body.no-scroll {
   top: 0;
   right: 0;
   transform: translateX(100%);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-out, opacity 0.2s ease-out;
   width: 100%;
   max-width: 260px;
   height: 100vh;
@@ -390,6 +390,145 @@ section {
 .social-icons a:hover {
   background-color: #b4d210;
   color: #000;
+}
+
+
+/* Footer Up Arrow*/
+#scrollToTopCircle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 48px;        /* ⬅️ Smaller */
+  height: 48px;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#scrollToTopCircle:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+#scrollToTopCircle i {
+  position: absolute;
+  font-size: 16px;    /* ⬅️ Smaller arrow */
+  color: #b4d210;
+  pointer-events: none;
+}
+
+/* Circle SVG */
+.circular-chart {
+  width: 48px;
+  height: 48px;
+  transform: rotate(-90deg);
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 2;
+}
+
+.circle {
+  fill: none;
+  stroke: #b4d210;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.3s ease;
+}
+
+/* ✅ Responsive: Even smaller on mobile */
+@media (max-width: 480px) {
+  #scrollToTopCircle {
+    width: 38px;
+    height: 38px;
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .circular-chart {
+    width: 38px;
+    height: 38px;
+  }
+
+  #scrollToTopCircle i {
+    font-size: 14px;
+  }
+}
+
+
+
+/* Whatsup*/
+#whatsappButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  z-index: 999;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+}
+
+#whatsappButton:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+#whatsappButton i {
+  position: absolute;
+  font-size: 18px;
+  color: #25D366; /* WhatsApp green */
+  pointer-events: none;
+}
+
+#whatsappButton .circular-chart {
+  width: 48px;
+  height: 48px;
+  transform: rotate(-90deg);
+}
+
+#whatsappButton .circle-bg {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 2;
+}
+
+#whatsappButton .circle {
+  fill: none;
+  stroke: #25D366;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+
+@media (max-width: 480px) {
+  #whatsappButton {
+    width: 38px;
+    height: 38px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  #whatsappButton .circular-chart {
+    width: 38px;
+    height: 38px;
+  }
+
+  #whatsappButton i {
+    font-size: 14px;
+  }
 }
 
 

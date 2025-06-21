@@ -1,68 +1,70 @@
-const filterBtns = document.querySelectorAll('.filter-btn');
-const sliderContent = document.getElementById('sliderContent');
-const allItems = [...sliderContent.children];
-const loadMoreBtn = document.getElementById('loadMoreBtn');
-const loadMoreContainer = document.getElementById('loadMoreContainer');
 
-let isExpanded = false;
-let currentFilter = 'all';
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const sliderContent = document.getElementById('sliderContent');
+  const allItems = [...sliderContent.children];
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const loadMoreContainer = document.getElementById('loadMoreContainer');
 
-function isMobile() {
-  return window.innerWidth <= 768;
-}
+  let currentFilter = 'all';
+  let visibleCount = 3;
+  const increment = 3;
 
-function getInitialItemCount() {
-  return 3; // Mobile & Desktop: 3 items initially
-}
-
-function applyFilter(filter) {
-  currentFilter = filter;
-  isExpanded = false;
-
-  // Filter button active class toggle
-  filterBtns.forEach(btn => btn.classList.remove('active'));
-  const activeBtn = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
-  activeBtn?.classList.add('active');
-
-  renderItems();
-}
-
-function renderItems() {
-  sliderContent.innerHTML = '';
-
-  const itemsToRender = currentFilter === 'all'
-    ? allItems
-    : allItems.filter(item => item.dataset.category === currentFilter);
-
-  const initialCount = getInitialItemCount();
-
-  if (!isExpanded) {
-    itemsToRender.slice(0, initialCount).forEach(item => {
-      sliderContent.appendChild(item.cloneNode(true));
-    });
-    loadMoreBtn.innerText = 'Load More';
-  } else {
-    itemsToRender.forEach(item => {
-      sliderContent.appendChild(item.cloneNode(true));
-    });
-    loadMoreBtn.innerText = 'Load Less';
+  function getFilteredItems() {
+    return currentFilter === 'all'
+      ? allItems
+      : allItems.filter(item => item.dataset.category === currentFilter);
   }
 
-  loadMoreContainer.style.display = itemsToRender.length > initialCount ? 'block' : 'none';
-}
+  function renderItems() {
+    const items = getFilteredItems();
+    sliderContent.innerHTML = '';
 
-loadMoreBtn.addEventListener('click', () => {
-  isExpanded = !isExpanded;
-  renderItems();
-});
+    // Show items up to visibleCount
+    items.slice(0, visibleCount).forEach(item => {
+      sliderContent.appendChild(item.cloneNode(true));
+    });
 
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const filter = btn.dataset.filter;
-    applyFilter(filter);
+    if (visibleCount >= items.length) {
+      loadMoreBtn.innerText = 'Load Less';
+    } else {
+      loadMoreBtn.innerText = 'Load More';
+    }
+
+    loadMoreContainer.style.display = items.length > increment ? 'block' : 'none';
+  }
+
+  function applyFilter(filter) {
+    currentFilter = filter;
+    visibleCount = increment;
+
+    filterBtns.forEach(btn => btn.classList.remove('active'));
+    const activeBtn = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
+    activeBtn?.classList.add('active');
+
+    renderItems();
+  }
+
+  loadMoreBtn.addEventListener('click', () => {
+    const items = getFilteredItems();
+
+    if (visibleCount >= items.length) {
+      // Reset to initial count
+      visibleCount = increment;
+    } else {
+      // Show next 3
+      visibleCount += increment;
+    }
+
+    renderItems();
   });
-});
 
-window.addEventListener('DOMContentLoaded', () => {
-  applyFilter('all');
-});
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      applyFilter(btn.dataset.filter);
+    });
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    applyFilter('all');
+  });
+
