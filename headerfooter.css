@@ -26,8 +26,8 @@
   position: fixed;
   top: 0;
   right: -100%;
-  width: 260px;
-  max-width: 100vw;
+  width: 100%;
+  max-width: 260px;
   height: 100vh;
   background-color: #5c5c5b;
   display: flex;
@@ -35,8 +35,10 @@
   padding: 30px 20px;
   transition: right 0.3s ease;
   z-index: 999;
-  overflow-y: auto; /* in case content overflows */
+  overflow-y: auto;
+  box-sizing: border-box;
 }
+git 
 
 
 .offcanvas-menu.active {
@@ -388,4 +390,11 @@
 .social-icons a:hover {
   background-color: #b4d210;
   color: #000;
+}
+
+
+
+/* At the bottom of your CSS */
+body {
+  overflow-x: hidden;
 }
