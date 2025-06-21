@@ -5,13 +5,13 @@ const closeMenu = document.getElementById('closeMenu');
 // Open menu
 menuToggle.addEventListener('click', () => {
   offcanvasMenu.classList.add('active');
-  document.body.style.overflow = 'hidden'; // scroll disable
+  document.body.classList.add('no-scroll');
 });
 
 // Close menu
 closeMenu.addEventListener('click', () => {
   offcanvasMenu.classList.remove('active');
-  document.body.style.overflow = ''; // scroll restore
+  document.body.classList.remove('no-scroll');
 });
 
 

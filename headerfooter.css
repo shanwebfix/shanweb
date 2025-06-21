@@ -12,16 +12,21 @@
   justify-content: center;
 }
 
+
+@media (max-width: 768px) {
   body {
-  overflow-x: hidden;
+    overflow-x: hidden;
+  }
+  body.no-scroll {
+  overflow: hidden;
+  position: relative;
 }
-/* Offcanvas Menu */
 .offcanvas-menu {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 260px;
-  max-width: 100vw;
+  width: 100%;
+  max-width: 260px;
   height: 100vh;
   background-color: #5c5c5b;
   display: flex;
@@ -29,9 +34,9 @@
   padding: 30px 20px;
   transition: right 0.3s ease;
   z-index: 999;
-  overflow-y: auto; /* in case content overflows */
+  overflow-y: auto;
+  box-sizing: border-box;
 }
-
 
 .offcanvas-menu.active {
   right: 0;
@@ -83,9 +88,8 @@
   color: #b4d210;       
   width: 32px;
   height: 32px;
-  
 }
-
+}
 
 /* Responsive visibility switch */
 
