@@ -1,19 +1,35 @@
-// Select elements
 const menuToggle = document.getElementById('menuToggle');
 const offcanvasMenu = document.getElementById('offcanvasMenu');
 const closeMenu = document.getElementById('closeMenu');
 const header = document.querySelector('.main-header');
 
+let scrollPosition = 0;
+
 // Open offcanvas menu
-menuToggle.addEventListener('click', () => {
+menuToggle.addEventListener('click', (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+
+  // Save current scroll position
+  scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Lock scroll
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollPosition}px`;
+  document.body.style.width = '100%';
+
   offcanvasMenu.classList.add('active');
-  document.body.classList.add('no-scroll');
 });
 
 // Close offcanvas menu
 closeMenu.addEventListener('click', () => {
   offcanvasMenu.classList.remove('active');
-  document.body.classList.remove('no-scroll');
+
+  // Unlock scroll
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+  window.scrollTo(0, scrollPosition);
 });
 
 // Header scroll effect
@@ -24,6 +40,7 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scrolled');
   }
 });
+
 
 
 
