@@ -1,31 +1,29 @@
+// Select elements
 const menuToggle = document.getElementById('menuToggle');
 const offcanvasMenu = document.getElementById('offcanvasMenu');
 const closeMenu = document.getElementById('closeMenu');
+const header = document.querySelector('.main-header');
 
-// Open menu
+// Open offcanvas menu
 menuToggle.addEventListener('click', () => {
   offcanvasMenu.classList.add('active');
   document.body.classList.add('no-scroll');
 });
 
-// Close menu
+// Close offcanvas menu
 closeMenu.addEventListener('click', () => {
   offcanvasMenu.classList.remove('active');
   document.body.classList.remove('no-scroll');
 });
 
-
-
-// header white scroll class js
-  const header = document.querySelector('.main-header');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
+// Header scroll effect
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
 
 
 

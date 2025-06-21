@@ -13,8 +13,9 @@ html, body {
 
 body.no-scroll {
   overflow: hidden;
-  position: relative;
+  height: 100vh;
 }
+
 
 /* ==== Preloader ==== */
 #preloader {
@@ -44,7 +45,7 @@ body.no-scroll {
   padding: 15px 40px;
   flex-wrap: wrap;
 
-  background-color: #ffffff; /* Solid white to prevent overlay */
+  background-color: #ffffff;
   transition: all 0.3s ease;
 
   border-bottom: none;
@@ -53,8 +54,8 @@ body.no-scroll {
 
 .main-header.scrolled {
   background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
