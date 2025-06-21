@@ -44,10 +44,18 @@ body.no-scroll {
   padding: 15px 40px;
   flex-wrap: wrap;
 
-  background: rgba(255, 255, 255, 0.2);
+  background-color: #ffffff; /* Solid white to prevent overlay */
+  transition: all 0.3s ease;
+
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.main-header.scrolled {
+  background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -60,13 +68,13 @@ body.no-scroll {
 
 /* ==== NAV WRAPPER (Glass Effect Box) ==== */
 .nav-wrapper {
-  background: rgba(255, 255, 255, 0.15);   
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);     
+  -webkit-backdrop-filter: blur(25px);
   border-radius: 50px;
   padding: 0px 35px;
   border: 0px solid #b4d210;
-  box-shadow: 0 0 15px rgba(180, 210, 16, 0.6);  
+  box-shadow: 0 0 35px rgba(180, 210, 16, 0.6);
 }
 
 /* ==== Center Navigation ==== */
@@ -130,7 +138,9 @@ body.no-scroll {
 .offcanvas-menu {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
   width: 100%;
   max-width: 260px;
   height: 100vh;
@@ -138,14 +148,14 @@ body.no-scroll {
   display: flex;
   flex-direction: column;
   padding: 30px 20px;
-  transition: right 0.3s ease;
   z-index: 9999;
   overflow-y: auto;
   box-sizing: border-box;
+  will-change: transform;
 }
 
 .offcanvas-menu.active {
-  right: 0;
+  transform: translateX(0);
 }
 
 .close-btn {
@@ -192,8 +202,8 @@ body.no-scroll {
 
 /* ==== Menu Icon ==== */
 #menuToggle i {
-  font-size: 32px;     
-  color: #b4d210;       
+  font-size: 32px;
+  color: #b4d210;
   width: 32px;
   height: 32px;
 }
@@ -221,7 +231,7 @@ body.no-scroll {
 body > main,
 #home,
 section {
-  padding-top: 100px; /* Adjust depending on header height */
+  padding-top: 100px; /* Match header height */
 }
 
 
