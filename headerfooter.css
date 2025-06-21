@@ -1,4 +1,22 @@
-/* ==== Header Base ==== */
+/* ==== General Reset ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* ✨ Prevent horizontal overflow */
+  font-family: sans-serif;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  position: relative;
+}
+
+/* ==== Preloader ==== */
 #preloader {
   position: fixed;
   width: 100%;
@@ -12,16 +30,101 @@
   justify-content: center;
 }
 
-
-@media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-  body.no-scroll {
-  overflow: hidden;
-  position: relative;
-} 
+/* ==== Header Base ==== */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  overflow: visible;
 }
+
+/* ==== Logo ==== */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #b4d210;
+}
+
+/* ==== NAV WRAPPER (Glass Effect Box) ==== */
+.nav-wrapper {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 50px;
+  padding: 0px 35px;
+  border: 0px solid #b4d210;
+  box-shadow: 0 0 15px rgba(180, 210, 16, 0.6);
+}
+
+/* ==== Center Navigation ==== */
+.nav-center {
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+}
+
+.nav-center a {
+  position: relative;
+  padding: 10px 10px;
+  border-radius: 8px;
+  color: #b4d210;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* ==== Hover underline animation ==== */
+.nav-center a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #b4d210;
+  transition: all 0.3s ease;
+}
+
+.nav-center a:hover::after {
+  width: 80%;
+}
+
+/* ==== Hire Me Button ==== */
+.hire-btn a {
+  background: linear-gradient(to right, #d2cf10, #b4d210);
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 0 25px rgba(180, 210, 16, 0.6);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+
+.hire-btn a:hover {
+  background: none !important;
+  color: #b4d210 !important;
+  border: 2px solid #b4d210;
+  box-shadow: 0 0 25px rgba(180, 210, 16, 0.6);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+
+/* ==== Offcanvas Menu ==== */
 .offcanvas-menu {
   position: fixed;
   top: 0;
@@ -34,11 +137,10 @@
   flex-direction: column;
   padding: 30px 20px;
   transition: right 0.3s ease;
-  z-index: 999;
+  z-index: 9999;
   overflow-y: auto;
   box-sizing: border-box;
 }
-
 
 .offcanvas-menu.active {
   right: 0;
@@ -85,27 +187,23 @@
   background: linear-gradient(to right, #b4d210, #d2cf10);
   color: #fff;
 }
+
 #menuToggle i {
-  font-size: 32px;     
-  color: #b4d210;       
+  font-size: 32px;
+  color: #b4d210;
   width: 32px;
   height: 32px;
 }
 
-
-/* Responsive visibility switch */
-
+/* ==== Responsive Visibility ==== */
 @media (max-width: 768px) {
-
   .desktop-only {
     display: none !important;
   }
   .mobile-only {
     display: block !important;
-    
   }
 }
-
 
 @media (min-width: 769px) {
   .desktop-only {
@@ -114,125 +212,6 @@
   .mobile-only {
     display: none !important;
   }
-  
-}
-
-
-.main-header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  flex-wrap: wrap;
-
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 0;
-
-  /* default: no overflow hidden */
-  overflow: visible;
-}
-
-.main-header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-
-}
-
-
-
-
-
-
-/* ==== Logo ==== */
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #b4d210;
-}
-
-/* ==== NAV WRAPPER (Glass Effect Box) ==== */
-.nav-wrapper {
-  background: rgba(255, 255, 255, 0.15);   
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);     
-  border-radius: 50px;
-  padding: 0px 35px;
-
-  /* solid green border */
-  border: 0px solid #b4d210;
-
-  /* subtle green outer glow */
-  box-shadow: 0 0 15px rgba(180, 210, 16, 0.6);  
-}
-
-
-/* ==== Center Navigation ==== */
-.nav-center {
-  display: flex;
-  gap: 20px;
-  font-weight: bold;
-}
-
-.nav-center a {
-  position: relative;
-  padding: 10px 10px;
-  border-radius: 8px;
-  color: #b4d210;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  font-weight: bold;
-}
-
-/* ==== Hover underline animation ==== */
-.nav-center a::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 0;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #b4d210;
-  transition: all 0.3s ease;
-}
-
-.nav-center a:hover::after {
-  width: 80%;
-}
-
-/* ==== Hire Me Button ==== */
-.hire-btn a {
- background: linear-gradient(to right, #d2cf10, #b4d210);
-  color: #fff;
-  padding: 10px 25px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-  box-shadow: 0 0 25px rgba(180, 210, 16, 0.6);
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
-}
-
-
-.hire-btn a:hover {
-  background: none !important;
-  color: #b4d210 !important;
-  border: 2px solid #b4d210;
-  box-shadow: 0 0 25px rgba(180, 210, 16, 0.6);
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
 }
 
 

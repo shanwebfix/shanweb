@@ -21,6 +21,7 @@ closeMenu.addEventListener('click', () => {
 
 
 
+
 const questions = document.querySelectorAll('.faq-question');
 
 questions.forEach((question) => {
