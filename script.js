@@ -1,16 +1,19 @@
- const menuToggle = document.getElementById('menuToggle');
-    const offcanvasMenu = document.getElementById('offcanvasMenu');
-    const closeMenu = document.getElementById('closeMenu');
+const menuToggle = document.getElementById('menuToggle');
+const offcanvasMenu = document.getElementById('offcanvasMenu');
+const closeMenu = document.getElementById('closeMenu');
 
-    // Open menu
-    menuToggle.addEventListener('click', () => {
-      offcanvasMenu.classList.add('active');
-    });
+// Open menu
+menuToggle.addEventListener('click', () => {
+  offcanvasMenu.classList.add('active');
+  document.body.style.overflow = 'hidden'; // scroll disable
+});
 
-    // Close menu
-    closeMenu.addEventListener('click', () => {
-      offcanvasMenu.classList.remove('active');
-    });
+// Close menu
+closeMenu.addEventListener('click', () => {
+  offcanvasMenu.classList.remove('active');
+  document.body.style.overflow = ''; // scroll restore
+});
+
 
 
 
