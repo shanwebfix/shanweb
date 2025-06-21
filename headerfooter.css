@@ -21,13 +21,13 @@
   overflow: hidden;
   position: relative;
 } 
-}
+
 .offcanvas-menu {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 100%;
-  max-width: 260px;
+  width: 260px;
+  max-width: 100vw;
   height: 100vh;
   background-color: #5c5c5b;
   display: flex;
@@ -35,8 +35,8 @@
   padding: 30px 20px;
   transition: right 0.3s ease;
   z-index: 999;
-  overflow-y: auto;
-  box-sizing: border-box;
+  overflow-y: auto; /* in case content overflows */
+}
 }
 
 .offcanvas-menu.active {
