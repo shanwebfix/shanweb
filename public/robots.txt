@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shanweb.vercel.app/sitemap.xml
