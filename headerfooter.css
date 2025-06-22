@@ -61,11 +61,28 @@ body.no-scroll {
 }
 
 /* ==== Logo ==== */
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #b4d210;
+/* Default desktop */
+.logo img {
+  width: 250px;
+  height: auto;
 }
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .logo img {
+    width: 120px;
+    height: auto;
+  
+  }
+}
+
+/* For very small mobile screens */
+@media (max-width: 480px) {
+  .logo img {
+    width: 120px;
+  }
+}
+
 
 /* ==== NAV WRAPPER (Glass Effect Box) ==== */
 .nav-wrapper {
