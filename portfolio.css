@@ -178,6 +178,8 @@
     height: 300px;
   }
 
+}
+
   .filter-btn {
     padding: 4px 8px;
     font-size: 13px;
@@ -196,10 +198,6 @@
   .filter-btn.active::after {
     border-top-color: #5c5c5b;
   }
-
-
-
-
 
 
 .filter-btn {

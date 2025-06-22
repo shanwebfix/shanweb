@@ -42,7 +42,7 @@ body.no-scroll {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 15px 50px;
   flex-wrap: wrap;
 
   background-color: #ffffff;
@@ -270,7 +270,7 @@ section {
   background-position: center center;
 
   color: #fff;
-  padding: 40px 20px 0px;
+  padding: 40px 50px 0px;
   font-family: sans-serif;
 
   position: relative;
@@ -426,7 +426,7 @@ section {
   outline: none;
   background-color: transparent;
   color: #fff;
-  width: 180px;
+  width: 130px;
 }
 
 .subscribe-form button {
@@ -450,9 +450,9 @@ section {
 /* Footer Up Arrow*/
 #scrollToTopCircle {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
-  width: 48px;        /* ⬅️ Smaller */
+  bottom: 35px;
+  left: 50px;
+  width: 48px;  
   height: 48px;
   cursor: pointer;
   z-index: 999;
@@ -503,8 +503,8 @@ section {
   #scrollToTopCircle {
     width: 38px;
     height: 38px;
-    bottom: 15px;
-    left: 15px;
+    bottom: 10px;
+    left: 18px;
   }
 
   .circular-chart {
@@ -522,8 +522,8 @@ section {
 /* Whatsup*/
 #whatsappButton {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 35px;
+  right: 50px;
   width: 48px;
   height: 48px;
   z-index: 999;
@@ -571,8 +571,8 @@ section {
   #whatsappButton {
     width: 38px;
     height: 38px;
-    bottom: 15px;
-    right: 15px;
+    bottom: 10px;
+    right: 18px;
   }
 
   #whatsappButton .circular-chart {
