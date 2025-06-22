@@ -4,12 +4,26 @@
 body {
   overflow-x: hidden !important;
 }
+
+.loader {
+    width: 60px;
+    height: 30px;
+    border-width: 2px 2px 30px 2px;
+  }
+
+  .loader:before,
+  .loader:after {
+    width: 8px;
+    height: 8px;
+    border-width: 12px;
+  }
   .services-container,
   .portfolio-grid,
   .pricing-container,
   .contact-container {
     grid-template-columns: 1fr;
   }
+  
 .main-header {
     overflow: hidden;
   }

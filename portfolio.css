@@ -64,7 +64,7 @@
   margin-bottom: 40px;
 }
 
-.filter-btn {
+.filter-bbtn {
   background: linear-gradient(to right, #d2cf10, #b4d210);
   color: #fff;
   padding: 12px 30px;
@@ -75,8 +75,8 @@
   transition: all 0.3s ease;
 }
 
-.filter-btn.active,
-.filter-btn:hover {
+.filter-bbtn.active,
+.filter-bbtn:hover {
   background: none !important;
   color: #b4d210 !important;
   border: 2px solid #b4d210;
@@ -132,19 +132,38 @@
 }
 
 .load-more-btn {
-  background: linear-gradient(to right, #d2cf10, #b4d210);
-  color: #fff;
-  padding: 12px 30px;
-  border-radius: 20px 0px 20px 0px;
+  position: relative;
+  background-color: #b4d210;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 18px;
   font-weight: bold;
-  border: 2px solid transparent;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.0s ease;
 }
 
+/* Hover effect for button */
 .load-more-btn:hover {
-  background: none !important;
-  color: #b4d210 !important;
-  border: 2px solid #b4d210;
+  background-color: #5c5c5b;
+}
+.load-more-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #b4d210; 
+  transition: border-top-color 0.0s ease;
+}
+
+.load-more-btn:hover::after {
+  border-top-color: #5c5c5b;
 }
 
 /* Responsive */
@@ -160,7 +179,64 @@
   }
 
   .filter-btn {
-    font-size: 14px;
-    padding: 8px 16px;
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 4px;
+    margin-bottom: 6px;
   }
+
+  .filter-btn::after {
+    bottom: -8px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #b4d210;
+  }
+
+  .filter-btn:hover::after,
+  .filter-btn.active::after {
+    border-top-color: #5c5c5b;
+  }
+
+
+
+
+
+
+.filter-btn {
+  position: relative;
+  background-color: #b4d210;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.0s ease;
 }
+
+.filter-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #b4d210;
+  transition: border-top-color 0.0s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #5c5c5b;
+}
+
+.filter-btn:hover::after,
+.filter-btn.active::after {
+  border-top-color: #5c5c5b;
+}
+
+
