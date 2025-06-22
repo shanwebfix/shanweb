@@ -1,40 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://shanweb.vercel.app/#Home</loc>
+    <loc>https://shanweb.vercel.app/</loc>
     <priority>1.00</priority>
     <changefreq>daily</changefreq>
   </url>
-
-  <url>
-    <loc>https://shanweb.vercel.app/#about</loc>
-    <priority>0.80</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://shanweb.vercel.app/#services</loc>
-    <priority>0.80</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://shanweb.vercel.app/#portfolio</loc>
-    <priority>0.80</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://shanweb.vercel.app/#about</loc>
-    <priority>0.80</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://shanweb.vercel.app/#contact</loc>
-    <priority>0.80</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
 </urlset>
