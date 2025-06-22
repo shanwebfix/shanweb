@@ -181,55 +181,45 @@
 }
 
   .filter-btn {
-    padding: 4px 8px;
-    font-size: 13px;
-    border-radius: 4px;
-    margin-bottom: 6px;
-  }
-
-  .filter-btn::after {
-    bottom: -8px;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 8px solid #b4d210;
-  }
-
-  .filter-btn:hover::after,
-  .filter-btn.active::after {
-    border-top-color: #5c5c5b;
-  }
-
-
-.filter-btn {
   position: relative;
   background-color: #b4d210;
   color: white;
   border: none;
-  padding: 12px 28px;
-  font-size: 18px;
+  padding: 10px 24px; /* slightly reduced to match triangle */
+  font-size: 16px;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.0s ease;
+  transition: background-color 0.3s ease;
 }
 
+/* Triangle below button */
 .filter-btn::after {
   content: "";
   position: absolute;
-  bottom: -12px;
+  bottom: -6px; /* closer to button to remove gap */
   left: 50%;
   transform: translateX(-50%);
   width: 0;
   height: 0;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-top: 12px solid #b4d210;
-  transition: border-top-color 0.0s ease;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #b4d210;
+  transition: border-top-color 0.3s ease;
 }
 
+/* Hover and active background */
 .filter-btn:hover,
 .filter-btn.active {
   background-color: #5c5c5b;
 }
+
+/* Triangle color change on hover/active */
+.filter-btn:hover::after,
+.filter-btn.active::after {
+  border-top-color: #5c5c5b;
+}
+
+
 
 
