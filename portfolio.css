@@ -232,9 +232,4 @@
   background-color: #5c5c5b;
 }
 
-.filter-btn:hover::after,
-.filter-btn.active::after {
-  border-top-color: #5c5c5b;
-}
-
 
