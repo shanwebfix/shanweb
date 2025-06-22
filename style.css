@@ -75,15 +75,104 @@ body {
   padding: 20px 0;
 }
 
+h1 {
+  font-family: "Alkatra", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+h2 {
+  font-family: "Bungee", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  }
+
+
+
+h5 {
+  font-family: "Archivo Black", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+}
+
+
+h2bb {
+  font-family: "Rubik Mono One", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  }
+h2 {
+  font-family: "Bungee", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  }
 
 
 
 
 
+  .main-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+overflow: hidden;
+}
 
+.main-section::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(150px);
+  z-index: -1;
+}
 
+.main-section::after {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: rgba(180, 210, 16, 0.3);
+  filter: blur(180px); /* Blur আরও বাড়ানো হলো */
+  z-index: -1;
+}
 
+  .section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(90deg, #b4d210, #777, #b4d210);
+  background-size: 300% 100%;
+  background-repeat: no-repeat;
+  background-position: 100% center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientRightToLeft 6s linear infinite;
+  margin-bottom: 40px;
+  display: inline-block;
+}
 
+@keyframes gradientRightToLeft {
+  0% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
 /* ===== Hero Section Base ===== */
 .hero-section {
   position: relative;
@@ -124,23 +213,44 @@ position: relative;
 }
 
 .hero-left h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+  font-size: 32px;
+  margin-bottom: 5px;
   font-weight: bold;
   color: #ffffff;
 }
+
 
 .hero-left p {
   font-size: 18px;
   margin-bottom: 30px;
   max-width: 500px;
 }
+.typing-loop {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 42px;
+  animation: typing 2.5s steps(12, end) 1s infinite alternate;
+}
+
+/* Gradient Text */
 .gradient-text {
   background: linear-gradient(to right, #d2cf10, #b4d210);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
 }
+
+/* Typing animation keyframes */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 13ch; /* total characters in "SHAN AHMED" including space */
+  }
+}
+
+
 
 
 /* ===== Buttons ===== */
@@ -252,66 +362,6 @@ position: relative;
 
 
 /* Service Design */
-.services-section {
-  padding: 50px 20px;
-  text-align: center;
-  background-color: #fff;
-  position: relative;
-  z-index: 1;
-overflow: hidden;
-}
-
-.services-section::before {
-  content: "";
-  position: absolute;
-  top: -150px;
-  left: -150px;
-  width: 300px;
-  height: 300px;
-  background: rgba(180, 210, 16, 0.3);
-  filter: blur(150px);
-  z-index: -1;
-}
-
-.services-section::after {
-  content: "";
-  position: absolute;
-  bottom: -150px;
-  right: -150px;
-  width: 300px;
-  height: 300px;
-  background: rgba(180, 210, 16, 0.3);
-  filter: blur(180px); /* Blur আরও বাড়ানো হলো */
-  z-index: -1;
-}
-
-.section-title {
-  font-size: 36px;
-  font-weight: bold;
-  color: transparent;
-  background: linear-gradient(90deg, #b4d210, #f1fcdf, #b4d210);
-  background-size: 300% 100%;
-  background-repeat: no-repeat;
-  background-position: 100% center; /* Start from right */
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientRightToLeft 6s linear infinite;
-  margin-bottom: 40px;
-  display: inline-block;
-}
-
-
-
-
-@keyframes gradientRightToLeft {
-  0% {
-    background-position: 100% center;
-  }
-  100% {
-    background-position: 0% center;
-  }
-}
 
 .services-container {
   display: grid;
@@ -367,64 +417,6 @@ overflow: hidden;
 
 
 /* Why Choose Me? */
-
-.choose-section {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #fff;
-  position: relative;
-  z-index: 1;
-overflow: hidden;
-}
-
-.choose-section::before {
-  content: "";
-  position: absolute;
-  top: -150px;
-  left: -150px;
-  width: 300px;
-  height: 300px;
-  background: rgba(180, 210, 16, 0.3);
-  filter: blur(150px);
-  z-index: -1;
-}
-
-.choose-section::after {
-  content: "";
-  position: absolute;
-  bottom: -150px;
-  right: -150px;
-  width: 300px;
-  height: 300px;
-  background: rgba(180, 210, 16, 0.3);
-  filter: blur(180px); /* Blur আরও বাড়ানো হলো */
-  z-index: -1;
-}
-
-.choose-title {
-  font-size: 36px;
-  font-weight: bold;
-  color: transparent;
-  background: linear-gradient(90deg, #b4d210, #f1fcdf, #b4d210);
-  background-size: 300% 100%;
-  background-repeat: no-repeat;
-  background-position: 100% center; /* Start from right */
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientRightToLeft 6s linear infinite;
-  margin-bottom: 40px;
-  display: inline-block;
-}
-
-@keyframes gradientRightToLeft {
-  0% {
-    background-position: 100% center;
-  }
-  100% {
-    background-position: 0% center;
-  }
-}
 
 .choose-container {
   display: grid;
@@ -488,64 +480,6 @@ overflow: hidden;
 
 
 /* Client Testimonial */
-.testimonial-section {
-  padding: 60px 20px;
-  background-color: #fff;
-  text-align: center;
-position: relative;
-  z-index: 9991;
-overflow: hidden;
-}
-
-.testimonial-section::before {
-  content: "";
-  position: absolute;
-  top: -150px;
-  left: -150px;
-  width: 300px;
-  height: 300px;
-  background: rgba(180, 210, 16, 0.3);
-  filter: blur(150px);
-  z-index: -1;
-}
-
-.testimonial-section::after {
-  content: "";
-  position: absolute;
-  bottom: -150px;
-  right: -150px;
-  width: 300px;
-  height: 300px;
-  background: rgba(180, 210, 16, 0.3);
-  filter: blur(180px);
-  z-index: -1;
-  overflow: hidden;
-}
-
-.testimonial-title {
-  font-size: 36px;
-  font-weight: bold;
-  color: transparent;
-  background: linear-gradient(90deg, #b4d210, #f1fcdf, #b4d210);
-  background-size: 300% 100%;
-  background-repeat: no-repeat;
-  background-position: 100% center; /* Start from right */
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientRightToLeft 6s linear infinite;
-  margin-bottom: 40px;
-  display: inline-block;
-}
-
-@keyframes gradientRightToLeft {
-  0% {
-    background-position: 100% center;
-  }
-  100% {
-    background-position: 0% center;
-  }
-}
 
 .testimonial-container {
   display: grid;
@@ -657,75 +591,6 @@ overflow: hidden;
 
 
 /* ==== Skills Section ==== */
-.skills-section {
-  padding: 60px 20px;
-  background-color: #fff;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.skills-section::before {
-  content: "";
-  position: absolute;
-  top: -150px;
-  left: -150px;
-  width: 300px;
-  height: 300px;
-  background: rgba(180, 210, 16, 0.3);
-  filter: blur(150px);
-  z-index: -1;
-}
-
-.skills-section::after {
-  content: "";
-  position: absolute;
-  bottom: -150px;
-  right: -150px;
-  width: 300px;
-  height: 300px;
-  background: rgba(180, 210, 16, 0.3);
-  filter: blur(180px);
-  z-index: -1;
-}
-
-
-
-.skills-title {
-  font-size: 36px;
-  font-weight: bold;
-  color: transparent;
-  background: linear-gradient(90deg, #b4d210, #f1fcdf, #b4d210);
-  background-size: 300% 100%;
-  background-repeat: no-repeat;
-  background-position: 100% center; /* Start from right */
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientRightToLeft 6s linear infinite;
-  margin-bottom: 40px;
-  display: inline-block;
-}
-
-
-
-
-@keyframes gradientRightToLeft {
-  0% {
-    background-position: 100% center;
-  }
-  100% {
-    background-position: 0% center;
-  }
-}
-
-
-
-
-
-
-
 
 .skill {
   margin-bottom: 25px;
@@ -841,63 +706,7 @@ overflow: hidden;
 
 
 /* Pricing Plan */
-.pricing-section {
-  padding: 60px 20px;
-  background-color: #fff;
-  text-align: center;
-  position: relative;
- z-index: 1;
-overflow: hidden;
-}
 
-.pricing-section::before {
-  content: "";
-  position: absolute;
-  top: -150px;
-  left: -150px;
-  width: 300px;
-  height: 300px;
-  background: rgba(180, 210, 16, 0.3);
-  filter: blur(150px);
-  z-index: -1;
-}
-
-.pricing-section::after {
-  content: "";
-  position: absolute;
-  bottom: -150px;
-  right: -150px;
-  width: 300px;
-  height: 300px;
-  background: rgba(180, 210, 16, 0.3);
-  filter: blur(180px); /* Blur আরও বাড়ানো হলো */
-  z-index: -1;
-}
-
-.pricing-title {
-  font-size: 36px;
-  font-weight: bold;
-  color: transparent;
-  background: linear-gradient(90deg, #b4d210, #f1fcdf, #b4d210);
-  background-size: 300% 100%;
-  background-repeat: no-repeat;
-  background-position: 100% center; /* Start from right */
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientRightToLeft 6s linear infinite;
-  margin-bottom: 40px;
-  display: inline-block;
-}
-
-@keyframes gradientRightToLeft {
-  0% {
-    background-position: 100% center;
-  }
-  100% {
-    background-position: 0% center;
-  }
-}
 
 .pricing-container {
   display: grid;
@@ -974,63 +783,9 @@ overflow: hidden;
 
 
 /* FAQ */
-.faq-section {
-  padding: 60px 20px;
-  background-color: #fff;
-  text-align: center;
-  position: relative;
- z-index: 1;
- overflow: hidden;
-}
 
-.faq-section::before {
-  content: "";
-  position: absolute;
-  top: -150px;
-  left: -150px;
-  width: 300px;
-  height: 300px;
-  background: rgba(180, 210, 16, 0.3);
-  filter: blur(150px);
-  z-index: -1;
-}
 
-.faq-section::after {
-  content: "";
-  position: absolute;
-  bottom: -150px;
-  right: -150px;
-  width: 300px;
-  height: 300px;
-  background: rgba(180, 210, 16, 0.3);
-  filter: blur(180px); /* Blur আরও বাড়ানো হলো */
-  z-index: -1;
-}
 
-.faq-title {
-  font-size: 36px;
-  font-weight: bold;
-  color: transparent;
-  background: linear-gradient(90deg, #b4d210, #f1fcdf, #b4d210);
-  background-size: 300% 100%;
-  background-repeat: no-repeat;
-  background-position: 100% center; /* Start from right */
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientRightToLeft 6s linear infinite;
-  margin-bottom: 40px;
-  display: inline-block;
-}
-
-@keyframes gradientRightToLeft {
-  0% {
-    background-position: 100% center;
-  }
-  100% {
-    background-position: 0% center;
-  }
-}
 
 .faq-container {
   display: flex;
@@ -1095,63 +850,6 @@ overflow: hidden;
 
 
 /* Contact Section */
-.contact-section {
-  padding: 60px 20px;
-  background-color: #fff;
-  text-align: center;
-  position: relative;
- z-index: 1;
-overflow: hidden;
-}
-
-.contact-section::before {
-  content: "";
-  position: absolute;
-  top: -150px;
-  left: -150px;
-  width: 300px;
-  height: 300px;
-  background: rgba(180, 210, 16, 0.3);
-  filter: blur(150px);
-  z-index: -1;
-}
-
-.contact-section::after {
-  content: "";
-  position: absolute;
-  bottom: -150px;
-  right: -150px;
-  width: 300px;
-  height: 300px;
-  background: rgba(180, 210, 16, 0.3);
-  filter: blur(180px); 
-  z-index: -1;
-}
-
-.contact-title {
-  font-size: 36px;
-  font-weight: bold;
-  color: transparent;
-  background: linear-gradient(90deg, #b4d210, #f1fcdf, #b4d210);
-  background-size: 300% 100%;
-  background-repeat: no-repeat;
-  background-position: 100% center; 
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientRightToLeft 6s linear infinite;
-  margin-bottom: 40px;
-  display: inline-block;
-}
-
-@keyframes gradientRightToLeft {
-  0% {
-    background-position: 100% center;
-  }
-  100% {
-    background-position: 0% center;
-  }
-}
 
 .contact-container {
   display: grid;
