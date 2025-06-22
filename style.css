@@ -378,16 +378,18 @@ position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   box-shadow: 0 0 15px rgba(180, 210, 16, 0.4);
+  
 }
 
 .service-box i {
   font-size: 40px;
   color: #b4d210;
   margin-bottom: 15px;
+
 }
 
 .service-box:hover i {
-  color: #ffffff;
+  color: #b4d210;
 }
 
 .service-box h3 {
@@ -396,15 +398,11 @@ position: relative;
 }
 
 .service-box:hover {
-  transform: rotateY(10deg) scale(1.05);
-  box-shadow: 0 10px 20px rgba(164, 250, 93, 0.15);
 
-  background-color: #b4d210;
-  color: #ffffff;
+  box-shadow: 0 0 25px rgba(209, 235, 64, 0.842);
+  color: #b4d210;
+  background-color: #fff;
 }
-
-
-
 
 
 
@@ -426,15 +424,14 @@ position: relative;
 }
 
 .choose-box {
-  background-color: #fffffa;
+  background-color: #ffffff;
   color: #b4d210;
-  
-  padding: 30px 25px;
+  padding: 30px 20px;
   border-radius: 15px;
-
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
   box-shadow: 0 0 15px rgba(180, 210, 16, 0.4);
+  
 }
 
 
@@ -444,7 +441,9 @@ position: relative;
   margin-bottom: 20px;
   transition: color 0.3s ease;
 }
-
+.choose-box:hover i {
+  color: #b4d210;
+}
 .choose-box h3 {
   font-size: 20px;
   margin-bottom: 15px;
@@ -457,28 +456,24 @@ position: relative;
 
 
 .choose-box:hover {
-  background-color: #b4d210;
-  color: #ffffff;
-  transform: rotateY(10deg) scale(1.05);
+
+  box-shadow: 0 0 25px rgba(209, 235, 64, 0.842);
+  color: #b4d210;
+  background-color: #fff;
 }
 
 
-
-
-
-
-.choose-box:hover i {
-  color: #ffffff;
-}
 
 .choose-box:hover p {
-  color: #dfdfdf;
+  color: #7c7c7c;
 }
 
 
 
 
 /* Client Testimonial */
+
+/* === Testimonial Section === */
 
 .testimonial-container {
   display: grid;
@@ -487,17 +482,20 @@ position: relative;
   max-width: 1000px;
   margin: 0 auto;
   overflow: hidden;
-  overflow: visible;
 }
 
 .testimonial-box {
-  background-color: #ffffff;
-  color: #b4d210;
-  padding: 30px 25px;
-  border-radius: 15px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  position: relative;
-  box-shadow: 0 0 15px rgba(180, 210, 16, 0.4);
+  position: relative !important; 
+  background-color: #5c5c5b !important;
+  color: #b4d210 !important;
+  padding: 30px 20px !important;
+  border-radius: 15px !important;
+  text-align: center !important;
+  box-shadow: 0 0 15px rgba(180, 210, 16, 0.4) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  overflow: hidden !important;
+  height: 300px;
+
 }
 
 .quote-icon {
@@ -511,7 +509,7 @@ position: relative;
 .testimonial-text {
   font-size: 15px;
   margin-top: 40px;
-  color: #757474;
+  color: #fff;
   margin-bottom: 20px;
 }
 
@@ -526,68 +524,43 @@ position: relative;
   color: #ccc;
 }
 
-.testimonial-box:hover {
-  background-color: #b4d210;
-  color: #ffffff;
-  border-radius: 15px;
-  transform: rotateY(10deg) scale(1.05);
-}
-
-.testimonial-box:hover .quote-icon {
-  color: #ffffff;
-}
-
-.testimonial-box:hover .testimonial-text {
-  color: #ffffff;
-}
-
-.testimonial-box:hover .client-role {
-  color: #d3d3d3;
-}
-
-
-
 /* slider */
 .testimonial-swiper {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-    overflow: hidden;
-  }
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-  }
- .swiper-pagination-bullet {
-  background-color: #494949 !important;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ffffff !important;
   opacity: 0.7;
   margin-top: 5px;
-  overflow: hidden;
 }
 
 .swiper-pagination-bullet-active {
   margin-top: 5px;
   background-color: #b4d210 !important;
   opacity: 1;
-  overflow: hidden;
 }
+
 .testimonial-section:hover .swiper-pagination-bullet {
   background-color: #ffffff !important;
   opacity: 0.7;
   margin-top: 5px;
-  overflow: hidden;
 }
 
 .testimonial-section:hover .swiper-pagination-bullet-active {
-  background-color: #0a0a07 !important;
+  background-color: #ffffff !important;
   opacity: 1;
   margin-top: 5px;
-  overflow: hidden;
 }
-
-
-
 
 /* ==== Skills Section ==== */
 
@@ -607,11 +580,12 @@ position: relative;
 .skill-bar {
   width: 100%;
   background: #eaeaea;
-  height: 26px; /* Taller height */
+  height: 26px;
   border-radius: 13px;
   overflow: hidden;
   position: relative;
 }
+
 
 /* ==== Skill Fill with "Deu Deu" Shine ==== */
 .skill-fill {
@@ -718,11 +692,17 @@ position: relative;
 .pricing-box {
   background-color: #5c5c5b;
   color: #b4d210;
-  padding: 30px 25px;
+  padding: 30px 25px !important;
   border-radius: 15px;
   transition: transform 0.3s ease, background-color 0.3s ease;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+
 
 .plan-name {
   font-size: 22px;

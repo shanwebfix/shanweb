@@ -126,6 +126,18 @@
   user-select: none;
 }
 
+@media (max-width: 768px) {
+  .portfolio-slider {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 10px;
+  }
+
+  .portfolio-item {
+    height: 300px;
+  }
+}
+
 .load-more-container {
   text-align: center;
   margin: 30px 0 40px;
@@ -166,49 +178,56 @@
   border-top-color: #5c5c5b;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  .portfolio-slider {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    padding: 0 10px;
+  .load-more-btn {
+    padding: 6px 16px;
+    font-size: 14px;
+    border-radius: 5px;
   }
 
-  .portfolio-item {
-    height: 300px;
+  .load-more-btn::after {
+    bottom: -5px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #b4d210;
   }
 
+  .load-more-btn:hover::after {
+    border-top-color: #5c5c5b;
+  }
 }
 
-  .filter-btn {
+
+ .filter-btn {
   position: relative;
   background-color: #b4d210;
   color: white;
   border: none;
-  padding: 10px 24px; /* slightly reduced to match triangle */
-  font-size: 16px;
+  padding: 12px 28px;
+  font-size: 18px;
   font-weight: bold;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-bottom: 6px;
 }
 
-/* Triangle below button */
+/* Triangle below the button */
 .filter-btn::after {
   content: "";
   position: absolute;
-  bottom: -6px; /* closer to button to remove gap */
+  bottom: -12px;
   left: 50%;
   transform: translateX(-50%);
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #b4d210;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #b4d210;
   transition: border-top-color 0.3s ease;
 }
 
-/* Hover and active background */
+/* Hover and Active background */
 .filter-btn:hover,
 .filter-btn.active {
   background-color: #5c5c5b;
@@ -219,6 +238,27 @@
 .filter-btn.active::after {
   border-top-color: #5c5c5b;
 }
+@media (max-width: 768px) {
+  .filter-btn {
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+  }
+
+  .filter-btn::after {
+    bottom: -8px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #b4d210;
+  }
+
+  .filter-btn:hover::after,
+  .filter-btn.active::after {
+    border-top-color: #5c5c5b;
+  }
+}
+
 
 
 
