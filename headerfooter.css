@@ -61,7 +61,7 @@ body.no-scroll {
 }
 
 /* ==== Logo ==== */
-/* Default desktop */
+
 .logo img {
   width: 250px;
   height: auto;
@@ -308,6 +308,7 @@ section {
   background: transparent;
   color: #fff;
   padding-right: 15px;
+  margin-right: 30px;
   font-family: sans-serif;
 }
 
@@ -355,7 +356,7 @@ section {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -4px; /* নিচে কিছু gap */
+  bottom: -4px;
   width: 0;
   height: 2px;
   background-color: #b4d210;
@@ -410,6 +411,42 @@ section {
 }
 
 
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: 1px solid #b4d210;
+  border-right: none;
+  border-radius: 15px 0 0 15px;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  width: 180px;
+}
+
+.subscribe-form button {
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #b4d210;
+  color: white;
+  border: 1px solid #b4d210;
+  border-radius: 0 15px 15px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background-color: #94ab0f;
+}
+
+
+
+
 /* Footer Up Arrow*/
 #scrollToTopCircle {
   position: fixed;
@@ -435,7 +472,7 @@ section {
 
 #scrollToTopCircle i {
   position: absolute;
-  font-size: 16px;    /* ⬅️ Smaller arrow */
+  font-size: 16px;   
   color: #b4d210;
   pointer-events: none;
 }

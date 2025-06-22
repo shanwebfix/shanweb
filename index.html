@@ -10,13 +10,12 @@
 
 
   <!-- Standard favicon -->
-<link rel="icon" type="image/png" sizes="32x32" href="assets/fav.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/fav-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/fav-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/fav-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/fav-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/fav-512.png">
 
-<!-- Optional but recommended -->
-<link rel="icon" type="image/png" sizes="16x16" href="assets/fav.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/fav.png">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/fav.png">
-<link rel="icon" type="image/png" sizes="512x512" href="assets/fav.png">
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsive.css">
@@ -418,12 +417,13 @@
   <h2 class="contact-title">Contact Me</h2>
   <div class="contact-container">
 
-    <form class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <form class="contact-form" action="https://script.google.com/macros/s/AKfycbw2H0Os9wjg7Zkh3PIiADzIjW3Kevx3jTm3aPNShSZtozVGUYOZc2q8FYSERntYFI-TVQ/exec" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
 
     <div class="contact-info">
       <h3>Get In Touch</h3>
@@ -442,9 +442,17 @@
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-about" id="about">
-      <h3>About Us</h3>
-      <p>We provide modern web design & development services to 
-        grow your online presence.</p>
+      <div class="logo"><img src="assets/logo2.png" alt="SHANWEB"></div>
+      <p style="margin-top: 10px;">
+  We provide modern web design & development services to 
+  grow your online presence.
+</p>
+        <div class="social-icons">
+        <a href="https://facebook.com/shanbd24" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/shanwebdesigner" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/8801627818285" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/shanbd97" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+      </div>
     </div>
     <div class="footer-links">
       <h3>Quick Links</h3>
@@ -471,18 +479,21 @@
       <p>Email: shanwebfix@gmail.com</p>
       <p>Phone: +8801627-818285</p>
 
-      <div class="social-icons">
-        <a href="https://facebook.com/shanbd24" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com/shanwebdesigner" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/8801627818285" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://t.me/shanbd97" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-      </div>
+<form class="subscribe-form" action="https://script.google.com/macros/s/AKfycbyMhwyr9ulCc_YqJGf_s_tog6V_NnZh33a2tdo_jYJFEfmTR41YfAxho0P0koyULyLm/exec" method="POST">
+  <input type="email" name="email" placeholder="Enter your email" required>
+  <button type="submit">Subscribe</button>
+</form>
+
+
+
+      
     </div>
 
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2025 ShanWeb. All rights reserved.</p>
+    <p>&copy; 2025 <span style="font-weight: bold; color: #fff;">ShanWeb</span>. All rights reserved.</p>
+
   </div>
 </footer>
 
