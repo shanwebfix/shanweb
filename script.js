@@ -223,6 +223,20 @@ document.querySelectorAll('img').forEach(function(img) {
 
 
 
+//dev off
+  setInterval(() => {
+    const before = new Date().getTime();
+    debugger;
+    const after = new Date().getTime();
+    if (after - before > 100) {
+      window.location.href = "about:blank";
+    }
+  }, 1000);
+
+
+
+
+
 
 
 
