@@ -178,6 +178,9 @@ scrollBtn.addEventListener('click', () => {
   });
 });
 
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
 
   document.addEventListener("contextmenu", (e) => e.preventDefault());
 
@@ -191,3 +194,62 @@ scrollBtn.addEventListener('click', () => {
       e.preventDefault();
     }
   });
+
+
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// Disable text selection
+document.addEventListener('selectstart', function(e) {
+  e.preventDefault();
+});
+
+// Disable drag (for images & content)
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+
+// Optional: Prevent saving images via right-click or dragging
+document.querySelectorAll('img').forEach(function(img) {
+  img.setAttribute('draggable', 'false');
+  img.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+});
+
+
+
+
+
+
+
+
+
+ 
+  // Open popup
+  document.querySelectorAll('.popup-trigger').forEach(trigger => {
+    trigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      const popupId = this.dataset.popup;
+      document.getElementById(popupId).style.display = 'flex';
+    });
+  });
+
+  // Close popup
+  document.querySelectorAll('.close-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      this.closest('.custom-popup').style.display = 'none';
+    });
+  });
+
+  // Optional: Click outside to close
+  window.addEventListener('click', function(e) {
+    document.querySelectorAll('.custom-popup').forEach(popup => {
+      if (e.target === popup) {
+        popup.style.display = 'none';
+      }
+    });
+  });
+
+

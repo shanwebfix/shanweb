@@ -64,7 +64,7 @@
     </nav>
   </div>
   <div class="hire-btn desktop-only">
-    <a href="#">Hire Me</a>
+    <a href="#hireme">Hire Me</a>
   </div>
 
  <div class="menu-toggle mobile-only" id="menuToggle">
@@ -84,7 +84,7 @@
       <a href="#service">Service</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <a href="#hireme" class="hire-link">Hire Me</a>
+      <a href="#hireme">Hire Me</a>
     </nav>
   </div>
 </header>
@@ -94,7 +94,7 @@
 
 
 <!-- ===== Hero Section ===== -->
-<section class="hero-section">
+<section class="hero-section" id="home">
   <!-- Background Video -->
   <video autoplay muted loop playsinline src="assets/hero-bg3.mp4" class="hero-video"></video>
 
@@ -105,8 +105,8 @@
 
       <p>I’m a passionate web developer who builds responsive and interactive websites.</p>
       <div class="hero-buttons">
-        <a href="#" class="btn-primary">View Portfolio</a>
-        <a href="#" class="btn-outline">Contact Me</a>
+        <a href="#portfolio" class="btn-primary">View Portfolio</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
       </div>
     </div>
     <div class="hero-right">
@@ -341,7 +341,7 @@
         <li>Responsive Layout</li>
         <li>5 Days Delivery</li>
       </ul>
-      <a href="#" class="plan-button">Get Started</a>
+      <a href="#contact" class="plan-button">Get Started</a>
     </div>
 
     <div class="pricing-box">
@@ -353,7 +353,7 @@
         <li>Mobile Friendly</li>
         <li>SEO Optimized</li>
       </ul>
-      <a href="#" class="plan-button">Choose Plan</a>
+      <a href="#contact" class="plan-button">Choose Plan</a>
     </div>
 
     <div class="pricing-box">
@@ -365,7 +365,7 @@
         <li>Full SEO Setup</li>
         <li>Priority Support</li>
       </ul>
-      <a href="#" class="plan-button">Start Now</a>
+      <a href="#contact" class="plan-button">Start Now</a>
     </div>
 
   </div>
@@ -398,6 +398,16 @@
       </button>
       <div class="faq-answer">
         <p>Yes! All websites I build are fully mobile responsive and look great on all devices.</p>
+      </div>
+    </div>
+
+<div class="faq-item">
+      <button class="faq-question">
+        Why I Use WordPress
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="faq-answer">
+        <p>WordPress powers over 40% of the web — and for good reason. It’s flexible, user-friendly, and scalable. I help businesses use WordPress to grow fast, with full control and minimal code.</p>
       </div>
     </div>
 
@@ -441,7 +451,7 @@
 </form>
 
 
-    <div class="contact-info">
+    <div class="contact-info" id="hireme">
       <h3>Get In Touch</h3>
       <p><i class="fas fa-phone"></i> +8801627-818285</p>
       <p><i class="fas fa-envelope"></i> shanwebfix@gmail.com</p>
@@ -481,13 +491,48 @@
     </div>
 
     <div class="footer-nav-links">
-      <h3>Navigation</h3>
+      <h3>Popup Link</h3>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+       
+  <li><a href="#" class="popup-trigger" data-popup="popup1">Let's Talk</a></li>
+  <li><a href="#" class="popup-trigger" data-popup="popup2">My Workflow</a></li>
+  <li><a href="#" class="popup-trigger" data-popup="popup3">Learning Journal</a></li>
+  <li><a href="#" class="popup-trigger" data-popup="popup4">Design Values</a></li>
+</ul>
+
+<!-- Popup 1 -->
+<div class="custom-popup" id="popup1">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <p>Whether you have a project in mind or just want to say hi — feel free to reach out!</p>
+  </div>
+</div>
+
+<!-- Popup 2 -->
+<div class="custom-popup" id="popup2">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <p>I follow a smooth workflow from concept to launch, ensuring quality every step of the way.</p>
+  </div>
+</div>
+
+<!-- Popup 3 -->
+<div class="custom-popup" id="popup3">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <p>I believe in constant growth. Recently I’ve been exploring topics like headless WordPress, advanced JS patterns, and performance tuning. Learning never stops — and I love the journey.</p>
+  </div>
+</div>
+
+<!-- Popup 4 -->
+<div class="custom-popup" id="popup4">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <p>I believe in clean, user-first designs. Every project I create focuses on clarity, accessibility, and delight — because design is more than just visuals; it's how it works.</p>
+  </div>
+</div>
+
+</ul>
     </div>
 
     <div class="footer-contact">
