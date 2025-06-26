@@ -25,9 +25,15 @@
 
 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="shaders/shaders.css">
+  <link rel="stylesheet" href="hero/hero.css">
   <link rel="stylesheet" href="responsive.css">
   <link rel="stylesheet" href="headerfooter.css">
   <link rel="stylesheet" href="portfolio.css">
+
+
+  <script src="https://unpkg.com/three@0.155.0/build/three.min.js"></script>
+
   <!-- Font Awesome CDN -->
   <!-- Preconnect only once -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,6 +48,8 @@
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js"></script>
+
 
 </head>
 <body>
@@ -93,27 +101,44 @@
 
 
 
+
+
+
+
+
+
 <!-- ===== Hero Section ===== -->
 <section class="hero-section" id="home">
-  <!-- Background Video -->
-  <video autoplay muted loop playsinline src="assets/hero-bg3.mp4" class="hero-video"></video>
-
-  <!-- Overlay Content -->
-  <div class="hero-content">
-    <div class="hero-left">
-      <h1>Hi, I'm </h1><h5 class="typing-loop gradient-text">SHAN AHMED</h5>
-
-      <p>I’m a passionate web developer who builds responsive and interactive websites.</p>
-      <div class="hero-buttons">
-        <a href="#portfolio" class="btn-primary">View Portfolio</a>
-        <a href="#contact" class="btn-outline">Contact Me</a>
-      </div>
-    </div>
-    <div class="hero-right">
-      <img src="assets/hero-img.png" alt="Hero Image">
-    </div>
-  </div>
-</section>
+        <div class="context">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h1>Hi, I'm </h1><h5 class="typing-loop gradient-text">SHAN AHMED</h5>
+                    <p>I'm a passionate web developer who builds responsive and interactive websites.</p>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn-primary">View Portfolio</a>
+                        <a href="#contact" class="btn-outline">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <img src="assets/hero-img.png" alt="Hero Image">
+                </div>
+            </div>
+        </div>
+        <div class="circles-background">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
 
 
 
@@ -155,6 +180,7 @@
 
     </div>
   </section>
+ 
 
 
 
@@ -589,7 +615,8 @@
   </svg>
   <i class="fab fa-whatsapp"></i>
 </a>
-
+<script src="shaders/shaders.js" type="module"></script>
+<script src="shaders1/shaders1.js" type="module"></script>
 <script src="script.js"></script>
 <script src="portfolio.js"></script>
 <script src="loader.js"></script>

@@ -53,6 +53,13 @@ window.addEventListener('scroll', () => {
 
 
 
+
+
+
+
+
+
+
 const questions = document.querySelectorAll('.faq-question');
 
 questions.forEach((question) => {
