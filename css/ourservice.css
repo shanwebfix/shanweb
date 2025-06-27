@@ -17,7 +17,7 @@
 }
 
 .service-box:hover i {
-  color: #b4d210;
+  color: #7c7c7c;
 }
 
 .service-box h3 {
@@ -26,7 +26,7 @@
   color: #fff;
 }
 .service-box:hover h3 {
-  color: #b4d210;
+  color: #7c7c7c;
 }
 
 .service-box h4 {
@@ -138,7 +138,7 @@ display: flex;
 
 .s-left {
   border-radius: 15px 0px 0px 0px;
-  background-color: #7c7c7c;
+  background-color: #b4d210;
   width: 30%;
 
 }
