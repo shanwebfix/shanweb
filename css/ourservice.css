@@ -1,8 +1,7 @@
-/* Service Design */
 
-.platform-container {
+.service-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 3 columns fixed */
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
@@ -10,29 +9,42 @@
 
 
 
-.platform-box i {
+.service-box i {
   font-size: 40px;
-  color: #b4d210;
+  color: #fff;
   margin-bottom: 15px;
 
 }
 
-.platform-box:hover i {
+.service-box:hover i {
   color: #b4d210;
 }
 
-.platform-box h3 {
+.service-box h3 {
   margin: 0;
-  font-size: 20px;
+  font-size: 24px;
+  color: #fff;
+}
+.service-box:hover h3 {
+  color: #b4d210;
 }
 
-.platform-box p {
+.service-box h4 {
+  margin: 0;
+  font-size: 20px;
+  color: #b4d210;
+}
+
+.service-box:hover h4 {
   color: #7c7c7c;
 }
 
+.service-box p {
+  color: #7c7c7c;
+}
 
-.platform-box {
-  padding: 30px 20px;
+.service-box {
+  padding: 10px 10px;
   color: #b4d210;
   border-radius: 15px;
   background-color: #ffffff;
@@ -40,9 +52,12 @@
   transition: all 0.0s ease;
   border: 1px solid #e0e0e0 ; /* Initial transparent border */
   border-style: ridge;
+  justify-content: left;
+align-items: start;
+display: flex;
 }
 
-.platform-box:hover {
+.service-box:hover {
  
   color: #b4d210;
   background-color: #fff;
@@ -51,7 +66,7 @@
 }
 
 /* Create the animated border effect */
-.platform-box::after {
+.service-box::after {
   content: '';
   position: absolute;
   top: -3px;
@@ -63,7 +78,7 @@
   border-radius: 15px;
 }
 
-.platform-box:hover::after {
+.service-box:hover::after {
   animation: drawBorder 1.3s linear forwards;
 }
 
@@ -107,28 +122,106 @@
 
 
 
+.s-left,
+.s-right {
+  padding: 20px;
+  color: #b4d210;
+  font-size: 18px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+
+.s-left {
+  border-radius: 15px 0px 0px 0px;
+  background-color: #7c7c7c;
+  width: 30%;
+
+}
+
+.s-right {
+  border-radius: 0px 0px 15px 0px;
+  background-color: #fff;
+  width: 70%;
+  background-color: #f1fcfa;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 👈 Items left aligned */
+  justify-content: flex-start;
+  text-align: left;        /* 👈 Text left aligned */
+  gap: 10px;               /* Optional: spacing between items */
+}
+
+
+
+
+
+
+
 @media (max-width: 768px) {
-  .platform-container {
-    grid-template-columns: 1fr; /* এক কলাম */
+  .service-container {
+    grid-template-columns: 1fr; 
   }
 
-  .p-left,
-  .p-right {
-    width: 100%; /* মোবাইলে পুরো জায়গা নিবে */
-    border-radius: 15px 15px 0 0; /* চাইলেই border radius adjust করো */
+  .s-left,
+  .s-right {
+    width: 100%;
+    border-radius: 15px 15px 0 0; 
   }
 
-  .p-right {
-    border-radius: 0 0 15px 15px; /* নিচের দিকের গোল অংশ */
+  .s-left {
+    background-color: #f1fcfa;
+    border-radius: 15px 0px 0px 0px;
   }
-
-  .platform-box {
+  .s-right {
+    background-color: #fcfcfc;
+    border-radius: 0px 0px 15px 0px; 
+  }
+  .service-box {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .platform-box i {
+  .service-box i {
     margin-bottom: 10px;
   }
+  .service-box i {
+  color: #7c7c7c;
+  margin-bottom: 10px;
+
 }
+
+.service-box:hover i {
+  color: #b4d210;
+}
+
+.service-box h3 {
+  margin: 0;
+  font-size: 24px;
+  color: #7c7c7c;
+}
+.service-box:hover h3 {
+  color: #b4d210;
+}
+
+.service-box h4 {
+  margin: 0;
+  font-size: 20px;
+  color: #b4d210;
+}
+.service-box:hover h4 {
+  margin: 0;
+  font-size: 20px;
+  color: #7c7c7c;
+}
+}
+
+
+
+
