@@ -152,6 +152,9 @@ overflow: hidden;
   font-size: 20px;
 }
 
+.service-box p {
+  color: #7c7c7c;
+}
 
 .service-box {
   padding: 30px 20px;
