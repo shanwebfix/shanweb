@@ -229,3 +229,26 @@
     font-size: 3rem;
   }
 }
+
+
+
+
+
+
+
+/* hero anim*/
+ .hero-anim-img {
+    animation: floatImage 6s ease-in-out infinite;
+  }
+
+  @keyframes floatImage {
+    0% {
+      transform: translateY(0px) scale(1);
+    }
+    50% {
+      transform: translateY(-10px) scale(1.10);
+    }
+    100% {
+      transform: translateY(0px) scale(1);
+    }
+  }
