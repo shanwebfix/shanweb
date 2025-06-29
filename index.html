@@ -24,44 +24,94 @@
 <link rel="icon" type="image/png" sizes="512x512" href="assets/fav-512.png">
 
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/shaders.css">
-  <link rel="stylesheet" href="css/hero.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/headerfooter.css">
-  <link rel="stylesheet" href="css/portfolio.css">
-  <link rel="stylesheet" href="css/webplatform.css">
-  <link rel="stylesheet" href="css/ourservice.css">
 
+  <!-- CSS preload -->
+<link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="css/style.css"></noscript>
 
-  <script src="https://unpkg.com/three@0.155.0/build/three.min.js"></script>
+<link rel="preload" href="css/css/shaders.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="css/shaders.css"></noscript>
 
-  <!-- Font Awesome CDN -->
-  <!-- Preconnect only once -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="css/hero.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="css/hero.css"></noscript>
 
-<!-- Multiple fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Archivo+Black&family=Bungee&family=Prosto+One&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js"></script>
+<link rel="preload" href="css/responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="css/responsive.css"></noscript>
 
+<link rel="preload" href="css/headerfooter.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="css/headerfooter.css"></noscript>
+
+<link rel="preload" href="css/portfolio.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="css/portfolio.css"></noscript>
+
+<link rel="preload" href="css/webplatform.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="css/webplatform.css"></noscript>
+
+<link rel="preload" href="css/ourservice.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="css/ourservice.css"></noscript>
+
+<head>
+  <!-- Fonts preconnect (একবারই দিবে) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts preload and stylesheet -->
+  <link
+    rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  >
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  </noscript>
+
+  <!-- Multiple fonts stylesheet (not preload due to multiple) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Archivo+Black&family=Bungee&family=Prosto+One&family=Rubik+Mono+One&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome CSS preload -->
+  <link
+    rel="preload"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  >
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </noscript>
+
+  <!-- Swiper CSS preload -->
+  <link
+    rel="preload"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  >
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </noscript>
+
+  <!-- Latest three.js -->
+  <script src="https://unpkg.com/three@0.155.0/build/three.min.js" defer></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
 </head>
 <body>
+
+  <script src="https://unpkg.com/three@0.155.0/build/three.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
 <!-- Preloader -->
 <div id="preloader">
   <div class="loader"></div>
 </div>
 
  <header class="main-header">
-  <div class="logo"><img src="assets/logo2.png" alt="SHANWEB"></div>
+  <div class="logo"><img src="assets/logo.webp" alt="SHANWEB"></div>
 
   <!-- Desktop menu -->
   <div class="nav-wrapper desktop-only">
@@ -122,7 +172,7 @@
                     </div>
                 </div>
                 <div class="hero-right">
-                    <img src="assets/hero-img.png" loading="lazy" alt="Hero Image" class="hero-anim-img">
+                    <img src="assets/hero-img1.webp" alt="Hero Image" class="hero-anim-img">
                 </div>
             </div>
         </div>
@@ -773,11 +823,11 @@ With a focus on WordPress and support for other platforms like Wix, Webflow, and
   </svg>
   <i class="fab fa-whatsapp"></i>
 </a>
-<script src="shaders/shaders.js" type="module"></script>
-<script src="shaders1/shaders1.js" type="module"></script>
-<script src="script.js"></script>
-<script src="portfolio.js"></script>
-<script src="loader.js"></script>
+<script src="shaders/shaders.js" type="module" defer></script>
+<script src="shaders1/shaders1.js" type="module" defer></script>
+<script src="script.js" defer></script>
+<script src="portfolio.js" defer></script>
+<script src="loader.js" defer></script>
 
 
 </body>
