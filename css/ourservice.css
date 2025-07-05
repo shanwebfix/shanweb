@@ -17,7 +17,7 @@
 }
 
 .service-box:hover i {
-  color: #7c7c7c;
+  color: #fff;
 }
 
 .service-box h3 {
@@ -26,13 +26,13 @@
   color: #fff;
 }
 .service-box:hover h3 {
-  color: #7c7c7c;
+  color: #fff;
 }
 
 .service-box h4 {
   margin: 0;
   font-size: 20px;
-  color: #b4d210;
+  color: #7209b7;
 }
 
 .service-box:hover h4 {
@@ -45,7 +45,7 @@
 
 .service-box {
   padding: 10px 10px;
-  color: #b4d210;
+  color: #7209b7;
   border-radius: 15px;
   background-color: #ffffff;
   position: relative;
@@ -59,7 +59,7 @@ display: flex;
 
 .service-box:hover {
  
-  color: #b4d210;
+  color: #7209b7;
   background-color: #fff;
   border-color: transparent; /* Keep main border transparent */
   border-radius: 15px;
@@ -84,48 +84,49 @@ display: flex;
 
 @keyframes drawBorder {
   0% {
-    border-top-color: rgba(209, 235, 64, 0.842);
+    border-top-color: rgba(114, 9, 183, 0.842);
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-left-color: transparent;
     clip-path: polygon(0 0, 0% 0, 0% 0, 0 0%);
   }
   25% {
-    border-top-color: rgba(209, 235, 64, 0.842);
+    border-top-color: rgba(114, 9, 183, 0.842);
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-left-color: transparent;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0%);
   }
   50% {
-    border-top-color: rgba(209, 235, 64, 0.842);
-    border-right-color: rgba(209, 235, 64, 0.842);
+    border-top-color: rgba(114, 9, 183, 0.842);
+    border-right-color: rgba(114, 9, 183, 0.842);
     border-bottom-color: transparent;
     border-left-color: transparent;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   75% {
-    border-top-color: rgba(209, 235, 64, 0.842);
-    border-right-color: rgba(209, 235, 64, 0.842);
-    border-bottom-color: rgba(209, 235, 64, 0.842);
+    border-top-color: rgba(114, 9, 183, 0.842);
+    border-right-color: rgba(114, 9, 183, 0.842);
+    border-bottom-color: rgba(114, 9, 183, 0.842);
     border-left-color: transparent;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   100% {
-    border-top-color: rgba(209, 235, 64, 0.842);
-    border-right-color: rgba(209, 235, 64, 0.842);
-    border-bottom-color: rgba(209, 235, 64, 0.842);
-    border-left-color: rgba(209, 235, 64, 0.842);
+    border-top-color: rgba(114, 9, 183, 0.842);
+    border-right-color: rgba(114, 9, 183, 0.842);
+    border-bottom-color: rgba(114, 9, 183, 0.842);
+    border-left-color: rgba(114, 9, 183, 0.842);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 
 
 
+
 .s-left,
 .s-right {
   padding: 20px;
-  color: #b4d210;
+  color: #7209b7;
   font-size: 18px;
   text-align: center;
   height: 100%;
@@ -138,7 +139,7 @@ display: flex;
 
 .s-left {
   border-radius: 15px 0px 0px 0px;
-  background-color: #b4d210;
+  background-color: #7209b7;
   width: 30%;
 
 }
@@ -198,7 +199,7 @@ display: flex;
 }
 
 .service-box:hover i {
-  color: #b4d210;
+  color: #7209b7;
 }
 
 .service-box h3 {
@@ -207,13 +208,13 @@ display: flex;
   color: #7c7c7c;
 }
 .service-box:hover h3 {
-  color: #b4d210;
+  color: #7209b7;
 }
 
 .service-box h4 {
   margin: 0;
   font-size: 20px;
-  color: #b4d210;
+  color: #7209b7;
 }
 .service-box:hover h4 {
   margin: 0;

@@ -50,7 +50,7 @@ body.no-scroll {
           animation: 1s spin linear infinite;
         }
         .loader:after {
-          color: #b4d210;
+          color: #7209b7;
           transform: rotateY(70deg);
           animation-delay: .4s;
         }
@@ -176,7 +176,8 @@ body.no-scroll {
     inset -3px -3px 8px rgba(255, 255, 255, 0.5),    /* Bottom-right inner light */
     inset 3px -3px 8px rgba(255, 255, 255, 0.5),     /* Bottom-left inner light */
     inset -3px 3px 8px rgba(255, 255, 255, 0.5),     /* Top-right inner light */
-    0 0 15px rgba(180, 210, 16, 0.4),                /* Outer soft glow */
+    0 0 15px rgba(114, 9, 183, 0.4),
+   
     0 0 5px rgba(255, 255, 255, 0.2);                /* Outer white shine */
 }
 
@@ -195,7 +196,7 @@ body.no-scroll {
   position: relative;
   padding: 10px 10px;
   border-radius: 8px;
-  color: #b4d210;
+  color: #7209b7;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
@@ -209,7 +210,7 @@ body.no-scroll {
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #b4d210;
+  background-color: #7209b7;
   transition: all 0.3s ease;
 }
 
@@ -219,27 +220,46 @@ body.no-scroll {
 
 /* ==== Hire Me Button ==== */
 .hire-btn a {
-  background: linear-gradient(to right, #d2cf10, #b4d210);
   color: #fff;
-  padding: 10px 25px;
-  border-radius: 30px;
+  padding: 8px 25px;
+  border-radius: 15px 0px 15px 0px;
   text-decoration: none;
   font-weight: bold;
+  position: relative;
+  display: inline-block;
   transition: all 0.3s ease;
+  box-shadow: 0 0 25px rgba(114, 9, 183, 0.6);
   border: 2px solid transparent;
-  box-shadow: 0 0 25px rgba(180, 210, 16, 0.6);
+
+  background-image: 
+    linear-gradient(to right, #7209b7, #3d0364), 
+    linear-gradient(to right, #7209b7, #3d0364);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
   backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(50px);
+  background-color: transparent;
 }
 
+/* Hover effect: fully transparent with glass look */
 .hire-btn a:hover {
-  background: none !important;
-  color: #b4d210 !important;
-  border: 2px solid #b4d210;
-  box-shadow: 0 0 25px rgba(180, 210, 16, 0.6);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(50px);
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0.05); /* very light transparent */
+  color: #7209b7 !important;
+  border: 2px solid #7209b7;
+  box-shadow: 0 0 25px rgba(114, 9, 183, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
+
+/* Active state */
+.hire-btn a:active {
+  opacity: 0.9;
+  transform: scale(0.98);
+}
+
+
 
 /* ==== Offcanvas Menu ==== */
 .offcanvas-menu {
@@ -268,7 +288,7 @@ body.no-scroll {
 .close-btn {
   align-self: flex-end;
   font-size: 24px;
-  color: #b4d210;
+  color: #7209b7;
   cursor: pointer;
   margin-bottom: 20px;
 }
@@ -281,7 +301,7 @@ body.no-scroll {
 }
 
 .offcanvas-nav a {
-  color: #b4d210;
+  color: #7209b7;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
@@ -293,24 +313,24 @@ body.no-scroll {
 
 .offcanvas-nav a:hover {
   background-color: #444;
-  color: #b4d210;
+  color: #7209b7;
 }
 
 .offcanvas-nav .hire-link {
-  background: linear-gradient(to right, #d2cf10, #b4d210);
+  background: linear-gradient(to right, #9e5dca, #7209b7);
   color: #fffffe;
   text-align: center;
 }
 
 .offcanvas-nav .hire-link:hover {
-  background: linear-gradient(to right, #b4d210, #d2cf10);
+  background: linear-gradient(to right, #7209b7, #9547c9);
   color: #fff;
 }
 
 /* ==== Menu Icon ==== */
 #menuToggle i {
   font-size: 32px;
-  color: #b4d210;
+  color: #7209b7;
   width: 32px;
   height: 32px;
 }
@@ -376,7 +396,8 @@ section {
   left: -150px;
   width: 300px;
   height: 300px;
-  background: rgba(180, 210, 16, 0.3);
+  background: rgba(114, 9, 183, 0.3);
+
   filter: blur(200px);
   z-index: -1;
 }
@@ -388,7 +409,8 @@ section {
   right: -150px;
   width: 300px;
   height: 300px;
-  background: rgba(180, 210, 16, 0.3);
+  background: rgba(114, 9, 183, 0.3);
+
   filter: blur(200px); /* Blur আরও বাড়ানো হলো */
   z-index: -1;
 }
@@ -419,7 +441,7 @@ section {
 
 
 .footer h3 {
-  color: #b4d210;
+  color: #7209b7;
   margin-bottom: 15px;
 }
 
@@ -448,7 +470,7 @@ section {
   bottom: -4px;
   width: 0;
   height: 2px;
-  background-color: #b4d210;
+  background-color: #7209b7;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -536,7 +558,7 @@ margin-top: 15px;
 }
 
 .social-icons a:hover {
-  background-color: #b4d210;
+  background-color: #7209b7;
   color: #000;
 }
 
@@ -550,7 +572,7 @@ margin-top: 15px;
 .subscribe-form input[type="email"] {
   padding: 6px 10px;
   font-size: 14px;
-  border: 1px solid #b4d210;
+  border: 1px solid #7209b7;
   border-right: none;
   border-radius: 15px 0 0 15px;
   outline: none;
@@ -562,16 +584,16 @@ margin-top: 15px;
 .subscribe-form button {
   padding: 6px 12px;
   font-size: 14px;
-  background-color: #b4d210;
+  background-color: #7209b7;
   color: white;
-  border: 1px solid #b4d210;
+  border: 1px solid #7209b7;
   border-radius: 0 15px 15px 0;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .subscribe-form button:hover {
-  background-color: #94ab0f;
+  background-color: #7209b7;
 }
 
 
@@ -603,7 +625,7 @@ margin-top: 15px;
 #scrollToTopCircle i {
   position: absolute;
   font-size: 16px;   
-  color: #b4d210;
+  color: #7209b7;
   pointer-events: none;
 }
 
@@ -622,7 +644,7 @@ margin-top: 15px;
 
 .circle {
   fill: none;
-  stroke: #b4d210;
+  stroke: #7209b7;
   stroke-width: 2.5;
   stroke-linecap: round;
   transition: stroke-dasharray 0.3s ease;
@@ -673,7 +695,7 @@ margin-top: 15px;
 #whatsappButton i {
   position: absolute;
   font-size: 18px;
-  color: #25D366; /* WhatsApp green */
+  color: #7209b7; /* WhatsApp green */
   pointer-events: none;
 }
 
@@ -691,7 +713,7 @@ margin-top: 15px;
 
 #whatsappButton .circle {
   fill: none;
-  stroke: #25D366;
+  stroke: #7209b7;
   stroke-width: 2.5;
   stroke-linecap: round;
 }

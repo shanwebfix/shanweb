@@ -8,17 +8,14 @@
   margin: 0 auto;
 }
 
-
-
 .platform-box i {
   font-size: 40px;
-  color: #b4d210;
+  color: #7209b7;
   margin-bottom: 15px;
-
 }
 
 .platform-box:hover i {
-  color: #b4d210;
+  color: #7209b7;
 }
 
 .platform-box h3 {
@@ -30,21 +27,19 @@
   color: #7c7c7c;
 }
 
-
 .platform-box {
   padding: 30px 20px;
-  color: #b4d210;
+  color: #7209b7;
   border-radius: 15px;
   background-color: #ffffff;
   position: relative;
   transition: all 0.0s ease;
-  border: 1px solid #e0e0e0 ; /* Initial transparent border */
+  border: 1px solid #e0e0e0; /* Initial transparent border */
   border-style: ridge;
 }
 
 .platform-box:hover {
- 
-  color: #b4d210;
+  color: #7209b7;
   background-color: #fff;
   border-color: transparent; /* Keep main border transparent */
   border-radius: 15px;
@@ -69,43 +64,41 @@
 
 @keyframes drawBorder {
   0% {
-    border-top-color: rgba(209, 235, 64, 0.842);
+    border-top-color: #7209b7;
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-left-color: transparent;
     clip-path: polygon(0 0, 0% 0, 0% 0, 0 0%);
   }
   25% {
-    border-top-color: rgba(209, 235, 64, 0.842);
+    border-top-color: #7209b7;
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-left-color: transparent;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0%);
   }
   50% {
-    border-top-color: rgba(209, 235, 64, 0.842);
-    border-right-color: rgba(209, 235, 64, 0.842);
+    border-top-color: #7209b7;
+    border-right-color: #7209b7;
     border-bottom-color: transparent;
     border-left-color: transparent;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   75% {
-    border-top-color: rgba(209, 235, 64, 0.842);
-    border-right-color: rgba(209, 235, 64, 0.842);
-    border-bottom-color: rgba(209, 235, 64, 0.842);
+    border-top-color: #7209b7;
+    border-right-color: #7209b7;
+    border-bottom-color: #7209b7;
     border-left-color: transparent;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   100% {
-    border-top-color: rgba(209, 235, 64, 0.842);
-    border-right-color: rgba(209, 235, 64, 0.842);
-    border-bottom-color: rgba(209, 235, 64, 0.842);
-    border-left-color: rgba(209, 235, 64, 0.842);
+    border-top-color: #7209b7;
+    border-right-color: #7209b7;
+    border-bottom-color: #7209b7;
+    border-left-color: #7209b7;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
-
-
 
 @media (max-width: 768px) {
   .platform-container {

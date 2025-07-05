@@ -14,7 +14,7 @@
   left: -150px;
   width: 300px;
   height: 300px;
-  background: rgba(180, 210, 16, 0.3);
+  background: rgba(114, 9, 183, 0.3);
   filter: blur(150px);
   z-index: -1;
 }
@@ -26,7 +26,7 @@
   right: -150px;
   width: 300px;
   height: 300px;
-  background: rgba(180, 210, 16, 0.3);
+  background: rgba(114, 9, 183, 0.3);
   filter: blur(180px); /* Blur আরও বাড়ানো হলো */
   z-index: -1;
 }
@@ -35,7 +35,7 @@
   font-size: 36px;
   font-weight: bold;
   color: transparent;
-  background: linear-gradient(90deg, #b4d210, #f1fcdf, #b4d210);
+  background: linear-gradient(90deg, #7209b7, #f3c5f5, #4a0379);
   background-size: 300% 100%;
   background-repeat: no-repeat;
   background-position: 100% center;
@@ -65,7 +65,7 @@
 }
 
 .filter-bbtn {
-  background: linear-gradient(to right, #d2cf10, #b4d210);
+  background: linear-gradient(to right, #a966d6, #7209b7);
   color: #fff;
   padding: 12px 30px;
   border-radius: 15px 0px 15px 0px;
@@ -78,8 +78,8 @@
 .filter-bbtn.active,
 .filter-bbtn:hover {
   background: none !important;
-  color: #b4d210 !important;
-  border: 2px solid #b4d210;
+  color: #7209b7 !important;
+  border: 2px solid #7209b7;
 }
 
 .portfolio-slider {
@@ -145,7 +145,7 @@
 
 .load-more-btn {
   position: relative;
-  background-color: #b4d210;
+  background-color: #7209b7;
   color: white;
   border: none;
   padding: 12px 28px;
@@ -170,7 +170,7 @@
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-top: 12px solid #b4d210; 
+  border-top: 12px solid #7209b7; 
   transition: border-top-color 0.0s ease;
 }
 
@@ -189,7 +189,7 @@
     bottom: -5px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 8px solid #b4d210;
+    border-top: 8px solid #7209b7;
   }
 
   .load-more-btn:hover::after {
@@ -200,7 +200,7 @@
 
  .filter-btn {
   position: relative;
-  background-color: #b4d210;
+  background-color: #7209b7;
   color: white;
   border: none;
   padding: 12px 28px;
@@ -223,7 +223,7 @@
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-top: 12px solid #b4d210;
+  border-top: 12px solid #7209b7;
   transition: border-top-color 0.3s ease;
 }
 
@@ -250,7 +250,7 @@
     bottom: -8px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 8px solid #b4d210;
+    border-top: 8px solid #7209b7;
   }
 
   .filter-btn:hover::after,
