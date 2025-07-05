@@ -75,7 +75,7 @@ overflow: hidden;
   top: -150px;
   left: -150px;
   width: 500px;
-  height: 400px;
+  height: 500px;
   background: rgba(113, 9, 183, 0.849); /* #7209b7 with opacity */
   filter: blur(150px);
   z-index: -1;
@@ -87,8 +87,8 @@ overflow: hidden;
   bottom: -150px;
   right: -150px;
   width: 500px;
-  height: 400px;
-  background: rgba(114, 9, 183, 0.3); /* #7209b7 with opacity */
+  height: 500px;
+  background: rgba(113, 9, 183, 0.849); /* #7209b7 with opacity */
   filter: blur(180px);
   z-index: -1;
 }

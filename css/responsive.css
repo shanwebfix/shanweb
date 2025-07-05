@@ -1,1 +1,15 @@
-@media (max-width:768px){.btn-outline,.btn-primary{margin:auto;border-radius:15px 0}body{overflow-x:hidden!important}.loader{width:60px;height:30px;border-width:2px 2px 30px}.loader:after,.loader:before{width:8px;height:8px;border-width:12px}.main-section{padding:20px}.contact-container,.portfolio-grid,.pricing-container,.services-container{grid-template-columns:1fr}.main-header{overflow:hidden;padding:15px 20px!important}.contact-title,.faq-title,.pricing-title,.section-title{font-size:26px;text-align:center}.contact-form,.contact-info,.faq-item,.pricing-box,.service-box{padding:20px 15px}.portfolio-item{height:300px}.plan-button{width:100%}.hero-buttons{display:flex;gap:10px}.btn-primary{padding:10px 25px}.btn-outline{padding:10px 30px}.testimonial-section{position:relative;z-index:1;overflow:hidden}.faq-item{width:300px;overflow:hidden;padding:0}.faq-question{padding:15px 20px;width:300px;font-size:16px}.footer{padding:40px 20px 0!important}.subscribe-form input[type=email]{width:110px}}
+@media (max-width:768px){.btn-outline,.btn-primary{margin:auto;border-radius:15px 0}body{overflow-x:hidden!important}.loader{width:60px;height:30px;border-width:2px 2px 30px}.loader:after,.loader:before{width:8px;height:8px;border-width:12px}.main-section{padding:20px}.contact-container,.portfolio-grid,.pricing-container,.services-container{grid-template-columns:1fr}.main-header{overflow:hidden;padding:15px 20px!important}.contact-title,.faq-title,.pricing-title,.section-title{font-size:26px;text-align:center}.contact-form,.contact-info,.faq-item,.pricing-box,.service-box{padding:20px 15px}.portfolio-item{height:300px}.plan-button{width:100%}.hero-buttons{display:flex;gap:10px}.btn-primary{padding:10px 25px}.btn-outline{padding:10px 30px}.testimonial-section{position:relative;z-index:1;overflow:hidden}.faq-item{width:300px;overflow:hidden;padding:0}.faq-question{padding:15px 20px;width:300px;font-size:16px}.footer{padding:40px 20px 0!important}.subscribe-form input[type=email]{width:110px}
+
+
+.main-section::before {
+ 
+  width: 300px;
+  height: 300px;
+ 
+}
+
+.main-section::after {
+width: 300px;
+  height: 300px;
+}
+}
