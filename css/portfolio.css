@@ -35,7 +35,7 @@
   font-size: 36px;
   font-weight: bold;
   color: transparent;
-  background: linear-gradient(90deg, #7209b7, #f3c5f5, #4a0379);
+  background: linear-gradient(90deg, #8e2de2, #f3c5f5, #4a0379);
   background-size: 300% 100%;
   background-repeat: no-repeat;
   background-position: 100% center;
@@ -65,7 +65,7 @@
 }
 
 .filter-bbtn {
-  background: linear-gradient(to right, #a966d6, #7209b7);
+  background: linear-gradient(to right, #a966d6, #8e2de2);
   color: #fff;
   padding: 12px 30px;
   border-radius: 15px 0px 15px 0px;
@@ -78,8 +78,8 @@
 .filter-bbtn.active,
 .filter-bbtn:hover {
   background: none !important;
-  color: #7209b7 !important;
-  border: 2px solid #7209b7;
+  color: #8e2de2 !important;
+  border: 2px solid #8e2de2;
 }
 
 .portfolio-slider {
@@ -145,7 +145,7 @@
 
 .load-more-btn {
   position: relative;
-  background-color: #7209b7;
+  background-color: #8e2de2;
   color: white;
   border: none;
   padding: 12px 28px;
@@ -170,7 +170,7 @@
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-top: 12px solid #7209b7; 
+  border-top: 12px solid #8e2de2; 
   transition: border-top-color 0.0s ease;
 }
 
@@ -189,7 +189,7 @@
     bottom: -5px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 8px solid #7209b7;
+    border-top: 8px solid #8e2de2;
   }
 
   .load-more-btn:hover::after {
@@ -200,7 +200,7 @@
 
  .filter-btn {
   position: relative;
-  background-color: #7209b7;
+  background-color: #8e2de2;
   color: white;
   border: none;
   padding: 12px 28px;
@@ -223,7 +223,7 @@
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-top: 12px solid #7209b7;
+  border-top: 12px solid #8e2de2;
   transition: border-top-color 0.3s ease;
 }
 
@@ -250,7 +250,7 @@
     bottom: -8px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 8px solid #7209b7;
+    border-top: 8px solid #8e2de2;
   }
 
   .filter-btn:hover::after,

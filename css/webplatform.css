@@ -10,12 +10,12 @@
 
 .platform-box i {
   font-size: 40px;
-  color: #7209b7;
+  color: #fff;
   margin-bottom: 15px;
 }
 
 .platform-box:hover i {
-  color: #7209b7;
+  color: #fff;
 }
 
 .platform-box h3 {
@@ -24,23 +24,21 @@
 }
 
 .platform-box p {
-  color: #7c7c7c;
+  color: #ddd;
 }
 
 .platform-box {
   padding: 30px 20px;
-  color: #7209b7;
+  color: #fff;
   border-radius: 15px;
-  background-color: #ffffff;
+  background-color: #494949;
   position: relative;
   transition: all 0.0s ease;
-  border: 1px solid #e0e0e0; /* Initial transparent border */
-  border-style: ridge;
 }
 
 .platform-box:hover {
-  color: #7209b7;
-  background-color: #fff;
+  color: #fff;
+  background-color: #494949;
   border-color: transparent; /* Keep main border transparent */
   border-radius: 15px;
 }
@@ -55,7 +53,7 @@
   bottom: -3px;
   border: 3px solid transparent;
   pointer-events: none;
-  border-radius: 15px;
+  border-radius: 18px;
 }
 
 .platform-box:hover::after {
@@ -102,17 +100,17 @@
 
 @media (max-width: 768px) {
   .platform-container {
-    grid-template-columns: 1fr; /* এক কলাম */
+    grid-template-columns: 1fr; 
   }
 
   .p-left,
   .p-right {
-    width: 100%; /* মোবাইলে পুরো জায়গা নিবে */
-    border-radius: 15px 15px 0 0; /* চাইলেই border radius adjust করো */
+    width: 100%; 
+    border-radius: 15px 15px 0 0; 
   }
 
   .p-right {
-    border-radius: 0 0 15px 15px; /* নিচের দিকের গোল অংশ */
+    border-radius: 0 0 15px 15px;
   }
 
   .platform-box {

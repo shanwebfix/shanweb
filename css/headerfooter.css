@@ -50,7 +50,7 @@ body.no-scroll {
           animation: 1s spin linear infinite;
         }
         .loader:after {
-          color: #7209b7;
+          color: #8e2de2;
           transform: rotateY(70deg);
           animation-delay: .4s;
         }
@@ -117,7 +117,7 @@ body.no-scroll {
   padding: 15px 50px;
   flex-wrap: wrap;
 
-  background-color: #ffffff;
+  background-color: #1e1e1e;
   transition: all 0.3s ease;
 
   border-bottom: none;
@@ -125,7 +125,7 @@ body.no-scroll {
 }
 
 .main-header.scrolled {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(121, 120, 120, 0.85);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -196,11 +196,16 @@ body.no-scroll {
   position: relative;
   padding: 10px 10px;
   border-radius: 8px;
-  color: #7209b7;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
+
+  background: linear-gradient(to left, #8e2de2, #ff416c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
+
 
 .nav-center a::after {
   content: "";
@@ -210,7 +215,7 @@ body.no-scroll {
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #7209b7;
+  background-color: #8e2de2;
   transition: all 0.3s ease;
 }
 
@@ -232,8 +237,8 @@ body.no-scroll {
   border: 2px solid transparent;
 
   background-image: 
-    linear-gradient(to right, #7209b7, #3d0364), 
-    linear-gradient(to right, #7209b7, #3d0364);
+  linear-gradient(to right, #8e2de2, #ff416c),
+  linear-gradient(to right, #8e2de2, #ff416c);
   background-origin: border-box;
   background-clip: content-box, border-box;
 
@@ -246,8 +251,8 @@ body.no-scroll {
 .hire-btn a:hover {
   background-image: none;
   background-color: rgba(255, 255, 255, 0.05); /* very light transparent */
-  color: #7209b7 !important;
-  border: 2px solid #7209b7;
+  color: #fff !important;
+  border: 2px solid #8e2de2;
   box-shadow: 0 0 25px rgba(114, 9, 183, 0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -288,7 +293,7 @@ body.no-scroll {
 .close-btn {
   align-self: flex-end;
   font-size: 24px;
-  color: #7209b7;
+  color: #ff416c;
   cursor: pointer;
   margin-bottom: 20px;
 }
@@ -301,7 +306,7 @@ body.no-scroll {
 }
 
 .offcanvas-nav a {
-  color: #7209b7;
+  color: #8e2de2;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
@@ -313,27 +318,32 @@ body.no-scroll {
 
 .offcanvas-nav a:hover {
   background-color: #444;
-  color: #7209b7;
+  color: #8e2de2;
 }
 
 .offcanvas-nav .hire-link {
-  background: linear-gradient(to right, #9e5dca, #7209b7);
+  background: linear-gradient(to right, #8e2de2, #ff416c);
   color: #fffffe;
   text-align: center;
 }
 
 .offcanvas-nav .hire-link:hover {
-  background: linear-gradient(to right, #7209b7, #9547c9);
+  background: linear-gradient(to right,#ff416c,  #8e2de2);
   color: #fff;
 }
 
 /* ==== Menu Icon ==== */
 #menuToggle i {
   font-size: 32px;
-  color: #7209b7;
   width: 32px;
   height: 32px;
+
+  background: linear-gradient(to right, #a966d6, #ff416c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
+
 
 /* ==== Responsive Visibility ==== */
 @media (max-width: 768px) {
@@ -441,7 +451,7 @@ section {
 
 
 .footer h3 {
-  color: #7209b7;
+  color: #8e2de2;
   margin-bottom: 15px;
 }
 
@@ -470,7 +480,7 @@ section {
   bottom: -4px;
   width: 0;
   height: 2px;
-  background-color: #7209b7;
+  background-color: #ff416c;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -558,8 +568,8 @@ margin-top: 15px;
 }
 
 .social-icons a:hover {
-  background-color: #7209b7;
-  color: #000;
+  background: linear-gradient(to right, #a966d6, #ff416c);
+  color: #fff;
 }
 
 
@@ -572,7 +582,7 @@ margin-top: 15px;
 .subscribe-form input[type="email"] {
   padding: 6px 10px;
   font-size: 14px;
-  border: 1px solid #7209b7;
+  border: 1px solid #8e2de2;
   border-right: none;
   border-radius: 15px 0 0 15px;
   outline: none;
@@ -584,16 +594,16 @@ margin-top: 15px;
 .subscribe-form button {
   padding: 6px 12px;
   font-size: 14px;
-  background-color: #7209b7;
+  background: linear-gradient(to right, #a966d6, #ff416c);
   color: white;
-  border: 1px solid #7209b7;
+  border: 1px solid #8e2de2;
   border-radius: 0 15px 15px 0;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .subscribe-form button:hover {
-  background-color: #7209b7;
+  background-color: #8e2de2;
 }
 
 
@@ -625,7 +635,7 @@ margin-top: 15px;
 #scrollToTopCircle i {
   position: absolute;
   font-size: 16px;   
-  color: #7209b7;
+  color: #8e2de2;
   pointer-events: none;
 }
 
@@ -638,13 +648,13 @@ margin-top: 15px;
 
 .circle-bg {
   fill: none;
-  stroke: #ddd;
+  stroke: #ff416c;
   stroke-width: 2;
 }
 
 .circle {
   fill: none;
-  stroke: #7209b7;
+  stroke: #8e2de2;
   stroke-width: 2.5;
   stroke-linecap: round;
   transition: stroke-dasharray 0.3s ease;
@@ -694,8 +704,8 @@ margin-top: 15px;
 
 #whatsappButton i {
   position: absolute;
-  font-size: 18px;
-  color: #7209b7; /* WhatsApp green */
+  font-size: 20px;
+  color: #04ca6e; /* WhatsApp green */
   pointer-events: none;
 }
 
@@ -713,7 +723,7 @@ margin-top: 15px;
 
 #whatsappButton .circle {
   fill: none;
-  stroke: #7209b7;
+  stroke: #04ca6e;
   stroke-width: 2.5;
   stroke-linecap: round;
 }
