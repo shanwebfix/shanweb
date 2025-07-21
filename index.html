@@ -87,7 +87,17 @@
 </div>
 
  <header class="main-header">
-  <div class="logo"><img src="assets/logo.webp" alt="SHANWEB"></div>
+  <div class="logo"><img 
+  src="/assets/logo-120.webp" 
+  alt="Logo" 
+  width="120" height="auto"
+  srcset="
+    /assets/logo-120.webp 160w,
+    /assets/logo-200.webp 250w
+  "
+  sizes="(max-width: 600px) 120px, 
+         200px"
+></div>
 
   <!-- Desktop menu -->
   <div class="nav-wrapper desktop-only">
@@ -148,7 +158,22 @@
                     </div>
                 </div>
                 <div class="hero-right">
-                 <img src="assets/hero-img1.webp" alt="Hero Image" class="hero-anim-img" draggable="false">
+                  <img 
+  src="/assets/hero-img1-480.webp" 
+  alt="Hero Image"
+  class="hero-anim-img"
+  style="width: 100%; height: auto; border-radius: 15px; object-fit: cover;"
+  srcset="
+    /assets/hero-img-240.webp 240w,
+    /assets/hero-img-480.webp 480w,
+
+  "
+  sizes="(max-width: 480px) 100vw, 
+         (max-width: 768px) 50vw,
+         (max-width: 1280px) 50vw,
+         50vw"
+/>
+
                 </div>
             </div>
         </div>
@@ -693,7 +718,17 @@ With a focus on WordPress and support for other platforms like Wix, Webflow, and
   
   <div class="footer-container">
     <div class="footer-about" id="about">
-      <div class="logo"><img src="assets/logo.webp" loading="lazy" alt="SHANWEB"></div>
+      <div class="logo"><img 
+  src="/assets/logo-120.webp" 
+  alt="Logo" 
+  width="120" height="auto"
+  srcset="
+    /assets/logo-120.webp 160w,
+    /assets/logo-200.webp 250w
+  "
+  sizes="(max-width: 600px) 120px, 
+         200px"
+></div>
       <p style="margin-top: 10px;">
   We provide modern web design & development services to 
   grow your online presence.
