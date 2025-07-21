@@ -40,78 +40,47 @@
 }
 
 .service-box {
-  
   color: #8e2de2;
+  background-color: #494949;
   border-radius: 15px;
-  background-color: #ffffff;
   position: relative;
   transition: all 0.0s ease;
-  
   justify-content: left;
 align-items: start;
 display: flex;
 }
-
-.service-box:hover {
- 
-  color: #8e2de2;
-  border-color: transparent; /* Keep main border transparent */
-  border-radius: 15px;
-}
-
-/* Create the animated border effect */
-.service-box::after {
+.service-box::before {
   content: '';
   position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border: 2px solid transparent;
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   border-radius: 15px;
+  padding: 2px;
+  background: 
+    linear-gradient(
+      160deg,
+      rgba(255, 0, 0, 1) 0%,
+      rgba(142, 45, 226, 0.8) 40%,
+      transparent 50%
+    ),
+    linear-gradient(
+      rgba(63, 62, 63, 1),
+      rgba(63, 62, 63, 1)
+    );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
-.service-box:hover::after {
-  animation: drawBorder 1.3s linear forwards;
-}
-
-@keyframes drawBorder {
-  0% {
-    border-top-color: rgba(114, 9, 183, 0.842);
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    clip-path: polygon(0 0, 0% 0, 0% 0, 0 0%);
-  }
-  25% {
-    border-top-color: rgba(114, 9, 183, 0.842);
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0%);
-  }
-  50% {
-    border-top-color: rgba(114, 9, 183, 0.842);
-    border-right-color: rgba(114, 9, 183, 0.842);
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  75% {
-    border-top-color: rgba(114, 9, 183, 0.842);
-    border-right-color: rgba(114, 9, 183, 0.842);
-    border-bottom-color: rgba(114, 9, 183, 0.842);
-    border-left-color: transparent;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  100% {
-    border-top-color: rgba(114, 9, 183, 0.842);
-    border-right-color: rgba(114, 9, 183, 0.842);
-    border-bottom-color: rgba(114, 9, 183, 0.842);
-    border-left-color: rgba(114, 9, 183, 0.842);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
+.service-box:hover::before {
+  opacity: 1;
 }
 
 
@@ -119,7 +88,7 @@ display: flex;
 
 .s-left,
 .s-right {
-  padding: 20px;
+  padding: 15px;
   color: #fff;
   font-size: 18px;
   text-align: center;
@@ -132,18 +101,11 @@ display: flex;
 
 
 .s-left {
-  border-radius: 12px 0px 0px 12px;
-  background: linear-gradient(to top, #8e2de2, #ff416c);
   width: 30%;
-
 }
 
 .s-right {
-  border-radius: 0px 10px 10px 0px;
-  background-color: #fff;
   width: 70%;
-  background-color: #494949;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start; 
@@ -169,26 +131,27 @@ display: flex;
   }
 
   .s-left {
+    text-align: left;
+    align-items: self-start;
     
-    border-radius: 10px 10px 0px 0px;
   }
   .s-right {
-    
-    border-radius: 0px 0px 10px 10px; 
+
   }
   .service-box {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0%;
+    align-items: left;
+    text-align: left;
+    padding: 10px;
   }
 
   .service-box i {
-    margin-bottom: 10px;
+    margin-bottom: 0px !important;
+    text-align: left;
   }
   .service-box i {
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 0px !important;
 
 }
 
@@ -198,19 +161,34 @@ display: flex;
   margin: 0;
   font-size: 24px;
   color: #fff;
+  margin-bottom: -25px !important;
+  margin-top: 10px;
+  text-align: left !important;
 }
 
 
 .service-box h4 {
   margin: 0;
   font-size: 20px;
-  color: #8e2de2;
+  color: #fff;
+ 
 }
-.service-box:hover h4 {
-  margin: 0;
-  font-size: 20px;
-  color: #ddd;
-}
+
+.service-box::before {
+    padding: 1.5px; /* Thinner border on mobile */
+    background: 
+      linear-gradient(
+        145deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(142, 45, 226, 0.8) 30%, /* More visible gradient on small screens */
+        transparent 45% /* Faster fade on mobile */
+      ),
+      linear-gradient(
+        rgba(63, 62, 63, 1),
+        rgba(63, 62, 63, 1)
+      );
+  }
+
 }
 
 

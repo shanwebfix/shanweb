@@ -116,7 +116,32 @@
   border-radius: 10px;
   scroll-behavior: smooth;
   cursor: grab;
+  
+  /* ফায়ারফক্সের জন্য স্ক্রলবার স্টাইল */
+  scrollbar-color: #ff416c #f1f1f1;
+  scrollbar-width: thin;
 }
+
+/* ক্রোম, এজ, সাফারির জন্য স্ক্রলবার স্টাইল */
+.image-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.image-container::-webkit-scrollbar-track {
+  background: #ff416c;
+  border-radius: 10px;
+}
+
+.image-container::-webkit-scrollbar-thumb {
+  background: #8e2de2;
+  border-radius: 10px;
+}
+
+.image-container::-webkit-scrollbar-thumb:hover {
+  background: #7d26d1;
+}
+
 
 .image-container img {
   width: 100%;

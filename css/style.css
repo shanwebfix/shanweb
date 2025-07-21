@@ -67,7 +67,7 @@ h2 {
 
 
 .main-section {
-  padding: 50px 50px;
+  padding: 60px 100px 60px 100px;
   text-align: center;
   background-color: #1e1e1e;
   position: relative;
@@ -153,10 +153,68 @@ h2 {
   z-index: -1;
   border-radius: 50%;
 }
+
+.contact-section {
+  padding: 50px 50px;
+  text-align: center;
+  background-color: #1e1e1e;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+/* ✅ TOP LEFT - Purple glow (updated) */
+.contact-section .top-left-glow {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background: rgba(142, 45, 226, 0.6); /* Purple */
+  filter: blur(80px);
+  z-index: -1;
+}
+
+/* ✅ TOP RIGHT - Red glow (updated) */
+.contact-section .top-right-glow {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 0, 0, 0.6); /* Red */
+  filter: blur(80px);
+  z-index: -1;
+}
+
+
+/* TOP CENTER - Black glow */
+.contact-section .top-center-glow {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.8);
+  filter: blur(100px);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+
+
 @media (max-width: 480px) {
   .main-section {
+    padding-bottom: 30px !important;
+    padding-top: 30px !important;
+  }
+    .contact-section {
     padding: 30px 15px;
   }
+  .contact-section .top-left-glow,
+  .contact-section .top-right-glow,
+  .contact-section .top-center-glow,
 
   .main-section .top-left-glow,
   .main-section .top-right-glow,
@@ -172,23 +230,22 @@ h2 {
 
 
 
-  .section-title {
+.section-title {
   font-size: 36px;
   font-weight: bold;
   color: transparent;
-  background: linear-gradient(90deg, #8e2de2, #b878ad, #ff416c);
-  background-size: 300% 100%;
+  background: linear-gradient(90deg, #8e2de2, #ff416c, #8e2de2); /* দুইবার প্রথম কালার যোগ করা */
+  background-size: 200% 100%; /* সাইজ দ্বিগুণ */
   background-repeat: no-repeat;
-  background-position: 100% center;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientRightToLeft 6s linear infinite;
+  animation: gradientLoop 4s linear infinite; /* সময় বাড়ানো */
   margin-bottom: 40px;
   display: inline-block;
 }
 
-@keyframes gradientRightToLeft {
+@keyframes gradientLoop {
   0% {
     background-position: 100% center;
   }
@@ -214,10 +271,48 @@ h2 {
   max-width: 1000px;
   margin: 0 auto;
 }
+.choose-box {
+  padding: 30px 20px;
+  color: #8e2de2;
+  border-radius: 15px;
+  background-color: #494949;
+  position: relative;
+  transition: all 0.0s ease;
+  
+}
+.choose-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background: 
+    linear-gradient(
+      145deg,
+      rgba(255, 0, 0, 1) 0%,
+      rgba(142, 45, 226, 0.8) 40%,
+      transparent 50%
+    ),
+    linear-gradient(
+      rgba(63, 62, 63, 1),
+      rgba(63, 62, 63, 1)
+    );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
 
-
-
-
+.choose-box:hover::before {
+  opacity: 1;
+}
 .choose-box i {
   font-size: 40px;
   color: #8e2de2;
@@ -237,98 +332,31 @@ h2 {
   font-size: 15px;
   color: #ddd;
 }
+@media (max-width: 768px) {
 
 
-.choose-box:hover {
-
-  box-shadow: 0 0 25px rgba(114, 9, 183, 0.842);
-
-  background-color: #fff;
-}
-
-
-
-
-
-
-.choose-box {
-  padding: 30px 20px;
-  color: #8e2de2;
-  border-radius: 15px;
-  background-color: #494949;
-  position: relative;
-  transition: all 0.0s ease;
-  
-}
-
-.choose-box:hover {
- background-color: #494949;
-  color: #8e2de2;
-  border-color: transparent; /* Keep main border transparent */
-  border-radius: 15px;
-}
-
-/* Create the animated border effect */
-.choose-box::after {
-  content: '';
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border: 2px solid transparent;
-  pointer-events: none;
-  border-radius: 15px;
-}
-
-.choose-box:hover::after {
-  animation: drawBorder 1.3s linear forwards;
-}
-
-@keyframes drawBorder {
-  0% {
-    border-top-color: rgba(248, 70, 47, 0.842);
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    clip-path: polygon(0 0, 0% 0, 0% 0, 0 0%);
+.choose-box::before {
+    padding: 1.5px; /* Thinner border on mobile */
+    background: 
+      linear-gradient(
+        155deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(142, 45, 226, 0.8) 30%, /* More visible gradient on small screens */
+        transparent 45% /* Faster fade on mobile */
+      ),
+      linear-gradient(
+        rgba(63, 62, 63, 1),
+        rgba(63, 62, 63, 1)
+      );
   }
-  25% {
-    border-top-color: rgba(114, 9, 183, 0.842);
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0%);
-  }
-  50% {
-    border-top-color: rgba(248, 70, 47, 0.842);
-    border-right-color: rgba(114, 9, 183, 0.842);
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  75% {
-    border-top-color: rgba(248, 70, 47, 0.842);
-    border-right-color: rgba(114, 9, 183, 0.842);
-    border-bottom-color: rgba(248, 70, 47, 0.842);
-    border-left-color: transparent;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  100% {
-    border-top-color: rgba(114, 9, 183, 0.842);
-    border-right-color: rgba(248, 70, 47, 0.842);
-    border-bottom-color: rgba(114, 9, 183, 0.842);
-    border-left-color: rgba(248, 70, 47, 0.842);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
+
 }
+
 
 
 
 
 /* Client Testimonial */
-
-/* === Testimonial Section === */
 
 .testimonial-container {
   display: grid;
@@ -446,7 +474,7 @@ h2 {
 .skill-fill {
   height: 100%;
   width: 0;
-  background: linear-gradient(90deg, #8e2de2, #ff416c);
+  background: linear-gradient(90deg, #ff416c, #8e2de2);
   animation: fillAnimation 2s ease-out forwards, shimmer 2s linear infinite;
   animation-delay: 0.2s, 2s;
   position: relative;
@@ -535,7 +563,6 @@ h2 {
 
 /* Pricing Plan */
 
-
 .pricing-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -613,39 +640,36 @@ h2 {
 
 
 
-
-
-
-
 /* FAQ */
-
-
-
-
+/* FAQ Styles */
 .faq-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-content: center;
-
+  align-items: center;
+  width: 100%;
+  max-width: 800px; /* Increased from 500px */
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .faq-item {
   border: 1px solid #471396;
   border-radius: 10px;
-  width: 500px;
+  width: 100%;
+  max-width: 800px; /* Increased from 500px */
   overflow: hidden;
   background-color: #5c5c5b;
-  margin: 2px auto; 
+  margin: 2px auto;
+  transition: all 0.3s ease;
 }
-
 
 .faq-question {
   background-color: #ddd;
   color: #5c5c5b;
   font-weight: bold;
   padding: 15px 20px;
-  width: 500px;
+  width: 100%;
   text-align: left;
   border: none;
   cursor: pointer;
@@ -673,14 +697,46 @@ h2 {
   padding: 15px 20px;
   display: none;
   font-size: 15px;
+  line-height: 1.6;
 }
 
-/* Active/open arrow rotates 180deg */
 .faq-question.active .arrow {
   transform: rotate(180deg);
 }
 
-
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .faq-container {
+    width: 100%;
+    padding: 0 0px;
+    box-sizing: border-box; 
+  }
+  
+  .faq-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .faq-question {
+    width: 100% !important;
+    padding: 12px 15px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  .faq-answer {
+    padding: 12px 15px;
+    font-size: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .arrow {
+    font-size: 24px;
+  }
+}
 
 
 
@@ -779,6 +835,61 @@ h2 {
   color: #fff;
 }
 
+
+/* Contact Section - Mobile Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 5px;
+  }
+
+  .contact-form,
+  .contact-info {
+    padding: 25px 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+
+  .contact-form textarea {
+    height: 120px;
+  }
+
+  .contact-form button {
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+
+  .contact-form button:hover {
+    padding: 9px 24px;
+  }
+
+  .contact-info h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .contact-info p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form,
+  .contact-info {
+    padding: 20px 15px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    text-align: center;
+  }
+}
 
 
 

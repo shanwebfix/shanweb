@@ -1,125 +1,112 @@
-/* Service Design */
-
+/* CSS */
 .platform-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 3 columns fixed */
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.platform-box {
+  position: relative;
+  padding: 30px 20px;
+  color: #fff;
+  border-radius: 15px;
+  background-color: #494949;
+  border: none;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .platform-box i {
   font-size: 40px;
   color: #fff;
   margin-bottom: 15px;
-}
-
-.platform-box:hover i {
-  color: #fff;
+  align-self: flex-start;
 }
 
 .platform-box h3 {
-  margin: 0;
+  margin: 0 0 10px 0;
   font-size: 20px;
+  text-align: left;
+  align-self: flex-start;
 }
 
 .platform-box p {
   color: #ddd;
+  margin: 0;
+  text-align: left;
+  line-height: 1.5;
 }
 
-.platform-box {
-  padding: 30px 20px;
-  color: #fff;
-  border-radius: 15px;
-  background-color: #494949;
-  position: relative;
-  transition: all 0.0s ease;
+.gradiant-text {
+  background: linear-gradient(90deg, #8e2de2, #ff416c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.platform-box:hover {
-  color: #fff;
-  background-color: #494949;
-  border-color: transparent; /* Keep main border transparent */
-  border-radius: 15px;
-}
-
-/* Create the animated border effect */
-.platform-box::after {
+.platform-box::before {
   content: '';
   position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border: 3px solid transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background: 
+    linear-gradient(
+      160deg,
+      rgba(255, 0, 0, 1) 0%,
+      rgba(142, 45, 226, 0.8) 40%,
+      transparent 50%
+    ),
+    linear-gradient(
+      rgba(63, 62, 63, 1),
+      rgba(63, 62, 63, 1)
+    );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
   pointer-events: none;
-  border-radius: 18px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
-.platform-box:hover::after {
-  animation: drawBorder 1.3s linear forwards;
-}
-
-@keyframes drawBorder {
-  0% {
-    border-top-color: #7209b7;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    clip-path: polygon(0 0, 0% 0, 0% 0, 0 0%);
-  }
-  25% {
-    border-top-color: #7209b7;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0%);
-  }
-  50% {
-    border-top-color: #7209b7;
-    border-right-color: #7209b7;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  75% {
-    border-top-color: #7209b7;
-    border-right-color: #7209b7;
-    border-bottom-color: #7209b7;
-    border-left-color: transparent;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  100% {
-    border-top-color: #7209b7;
-    border-right-color: #7209b7;
-    border-bottom-color: #7209b7;
-    border-left-color: #7209b7;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
+.platform-box:hover::before {
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
   .platform-container {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
-
-  .p-left,
-  .p-right {
-    width: 100%; 
-    border-radius: 15px 15px 0 0; 
-  }
-
-  .p-right {
-    border-radius: 0 0 15px 15px;
-  }
-
+  
   .platform-box {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    padding: 25px 20px;
+  }
+  
+  .platform-box i {
+    font-size: 35px;
   }
 
-  .platform-box i {
-    margin-bottom: 10px;
+  .platform-box::before {
+    padding: 1.5px; /* Thinner border on mobile */
+    background: 
+      linear-gradient(
+        145deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(142, 45, 226, 0.8) 30%, /* More visible gradient on small screens */
+        transparent 45% /* Faster fade on mobile */
+      ),
+      linear-gradient(
+        rgba(63, 62, 63, 1),
+        rgba(63, 62, 63, 1)
+      );
   }
 }
