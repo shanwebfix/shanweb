@@ -72,31 +72,102 @@ h2 {
   background-color: #1e1e1e;
   position: relative;
   z-index: 1;
-overflow: hidden;
+  overflow: hidden;
 }
 
+/* BOTTOM LEFT - Purple glow */
 .main-section::before {
   content: "";
   position: absolute;
-  top: -150px;
-  left: -150px;
-  width: 500px;
-  height: 500px;
-  background: rgba(113, 9, 183, 0.849); /* #8e2de2 with opacity */
-  filter: blur(150px);
+  bottom: -60px;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background: rgba(142, 45, 226, 0.6);
+  filter: blur(80px);
   z-index: -1;
 }
 
+/* BOTTOM RIGHT - Red glow */
 .main-section::after {
   content: "";
   position: absolute;
-  bottom: -150px;
-  right: -150px;
-  width: 500px;
-  height: 500px;
-  background: rgba(113, 9, 183, 0.849); /* #8e2de2 with opacity */
-  filter: blur(180px);
+  bottom: -60px;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 0, 0, 0.6);
+  filter: blur(80px);
   z-index: -1;
+}
+
+/* BOTTOM CENTER - Black glow */
+.main-section .bottom-center-glow {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.8);
+  filter: blur(100px);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+/* ✅ TOP LEFT - Purple glow (updated) */
+.main-section .top-left-glow {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background: rgba(142, 45, 226, 0.6); /* Purple */
+  filter: blur(80px);
+  z-index: -1;
+}
+
+/* ✅ TOP RIGHT - Red glow (updated) */
+.main-section .top-right-glow {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 0, 0, 0.6); /* Red */
+  filter: blur(80px);
+  z-index: -1;
+}
+
+
+/* TOP CENTER - Black glow */
+.main-section .top-center-glow {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.8);
+  filter: blur(100px);
+  z-index: -1;
+  border-radius: 50%;
+}
+@media (max-width: 480px) {
+  .main-section {
+    padding: 30px 15px;
+  }
+
+  .main-section .top-left-glow,
+  .main-section .top-right-glow,
+  .main-section .top-center-glow,
+  .main-section .bottom-center-glow,
+  .main-section::before,
+  .main-section::after {
+    width: 80px;
+    height: 80px;
+    filter: blur(50px);
+  }
 }
 
 

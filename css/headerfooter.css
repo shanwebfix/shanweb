@@ -383,7 +383,7 @@ section {
 /* Footer Design */
 .footer {
   background-color: #000;
-  background-image: url('assets/footerbg.jpg');
+  background-image: url('/assets/footerbg.jpg');
   background-size: cover;              
   background-repeat: no-repeat;
   background-position: center center;
@@ -399,7 +399,7 @@ section {
 }
 
 
-.footer::before {
+.footer00::before {
   content: "";
   position: absolute;
   top: -150px;
@@ -412,7 +412,7 @@ section {
   z-index: -1;
 }
 
-.footer::after {
+.footer00::after {
   content: "";
   position: absolute;
   bottom: -150px;
