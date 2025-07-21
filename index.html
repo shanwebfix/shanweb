@@ -15,8 +15,6 @@
 
   <title>ShanWeb - Web Developer and Designer</title>
 
-
-  <!-- Standard favicon -->
 <link rel="icon" type="image/png" sizes="16x16" href="assets/fav-16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/fav-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/fav-180.png">
@@ -24,8 +22,6 @@
 <link rel="icon" type="image/png" sizes="512x512" href="assets/fav-512.png">
 
 
-
-  <!-- CSS preload -->
    <link rel="stylesheet" href="/css/style.css">
    <link rel="stylesheet" href="/css/shaders.css">
    <link rel="stylesheet" href="/css/hero.css">
@@ -37,52 +33,46 @@
 
 
 <head>
-  <!-- Fonts preconnect (একবারই দিবে) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Fonts preload and stylesheet -->
-  <link
-    rel="preload"
-    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-    as="style"
-    onload="this.onload=null;this.rel='stylesheet'"
-  >
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  </noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Multiple fonts stylesheet (not preload due to multiple) -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Archivo+Black&family=Bungee&family=Prosto+One&family=Rubik+Mono+One&display=swap" rel="stylesheet" />
+<link
+  rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
+>
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</noscript>
 
-  <!-- Font Awesome CSS preload -->
-  <link
-    rel="preload"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    as="style"
-    onload="this.onload=null;this.rel='stylesheet'"
-  >
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  </noscript>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Archivo+Black&family=Bungee&family=Prosto+One&family=Rubik+Mono+One&display=swap" rel="stylesheet">
 
-  <!-- Swiper CSS preload -->
-  <link
-    rel="preload"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    as="style"
-    onload="this.onload=null;this.rel='stylesheet'"
-  >
-  <noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  </noscript>
+<link
+  rel="preload"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
+>
+<noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</noscript>
 
-  <!-- Latest three.js -->
-  <script src="https://unpkg.com/three@0.155.0/build/three.min.js" defer></script>
+<link
+  rel="preload"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
+>
+<noscript>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</noscript>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<script src="https://unpkg.com/three@0.155.0/build/three.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
 
 </head>
 <body>
@@ -158,7 +148,7 @@
                     </div>
                 </div>
                 <div class="hero-right">
-                    <img src="assets/hero-img1.webp" alt="Hero Image" class="hero-anim-img">
+                 <img src="assets/hero-img1.webp" alt="Hero Image" class="hero-anim-img" draggable="false">
                 </div>
             </div>
         </div>
