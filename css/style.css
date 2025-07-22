@@ -275,10 +275,10 @@ h2 {
   padding: 30px 20px;
   color: #8e2de2;
   border-radius: 15px;
-  background-color: #494949;
+  background-color: #111;
   position: relative;
   transition: all 0.0s ease;
-  
+  border: 1px solid #333333;
 }
 .choose-box::before {
   content: '';
@@ -313,6 +313,10 @@ h2 {
 .choose-box:hover::before {
   opacity: 1;
 }
+.choose-box:hover{
+border: 0px solid none;
+}
+border: 0px solid none;
 .choose-box i {
   font-size: 40px;
   color: #8e2de2;
@@ -333,7 +337,10 @@ h2 {
   color: #ddd;
 }
 @media (max-width: 768px) {
+.choose-box {
 
+  border: 0px solid none;
+}
 
 .choose-box::before {
     padding: 1.5px; /* Thinner border on mobile */
@@ -369,7 +376,7 @@ h2 {
 
 .testimonial-box {
   position: relative !important; 
-  background-color: #494949 !important;
+  background-color: #111 !important;
   color: #8e2de2 !important;
   padding: 30px 20px !important;
   border-radius: 15px !important;
@@ -378,6 +385,7 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease !important;
   overflow: hidden !important;
   height: 300px;
+  border: 1px solid #333333;
 
 }
 
@@ -572,7 +580,7 @@ h2 {
 }
 
 .pricing-box {
-  background-color: #5c5c5b;
+  background-color: #111;
   color: #8e2de2;
   padding: 30px 25px !important;
   border-radius: 15px;
@@ -582,6 +590,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px solid #333333;
 }
 
 
@@ -665,8 +674,8 @@ h2 {
 }
 
 .faq-question {
-  background-color: #ddd;
-  color: #5c5c5b;
+  background-color: #111;
+  color: #fff;
   font-weight: bold;
   padding: 15px 20px;
   width: 100%;
@@ -678,7 +687,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 15px rgba(114, 9, 183, 0.4);
+  box-shadow: 0 0 15px rgba(49, 49, 49, 0.767);
 }
 
 .faq-question:hover {
@@ -752,7 +761,7 @@ h2 {
 }
 
 .contact-form {
-  background-color: #5c5c5b;
+  background-color: #111;
   background-image: url('assets/cbg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -762,6 +771,7 @@ h2 {
   color: #8e2de2;
   position: relative;
   overflow: hidden;
+  border: 1px solid #333333;
 }
 
 
@@ -772,8 +782,10 @@ h2 {
   margin-bottom: 20px;
   border: none;
   border-radius: 10px;
-  background-color: #eee;
+  background-color: #111;
   font-size: 16px;
+  border: 1px solid #333333;
+  color: #fff;
 }
 
 .contact-form textarea {
@@ -808,7 +820,7 @@ h2 {
 }
 
 .contact-info {
-  background-color: #5c5c5b;
+  background-color: #111;
   background-image: url('assets/cbg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -818,6 +830,7 @@ h2 {
   color: #fff;
   position: relative;
   overflow: hidden;
+  border: 1px solid #333333;
 }
 
 .contact-info h3 {

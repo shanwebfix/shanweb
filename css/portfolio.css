@@ -91,12 +91,13 @@
 }
 
 .portfolio-item {
-  background-color: #5c5c5b;
+  background-color: #111;
   border-radius: 15px;
   overflow: hidden;
   padding: 10px;
   height: 400px;
   animation: fadeInUp 0.5s ease;
+  border: 1px solid #333333;
 }
 
 @keyframes fadeInUp {
@@ -183,7 +184,7 @@
 
 /* Hover effect for button */
 .load-more-btn:hover {
-  background-color: #5c5c5b;
+  background-color: #111;
 }
 .load-more-btn::after {
   content: "";
@@ -200,7 +201,7 @@
 }
 
 .load-more-btn:hover::after {
-  border-top-color: #5c5c5b;
+  border-top-color: #111;
 }
 
 @media (max-width: 768px) {
@@ -218,7 +219,7 @@
   }
 
   .load-more-btn:hover::after {
-    border-top-color: #5c5c5b;
+    border-top-color: #111;
   }
 }
 
@@ -255,13 +256,13 @@
 /* Hover and Active background */
 .filter-btn:hover,
 .filter-btn.active {
-  background-color: #5c5c5b;
+  background-color: #111;
 }
 
 /* Triangle color change on hover/active */
 .filter-btn:hover::after,
 .filter-btn.active::after {
-  border-top-color: #5c5c5b;
+  border-top-color: #111;
 }
 @media (max-width: 768px) {
   .filter-btn {
@@ -280,7 +281,7 @@
 
   .filter-btn:hover::after,
   .filter-btn.active::after {
-    border-top-color: #5c5c5b;
+    border-top-color: #111;
   }
 }
 
