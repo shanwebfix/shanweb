@@ -92,20 +92,68 @@
 
     <button class="btn-generate" onclick="generateEmail()">Generate Email Address</button>
 
-    <div class="output-box" id="resultBox">johnsmith247@gmail.com</div>
+    <div class="output-box" id="resultBox">johnsmith@gmail.com</div>
 
     <button class="btn-copy" onclick="copyResult()">Copy</button>
   </div>
 
   <script>
-    const firstNames = [
-      "John", "Emma", "Liam", "Olivia", "Noah", "Ava", "James", "Sophia",
-      "Ethan", "Isabella", "Lucas", "Mia", "Henry", "Amelia", "Alexander", "Grace"
-    ];
-    const lastNames = [
-      "Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis",
-      "Garcia", "Rodriguez", "Martinez", "Lee", "Clark", "Walker", "Young"
-    ];
+const firstNames = [
+  "John", "Emma", "Liam", "Olivia", "Noah", "Ava", "James", "Sophia",
+  "Ethan", "Isabella", "Lucas", "Mia", "Henry", "Amelia", "Alexander", "Grace",
+  "Benjamin", "Charlotte", "Daniel", "Harper", "Michael", "Evelyn", "Matthew", "Abigail",
+  "David", "Emily", "Joseph", "Ella", "Samuel", "Elizabeth", "Logan", "Avery",
+  "Jackson", "Sofia", "Sebastian", "Scarlett", "Jack", "Victoria", "Owen", "Aria",
+  "Wyatt", "Lily", "Gabriel", "Hannah", "Carter", "Luna", "Jayden", "Zoe",
+  "Luke", "Chloe", "Isaac", "Penelope", "Anthony", "Layla", "Grayson", "Riley",
+  "Julian", "Nora", "Levi", "Camila", "Lincoln", "Aurora", "Nathan", "Savannah",
+  "Christian", "Brooklyn", "Hunter", "Bella", "Aaron", "Claire", "Eli", "Skylar",
+  "Jeremiah", "Lucy", "Jonathan", "Paisley", "Thomas", "Everly", "Charles", "Anna",
+  "Caleb", "Caroline", "Josiah", "Nova", "Andrew", "Genesis", "Ezra", "Emilia",
+  "Hudson", "Kennedy", "Ryan", "Samantha", "Adrian", "Maya", "Nolan", "Willow",
+  "Easton", "Naomi", "Jaxon", "Elena", "Robert", "Sarah", "Angel", "Aaliyah",
+  "Brayden", "Gabriella", "Miles", "Madelyn", "Colton", "Cora", "Jordan", "Ruby",
+  "Dominic", "Serenity", "Austin", "Eva", "Ian", "Nevaeh", "Adam", "Autumn",
+  "Elias", "Quinn", "Jace", "Peyton", "Greyson", "Taylor", "Jose", "Brielle",
+  "Ezekiel", "Khloe", "Carson", "Kinsley", "Xavier", "Jade", "Cooper", "Melody",
+  "Parker", "Alexa", "Roman", "Reagan", "Jason", "Clara", "Santiago", "Raelynn",
+  "Connor", "Ashley", "Jameson", "Eliza", "Theodore", "Lyla", "Kevin", "Kylie",
+  "Silas", "Athena", "Micah", "Lillian", "Brody", "Isla", "Luis", "Violet",
+  "Asher", "Margaret", "Diego", "Maria", "Vincent", "Valentina", "Max", "Jocelyn",
+  "Sawyer", "Adeline", "Mateo", "Rylee", "Kingston", "Harmony", "Maxwell", "Josephine",
+  "Beau", "Juliana", "Camden", "Delilah", "Braxton", "Morgan", "Declan", "London",
+  "Kaiden", "Adalynn", "Jonah", "Ariana", "Bryson", "Liliana", "Hayden", "Alina",
+  "George", "Jasmine", "Leonardo", "Rosalie", "Kaleb", "Andrea", "Harrison", "Valeria",
+  "Rowan", "Emery", "Finley", "Ayla", "Tristan", "Blake", "Gavin", "Brynlee"
+];
+
+const lastNames = [
+  "Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis",
+  "Garcia", "Rodriguez", "Martinez", "Lee", "Clark", "Walker", "Young",
+  "Allen", "King", "Wright", "Scott", "Torres", "Nguyen", "Hill", "Flores",
+  "Green", "Adams", "Nelson", "Baker", "Hall", "Rivera", "Campbell", "Mitchell",
+  "Carter", "Roberts", "Gomez", "Phillips", "Evans", "Turner", "Diaz", "Parker",
+  "Cruz", "Edwards", "Collins", "Reyes", "Stewart", "Morris", "Morales", "Murphy",
+  "Cook", "Rogers", "Morgan", "Peterson", "Cooper", "Reed", "Bailey", "Bell",
+  "Gomez", "Kelly", "Howard", "Ward", "Cox", "Richardson", "Wood", "Watson",
+  "Brooks", "Bennett", "Gray", "James", "Reyes", "Watkins", "Sanders", "Price",
+  "Bennett", "Wood", "Barnes", "Ross", "Henderson", "Coleman", "Jenkins", "Perry",
+  "Powell", "Long", "Patterson", "Hughes", "Flores", "Washington", "Butler", "Simmons",
+  "Foster", "Gonzales", "Bryant", "Alexander", "Russell", "Griffin", "Diaz", "Hayes",
+  "Myers", "Ford", "Hamilton", "Graham", "Sullivan", "Wallace", "Woods", "Cole",
+  "West", "Jordan", "Owens", "Reynolds", "Fisher", "Ellis", "Harrison", "Gibson",
+  "Mcdonald", "Cruz", "Marshall", "Ortiz", "Gomez", "Murray", "Freeman", "Wells",
+  "Webb", "Simpson", "Stevens", "Tucker", "Porter", "Hunter", "Hicks", "Crawford",
+  "Henry", "Boyd", "Mason", "Moreno", "Kennedy", "Warren", "Dixon", "Ramos",
+  "Andrews", "Chapman", "Lawson", "Weaver", "Watkins", "Burns", "Gordon", "Shaw",
+  "Holmes", "Rice", "Robertson", "Hunt", "Black", "Daniels", "Palmer", "Mills",
+  "Nichols", "Grant", "Knight", "Ferguson", "Rose", "Stone", "Hawkins", "Dunn",
+  "Perkins", "Hudson", "Spencer", "Gardner", "Stephens", "Payne", "Pierce", "Berry",
+  "Matthews", "Arnold", "Wagner", "Willis", "Ray", "Watkins", "Olson", "Carroll",
+  "Duncan", "Snyder", "Hart", "Cunningham", "Bradley", "Lane", "Andrews", "Ruiz",
+  "Harper", "Fox", "Riley", "Armstrong", "Carpenter", "Weaver", "Greene", "Lawrence"
+];
+
 
     function getRandom(arr) {
       return arr[Math.floor(Math.random() * arr.length)];
@@ -116,21 +164,21 @@
     }
 
     function generateEmail() {
-      let nameInput = document.getElementById("fullName").value.trim();
       const domain = document.getElementById("domain").value;
+      let inputName = document.getElementById("fullName").value.trim();
+
       let cleanName;
 
-      if (!nameInput) {
-        // Auto-generate random name
-        const randomFullName = `${getRandom(firstNames)}${getRandom(lastNames)}`;
-        cleanName = sanitizeInput(randomFullName);
+      if (inputName === "") {
+        // Generate random name if input is empty
+        const randomFirst = getRandom(firstNames);
+        const randomLast = getRandom(lastNames);
+        cleanName = sanitizeInput(`${randomFirst}${randomLast}`);
       } else {
-        cleanName = sanitizeInput(nameInput);
+        cleanName = sanitizeInput(inputName);
       }
 
-      const randomNum = Math.floor(100 + Math.random() * 900);
-      const email = `${cleanName}${randomNum}@${domain}`;
-
+      const email = `${cleanName}@${domain}`;
       document.getElementById("resultBox").innerText = email;
     }
 
