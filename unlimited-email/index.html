@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Email Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      background-color: #0f1117;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    select, input, button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
+      background-color: #1e2128;
+      color: white;
+    }
+
+    button {
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-generate {
+      background-color: #ff6b4d;
+    }
+
+    .output-box {
+      background-color: #1e2128;
+      padding: 15px;
+      font-size: 20px;
+      text-align: center;
+      border-radius: 8px;
+      margin-top: 20px;
+      word-wrap: break-word;
+    }
+
+    .btn-copy {
+      background-color: #91e6ff;
+      color: black;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 20px;
+      }
+
+      .output-box {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Smart Email Generator</h1>
+
+    <input type="text" id="userName" placeholder="Enter your name (optional)" />
+
+    <select id="domain">
+      <option value="gmail.com">gmail.com</option>
+      <option value="yahoo.com">yahoo.com</option>
+      <option value="outlook.com">outlook.com</option>
+      <option value="icloud.com">icloud.com</option>
+      <option value="proton.me">proton.me</option>
+    </select>
+
+    <button class="btn-generate" onclick="generateEmail()">Generate Email Address</button>
+
+    <div class="output-box" id="resultBox">youremail@example.com</div>
+
+    <button class="btn-copy" onclick="copyResult()">Copy</button>
+  </div>
+
+  <script>
+    const usedNames = new Set();
+    const letters = "abcdefghijklmnopqrstuvwxyz";
+
+    function getRandomName(length) {
+      let name = "";
+      for (let i = 0; i < length; i++) {
+        name += letters.charAt(Math.floor(Math.random() * letters.length));
+      }
+      return name.charAt(0).toUpperCase() + name.slice(1);
+    }
+
+    function generateUniqueName() {
+      let fullName;
+      let tries = 0;
+
+      do {
+        const first = getRandomName(5 + Math.floor(Math.random() * 3));
+        const last = getRandomName(5 + Math.floor(Math.random() * 4));
+        fullName = (first + last).toLowerCase();
+        tries++;
+        if (tries > 10000) {
+          alert("No more unique names available.");
+          break;
+        }
+      } while (usedNames.has(fullName));
+
+      usedNames.add(fullName);
+      return fullName;
+    }
+
+    function sanitizeInput(text) {
+      return text.toLowerCase().replace(/[^a-z]/g, '');
+    }
+
+    function generateEmail() {
+      const nameInput = document.getElementById("userName").value.trim();
+      const domain = document.getElementById("domain").value;
+
+      let finalName;
+
+      if (nameInput === "") {
+        finalName = generateUniqueName();
+      } else {
+        finalName = sanitizeInput(nameInput);
+      }
+
+      const email = `${finalName}@${domain}`;
+      document.getElementById("resultBox").innerText = email;
+    }
+
+    function copyResult() {
+      const email = document.getElementById("resultBox").innerText;
+      navigator.clipboard.writeText(email)
+        .then(() => alert("Copied to clipboard!"));
+    }
+
+    // Auto-generate on load
+    window.onload = generateEmail;
+  </script>
+
+</body>
+</html>
