@@ -80,7 +80,7 @@
   <div class="container">
     <h1>Random Email Generator</h1>
 
-    <input type="text" id="fullName" placeholder="Enter your full name (e.g. John Smith)" />
+    <input type="text" id="fullName" placeholder="Enter your full name (optional)" />
 
     <select id="domain">
       <option value="gmail.com">gmail.com</option>
@@ -98,21 +98,37 @@
   </div>
 
   <script>
+    const firstNames = [
+      "John", "Emma", "Liam", "Olivia", "Noah", "Ava", "James", "Sophia",
+      "Ethan", "Isabella", "Lucas", "Mia", "Henry", "Amelia", "Alexander", "Grace"
+    ];
+    const lastNames = [
+      "Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis",
+      "Garcia", "Rodriguez", "Martinez", "Lee", "Clark", "Walker", "Young"
+    ];
+
+    function getRandom(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
     function sanitizeInput(text) {
       return text.toLowerCase().replace(/[^a-z]/g, '');
     }
 
     function generateEmail() {
-      const nameInput = document.getElementById("fullName").value.trim();
+      let nameInput = document.getElementById("fullName").value.trim();
       const domain = document.getElementById("domain").value;
+      let cleanName;
 
       if (!nameInput) {
-        alert("Please enter a full name.");
-        return;
+        // Auto-generate random name
+        const randomFullName = `${getRandom(firstNames)}${getRandom(lastNames)}`;
+        cleanName = sanitizeInput(randomFullName);
+      } else {
+        cleanName = sanitizeInput(nameInput);
       }
 
-      const cleanName = sanitizeInput(nameInput);
-      const randomNum = Math.floor(100 + Math.random() * 900); // 3-digit number
+      const randomNum = Math.floor(100 + Math.random() * 900);
       const email = `${cleanName}${randomNum}@${domain}`;
 
       document.getElementById("resultBox").innerText = email;
@@ -124,38 +140,6 @@
         .then(() => alert("Copied to clipboard!"));
     }
   </script>
-<script>  // io
-  document.addEventListener("keydown", function (e) {
-    if (
-      e.key === "F12" ||
-      (e.ctrlKey && e.shiftKey && e.key === "I") ||
-      (e.ctrlKey && e.key === "U")
-    ) {
-      e.preventDefault();
-    }
-  });
 
-
-document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
-});
-
-// Disable text selection
-document.addEventListener('selectstart', function(e) {
-  e.preventDefault();
-});
-
-// Disable drag (for images & content)
-document.addEventListener('dragstart', function(e) {
-  e.preventDefault();
-});
-
-// Optional: Prevent saving images via right-click or dragging
-document.querySelectorAll('img').forEach(function(img) {
-  img.setAttribute('draggable', 'false');
-  img.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
-});</script>
 </body>
 </html>
