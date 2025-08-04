@@ -1,6 +1,5 @@
 // faq.js
 
-// এই ফাংশন FAQ সেকশনের জন্য event listener সেট করবে
 function initfaq() {
   const questions = document.querySelectorAll('.faq-question');
 

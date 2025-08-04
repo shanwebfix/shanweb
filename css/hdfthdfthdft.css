@@ -523,8 +523,8 @@ section {
 
 /* Popup Box */
 .popup-content {
-  background: #ffffff;
-  color: #5c5c5b;
+  background: #5c5c5b;
+  color: #fff;
   padding: 30px;
   border-radius: 10px;
   position: relative;
@@ -541,7 +541,7 @@ section {
   right: 15px;
   font-size: 24px;
   font-weight: bold;
-  color: #333;
+  color: #cf4646;
   cursor: pointer;
 }
 

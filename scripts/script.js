@@ -24,7 +24,15 @@ function loadSection(path, elementId, callback) {
     });
 }
 
-loadSection("/fetch/753qwyyuirtt4r2r7.html", "wutyitf489uh");
+loadSection("/fetch/753qwyyuirtt4r2r7.html", "wutyitf489uh", () => {
+  if (typeof inithadfa === "function") {
+    inithadfa();
+  } else {
+    console.warn("inithadfa() not defined");
+  }
+});
+
+
 loadSection("/fetch/hjsguaw22228y456.html", "gdsshhhhe");
 loadSection("/fetch/seyaggiuafe.html", "saFrfwgwrf");
 loadSection("/fetch/afcadjfcapppvkjdgfcgd.html", "sfgargwa");
@@ -39,7 +47,16 @@ loadSection("/fetch/afafcadpppapappavhappapp.html", "sgwrafwe", () => {
 });
 
 loadSection("/fetch/auyfcafwacawjhwffwjfjwhf.html", "svgsfwrrfwegwaergwr");
-loadSection("/fetch/satrtvvtfvctvtvtctu.html", "rheafsazcf");
+
+
+loadSection("/fetch/satrtvvtfvctvtvtctu.html", "rheafsazcf", () => {
+  if (typeof inittsmsffgiuf === "function") {
+    inittsmsffgiuf();
+  } else {
+    console.warn("inittsmsffgiuf() not defined");
+  }
+});
+
 loadSection("/fetch/hagjsskglgssksgsskgsjkgsg.html", "wsyfaEFGsb");
 loadSection("/fetch/acbavbcppabagppavbappabvapp.html", "sgsfsgaetgbhnje");
 
@@ -53,60 +70,20 @@ loadSection("/fetch/agcfadfffjksffflhffflfiufu.html", "weftwgsrfbdfjhrsye", () =
   }
 });
 
-
-loadSection("/fetch/coyiocyiertocccuccyssfcyotycc.html", "ehestwarhst");
-loadSection("/fetch/;oysiofofoifiofioffiofyfffsyfyofy.html", "saytfuyaetfdef");
-
-
-
-
-
-
-
-
-const menuToggle = document.getElementById('menuToggle');
-const offcanvasMenu = document.getElementById('offcanvasMenu');
-const closeMenu = document.getElementById('closeMenu');
-const header = document.querySelector('.main-header');
-
-let scrollPosition = 0;
-
-// Open menu
-menuToggle.addEventListener('click', (e) => {
-  e.preventDefault();
-  e.stopPropagation();
-
-  // First show the menu immediately
-  offcanvasMenu.classList.add('active');
-
-  // Delay scroll lock to next frame (for smoother animation)
-  setTimeout(() => {
-    scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollPosition}px`;
-    document.body.style.width = '100%';
-  }, 10); // 10ms delay is enough
-});
-
-// Close menu
-closeMenu.addEventListener('click', () => {
-  offcanvasMenu.classList.remove('active');
-
-  // Unlock scroll after animation ends
-  setTimeout(() => {
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.width = '';
-    window.scrollTo(0, scrollPosition);
-  }, 300); // match your transition duration (0.3s)
-});
-
-// Header scroll effect
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 10) {
-    header.classList.add('scrolled');
+loadSection("/fetch/coyiocyiertocccuccyssfcyotycc.html", "ehestwarhst", () => {
+  if (typeof initft === "function") {
+    initft();
   } else {
-    header.classList.remove('scrolled');
+    console.warn("initft() not defined");
+  }
+});
+
+
+loadSection("/fetch/;oysiofofoifiofioffiofyfffsyfyofy.html", "saytfuyaetfdef", () => {
+  if (typeof initsfspopsbvs === "function") {
+    initsfspopsbvs();
+  } else {
+    console.warn("initsfspopsbvs() not defined");
   }
 });
 
@@ -116,22 +93,54 @@ window.addEventListener('scroll', () => {
 
 
 
+// io
+  document.addEventListener("keydown", function (e) {
+    if (
+      e.key === "F12" ||
+      (e.ctrlKey && e.shiftKey && e.key === "I") ||
+      (e.ctrlKey && e.key === "U")
+    ) {
+      e.preventDefault();
+    }
+  });
+
+
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// Disable text selection
+document.addEventListener('selectstart', function(e) {
+  e.preventDefault();
+});
+
+// Disable drag (for images & content)
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+
+// Optional: Prevent saving images via right-click or dragging
+document.querySelectorAll('img').forEach(function(img) {
+  img.setAttribute('draggable', 'false');
+  img.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+});
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+//dff
+  setInterval(() => {
+    const before = new Date().getTime();
+    debugger;
+    const after = new Date().getTime();
+    if (after - before > 100) {
+      window.location.href = "about:blank";
+    }
+  }, 1000);
 
 
 
@@ -180,65 +189,14 @@ document.querySelectorAll('.image-container').forEach(container => {
 
 
 
-// Testimonial Slider
-
-const swiper = new Swiper(".testimonial-swiper", {
-    loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    slidesPerView: 1,
-    spaceBetween: 30,
-    breakpoints: {
-      768: {
-        slidesPerView: 3,
-      },
-    },
-  });
 
 
 
 
-// Footer Up Arrow
-const scrollCircle = document.querySelector('.circle');
-const scrollBtn = document.getElementById('scrollToTopCircle');
 
-window.addEventListener('scroll', () => {
-  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrollPercent = (scrollTop / scrollHeight) * 100;
 
-  // Update circle progress
-  scrollCircle.setAttribute('stroke-dasharray', `${scrollPercent}, 100`);
 
-  // Hide or show button based on scroll position
-  if (scrollTop < 100) {
-    scrollBtn.style.opacity = '0';
-    scrollBtn.style.pointerEvents = 'none';
-  } else {
-    scrollBtn.style.opacity = '1';
-    scrollBtn.style.pointerEvents = 'auto';
-  }
-});
 
-// Scroll to top on click
-scrollBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
-
-document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
-});
-
-  document.addEventListener("contextmenu", (e) => e.preventDefault());
 
 
 
@@ -250,29 +208,6 @@ document.addEventListener('contextmenu', function(e) {
 
 
  
-  // Open popup
-  document.querySelectorAll('.popup-trigger').forEach(trigger => {
-    trigger.addEventListener('click', function(e) {
-      e.preventDefault();
-      const popupId = this.dataset.popup;
-      document.getElementById(popupId).style.display = 'flex';
-    });
-  });
-
-  // Close popup
-  document.querySelectorAll('.close-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      this.closest('.custom-popup').style.display = 'none';
-    });
-  });
-
-  // Optional: Click outside to close
-  window.addEventListener('click', function(e) {
-    document.querySelectorAll('.custom-popup').forEach(popup => {
-      if (e.target === popup) {
-        popup.style.display = 'none';
-      }
-    });
-  });
+  
 
 
