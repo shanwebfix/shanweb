@@ -316,7 +316,7 @@ h2 {
 .choose-box:hover{
 border: 0px solid none;
 }
-border: 0px solid none;
+
 .choose-box i {
   font-size: 40px;
   color: #8e2de2;
@@ -389,6 +389,43 @@ border: 0px solid none;
 
 }
 
+.testimonial-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background: 
+    linear-gradient(
+      -45deg,
+      rgba(255, 0, 0, 1) 0%,
+      rgba(142, 45, 226, 0.8) 40%,
+      transparent 50%
+    ),
+    linear-gradient(
+      rgba(63, 62, 63, 1),
+      rgba(63, 62, 63, 1)
+    );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.testimonial-box:hover::before {
+  opacity: 1;
+}
+.testimonial-box:hover{
+border: 0px solid none;
+}
+
 .quote-icon {
   font-size: 30px;
   color: #8e2de2;
@@ -451,6 +488,29 @@ border: 0px solid none;
   background-color: #ffffff !important;
   opacity: 1;
   margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+.testimonial-box {
+
+  border: 0px solid none;
+}
+
+.testimonial-box::before {
+    padding: 1.5px; /* Thinner border on mobile */
+    background: 
+      linear-gradient(
+        -40deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(142, 45, 226, 0.8) 30%, /* More visible gradient on small screens */
+        transparent 45% /* Faster fade on mobile */
+      ),
+      linear-gradient(
+        rgba(63, 62, 63, 1),
+        rgba(63, 62, 63, 1)
+      );
+  }
+
 }
 
 /* ==== Skills Section ==== */

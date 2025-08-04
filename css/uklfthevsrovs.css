@@ -8,6 +8,7 @@
   align-items: center;
   background: #0f2027;
   background: linear-gradient(to top, #2c5364, #203a43, #0f2027);
+  margin-top: -100px !important;
 }
 
 .context {
@@ -25,6 +26,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
+
 }
 
 .hero-left {
