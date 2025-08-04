@@ -1,0 +1,118 @@
+
+<section class="main-section" id="service">
+  <div class="bottom-center-glow"></div>
+    <h2 class="section-title">Our Services</h2>
+    <div class="service-container">
+
+    
+        <div class="service-box">
+          <div class="s-left">
+        <i class="fas fa-briefcase"></i>
+        <h3 class="gradiant-text">Portfolio</h3></div>
+
+        <div class="s-right">
+        <h4>Showcase your talent with elegance.</h4>
+        <p>We design clean, modern portfolio websites that highlight your skills, achievements, and work perfect for freelancers, creatives, and professionals.</p>
+      </div></div>
+
+      <div class="service-box">
+        <div class="s-left">
+        <i class="fas fa-rocket"></i>
+        <h3 class="gradiant-text">Landing Page</h3></div>
+        <div class="s-right">
+        <h4>Convert visitors into customers.</h4>
+        <p>High-converting, fast-loading landing pages tailored to promote your product, service, or campaign, focused on results and user experience.</p>
+      </div></div>
+
+      <div class="service-box">
+        <div class="s-left">
+        <i class="fas fa-building"></i>
+        <h3 class="gradiant-text">Business Website</h3></div>
+
+        <div class="s-right">
+        <h4>Grow your brand with a strong online presence.</h4>
+        <p>We build professional business websites that reflect trust, boost credibility, and help you connect with your audience effectively.</p>
+      </div></div>
+
+      <div class="service-box">
+        <div class="s-left">
+        <i class="fas fa-shopping-cart"></i>
+        <h3 class="gradiant-text">E-commerce</h3></div>
+
+        <div class="s-right">
+        <h4>Start selling online smart and simple.</h4>
+        <p>From product listings to secure checkout, we craft user-friendly e-commerce websites that drive sales and enhance customer satisfaction.</p>
+      </div></div>
+
+      <div class="service-box">
+        <div class="s-left">
+        <i class="fas fa-pen-nib"></i>
+        <h3 class="gradiant-text">Blog Website</h3></div>
+
+        <div class="s-right">
+      <h4>Share your voice with the world.</h4>       
+     <p>Whether it’s personal stories or niche content, our blog websites are designed for readability, engagement, and easy content management.</p>
+      </div></div>
+
+      <div class="service-box">
+        <div class="s-left">
+        <i class="fas fa-mobile-alt"></i>
+        <h3 class="gradiant-text">App Landing</h3></div>
+
+        <div class="s-right">
+      <h4>Launch your app with impact.</h4>
+        <p>We create sleek, informative app landing pages that highlight features, benefits, and encourage downloads across platforms.</p>
+      </div></div>
+
+    </div>
+<script>
+  // io
+  document.addEventListener("keydown", function (e) {
+    if (
+      e.key === "F12" ||
+      (e.ctrlKey && e.shiftKey && e.key === "I") ||
+      (e.ctrlKey && e.key === "U")
+    ) {
+      e.preventDefault();
+    }
+  });
+
+
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// Disable text selection
+document.addEventListener('selectstart', function(e) {
+  e.preventDefault();
+});
+
+// Disable drag (for images & content)
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+
+// Optional: Prevent saving images via right-click or dragging
+document.querySelectorAll('img').forEach(function(img) {
+  img.setAttribute('draggable', 'false');
+  img.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+});
+
+
+
+
+
+
+//dev off
+  setInterval(() => {
+    const before = new Date().getTime();
+    debugger;
+    const after = new Date().getTime();
+    if (after - before > 100) {
+      window.location.href = "about:blank";
+    }
+  }, 1000);
+</script>
+  </section>

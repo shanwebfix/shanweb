@@ -1,3 +1,35 @@
+
+
+  function loadSection(path, elementId) {
+    fetch(path)
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById(elementId).innerHTML = html;
+      })
+      .catch(err => {
+        document.getElementById(elementId).innerHTML = "কনটেন্ট লোড করতে সমস্যা হয়েছে!";
+        console.error(err);
+      });
+  }
+
+  loadSection("/fetch/header.html", "header");
+  loadSection("/fetch/hero.html", "hero-section");
+  loadSection("/fetch/service.html", "service");
+  loadSection("/fetch/platform.html", "platform");
+  loadSection("/fetch/portfolio.html", "portfolio");
+  loadSection("/fetch/choose.html", "choose");
+  loadSection("/fetch/testi.html", "testi");
+  loadSection("/fetch/skills.html", "skills");
+  loadSection("/fetch/price.html", "price");
+  loadSection("/fetch/faq.html", "faq");
+  loadSection("/fetch/contact.html", "contact");
+  loadSection("/fetch/footer.html", "footer");
+
+
+
+
+
+
 const menuToggle = document.getElementById('menuToggle');
 const offcanvasMenu = document.getElementById('offcanvasMenu');
 const closeMenu = document.getElementById('closeMenu');
