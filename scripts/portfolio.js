@@ -1,4 +1,4 @@
-
+function initPortfolio() {
   const filterBtns = document.querySelectorAll('.filter-btn');
   const sliderContent = document.getElementById('sliderContent');
   const allItems = [...sliderContent.children];
@@ -19,7 +19,6 @@
     const items = getFilteredItems();
     sliderContent.innerHTML = '';
 
-    // Show items up to visibleCount
     items.slice(0, visibleCount).forEach(item => {
       sliderContent.appendChild(item.cloneNode(true));
     });
@@ -44,19 +43,19 @@
     renderItems();
   }
 
-  loadMoreBtn.addEventListener('click', () => {
-    const items = getFilteredItems();
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      const items = getFilteredItems();
 
-    if (visibleCount >= items.length) {
-      // Reset to initial count
-      visibleCount = increment;
-    } else {
-      // Show next 3
-      visibleCount += increment;
-    }
+      if (visibleCount >= items.length) {
+        visibleCount = increment;
+      } else {
+        visibleCount += increment;
+      }
 
-    renderItems();
-  });
+      renderItems();
+    });
+  }
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -64,7 +63,6 @@
     });
   });
 
-  window.addEventListener('DOMContentLoaded', () => {
-    applyFilter('all');
-  });
-
+  // Initial render
+  applyFilter('all');
+}

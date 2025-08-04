@@ -1,79 +1,66 @@
+function loadSection(path, elementId, callback) {
+  console.log("Loading:", path, "into:", elementId);
+  fetch(path)
+    .then(res => {
+      if (!res.ok) throw new Error(`Failed to load ${path}, status: ${res.status}`);
+      return res.text();
+    })
+    .then(html => {
+      const container = document.getElementById(elementId);
+      if (!container) {
+        console.warn(`Container with id "${elementId}" not found!`);
+        return;
+      }
+      container.innerHTML = html;
 
+      if (typeof callback === "function") {
+        setTimeout(callback, 0);
+      }
+    })
+    .catch(err => {
+      console.error("Error loading section:", err);
+      const container = document.getElementById(elementId);
+      if (container) container.innerHTML = "কনটেন্ট লোড করতে সমস্যা হয়েছে!";
+    });
+}
 
-  function loadSection(path, elementId) {
-    fetch(path)
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById(elementId).innerHTML = html;
-      })
-      .catch(err => {
-        document.getElementById(elementId).innerHTML = "কনটেন্ট লোড করতে সমস্যা হয়েছে!";
-        console.error(err);
-      });
+loadSection("/fetch/753qwyyuirtt4r2r7.html", "wutyitf489uh");
+loadSection("/fetch/hjsguaw22228y456.html", "gdsshhhhe");
+loadSection("/fetch/seyaggiuafe.html", "saFrfwgwrf");
+loadSection("/fetch/afcadjfcapppvkjdgfcgd.html", "sfgargwa");
+
+// portfolio section with callback to initPortfolio
+loadSection("/fetch/afafcadpppapappavhappapp.html", "sgwrafwe", () => {
+  if (typeof initPortfolio === "function") {
+    initPortfolio();
+  } else {
+    console.warn("initPortfolio() not defined");
   }
-
-  loadSection("/fetch/header.html", "header");
-  loadSection("/fetch/hero.html", "hero-section");
-  loadSection("/fetch/service.html", "service");
-  loadSection("/fetch/platform.html", "platform");
-  loadSection("/fetch/portfolio.html", "portfolio");
-  loadSection("/fetch/choose.html", "choose");
-  loadSection("/fetch/testi.html", "testi");
-  loadSection("/fetch/skills.html", "skills");
-  loadSection("/fetch/price.html", "price");
-  loadSection("/fetch/faq.html", "faq");
-  loadSection("/fetch/contact.html", "contact");
-  loadSection("/fetch/footer.html", "footer");
-
-
-  // io
-  document.addEventListener("keydown", function (e) {
-    if (
-      e.key === "F12" ||
-      (e.ctrlKey && e.shiftKey && e.key === "I") ||
-      (e.ctrlKey && e.key === "U")
-    ) {
-      e.preventDefault();
-    }
-  });
-
-
-document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
 });
 
-// Disable text selection
-document.addEventListener('selectstart', function(e) {
-  e.preventDefault();
-});
+loadSection("/fetch/auyfcafwacawjhwffwjfjwhf.html", "svgsfwrrfwegwaergwr");
+loadSection("/fetch/satrtvvtfvctvtvtctu.html", "rheafsazcf");
+loadSection("/fetch/hagjsskglgssksgsskgsjkgsg.html", "wsyfaEFGsb");
+loadSection("/fetch/acbavbcppabagppavbappabvapp.html", "sgsfsgaetgbhnje");
 
-// Disable drag (for images & content)
-document.addEventListener('dragstart', function(e) {
-  e.preventDefault();
-});
+// faq
 
-// Optional: Prevent saving images via right-click or dragging
-document.querySelectorAll('img').forEach(function(img) {
-  img.setAttribute('draggable', 'false');
-  img.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
+loadSection("/fetch/agcfadfffjksffflhffflfiufu.html", "weftwgsrfbdfjhrsye", () => {
+  if (typeof initfaq === "function") {
+    initfaq();
+  } else {
+    console.warn("initfaq() not defined");
+  }
 });
 
 
+loadSection("/fetch/coyiocyiertocccuccyssfcyotycc.html", "ehestwarhst");
+loadSection("/fetch/;oysiofofoifiofioffiofyfffsyfyofy.html", "saytfuyaetfdef");
 
 
 
 
-//dev off
-  setInterval(() => {
-    const before = new Date().getTime();
-    debugger;
-    const after = new Date().getTime();
-    if (after - before > 100) {
-      window.location.href = "about:blank";
-    }
-  }, 1000);
+
 
 
 
@@ -139,24 +126,7 @@ window.addEventListener('scroll', () => {
 
 
 
-const questions = document.querySelectorAll('.faq-question');
 
-questions.forEach((question) => {
-  question.addEventListener('click', () => {
-    const answer = question.nextElementSibling;
-    const isOpen = answer.style.display === 'block';
-
-    // সব FAQ answer বন্ধ করো
-    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-    // সব arrow remove active ক্লাস করো
-    questions.forEach(q => q.classList.remove('active'));
-
-    if (!isOpen) {
-      answer.style.display = 'block';
-      question.classList.add('active');
-    }
-  });
-});
 
 
 
